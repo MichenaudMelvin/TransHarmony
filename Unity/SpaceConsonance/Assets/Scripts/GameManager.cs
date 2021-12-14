@@ -20,33 +20,15 @@ public class GameManager : MonoBehaviour{
     }
 
     public void changePrefrenceColor(RawImage rawImage, int index0, int index1, int index2){
-        rawImage.color = musicColors[index0] * musicColors[index1] * musicColors[index2];
+        rawImage.color = musicColors[index0] + ((musicColors[index1] - musicColors[index0])/2);
         Color currColor = rawImage.color;
-
-        // if(currColor.r >= 180f){
-        //     currColor.r += 15f;
-        // } else if(currColor.r <= 30){
-        //     currColor.r += -15f;
-        // }
-
-        // if(currColor.g >= 180f){
-        //     currColor.g += 15f;
-        // } else if(currColor.g <= 30){
-        //     currColor.g += -15f;
-        // }
-
-        // if(currColor.b >= 180f){
-        //     currColor.b += 15f;
-        // } else if(currColor.b <= 30){
-        //     currColor.b += -15f;
-        // }
-
         currColor.a = 1f;
         rawImage.color = currColor;
     }
 
     public void ConnectArtist(){
         // ArtistsAttributes artistA, ArtistsAttributes artistB <-- parameters
+        // est-ce que le public doit forcément etre la meme couleur que les artistes ou plutot choisir des nuances ?
         Color newColor = ya1.preferences.color + ya2.preferences.color;
         imageTest.color = newColor;
     }

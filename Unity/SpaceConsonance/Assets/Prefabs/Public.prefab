@@ -167,7 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df3046af83f3134abea2622b5513f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preferencesName: 
+  preferencesName0: 
+  preferencesName1: 
+  preferencesName2: 
   preferences: {fileID: 273268663833693663}
   gameManager: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
 --- !u!114 &199895614218401514

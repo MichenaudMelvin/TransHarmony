@@ -4,14 +4,25 @@ using UnityEngine.UI;
 public class StopMusic : MonoBehaviour{
 
     public Button btn;
-    private AudioSource musicToStop;
+    public Button playBtn;
+
+    public AudioSource musicToStop;
 
     private void Start(){
-        // musicToStop = this.transform.parent.GetComponent<ArtistsAttributes>().musicToPlay;
         btn.onClick.AddListener(Stop);
     }
 
+    private void Update() {
+        if(!musicToStop.isPlaying){
+            // stop la musique si elle s'arrette
+            this.gameObject.SetActive(false);
+            playBtn.gameObject.SetActive(true);
+        }
+    }
+
     private void Stop(){
-        // musicToStop.Stop();
+        if(musicToStop.clip != null){
+            musicToStop.Stop();
+        }
     }
 }
