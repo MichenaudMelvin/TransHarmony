@@ -348,6 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSnap: {fileID: -5386191628735162061, guid: 3b6b6ea05e6e7e6488ed595249b81265, type: 3}
   btn: {fileID: 1623495080386091122}
+  gameManager: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
   inHall: 0
 --- !u!1 &2260929515492531936
 GameObject:
@@ -743,6 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn: {fileID: 5167141923104100276}
   musicToPlay: {fileID: 1079328234661581702}
+  gameManager: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
 --- !u!1 &6006016904777434386
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,3 +978,4 @@ MonoBehaviour:
   btn: {fileID: 2228293147604266129}
   playBtn: {fileID: 5167141923104100276}
   musicToStop: {fileID: 1079328234661581702}
+  gameManager: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}

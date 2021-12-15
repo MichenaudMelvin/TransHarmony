@@ -8,6 +8,8 @@ public class StopMusic : MonoBehaviour{
 
     public AudioSource musicToStop;
 
+    public GameManager gameManager;
+
     private void Start(){
         btn.onClick.AddListener(Stop);
     }
@@ -21,7 +23,7 @@ public class StopMusic : MonoBehaviour{
     }
 
     private void Stop(){
-        if(musicToStop.clip != null){
+        if(musicToStop.clip != null && !gameManager.isFinished){
             musicToStop.Stop();
         }
     }

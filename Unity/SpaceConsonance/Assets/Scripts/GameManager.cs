@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour{
     public List<string> musicStyles;
     public List<Color> musicColors;
 
-    public RawImage imageTest;
+    public float satisfactionPoints;
+    public int enoughPoints;
 
-    public ArtistsAttributes ya1;
-    public ArtistsAttributes ya2;
+    public bool isFinished;
+
+    public List<ArtistsAttributes> artistList;
 
     public void changePrefrenceColor(RawImage rawImage, int index){
         rawImage.color = musicColors[index];
@@ -19,23 +21,25 @@ public class GameManager : MonoBehaviour{
         rawImage.color = currColor;
     }
 
-    public void changePrefrenceColor(RawImage rawImage, int index0, int index1, int index2){
-        rawImage.color = musicColors[index0] + ((musicColors[index1] - musicColors[index0])/2);
+    public void changePrefrenceColor(RawImage rawImage, int index0, int index1, int index2, int index3){
+        rawImage.color = musicColors[index0] + (((musicColors[index1] - musicColors[index0])/2) + ((musicColors[index3] - musicColors[index2])/2));
+        print(musicStyles[index0]);
+        print(musicStyles[index1]);
+        print(musicStyles[index2]);
+        print(musicStyles[index3]);
         Color currColor = rawImage.color;
         currColor.a = 1f;
         rawImage.color = currColor;
     }
 
-    public void ConnectArtist(){
-        // ArtistsAttributes artistA, ArtistsAttributes artistB <-- parameters
-        // est-ce que le public doit forcément etre la meme couleur que les artistes ou plutot choisir des nuances ?
-        Color newColor = ya1.preferences.color + ya2.preferences.color;
-        imageTest.color = newColor;
-    }
-
-    private void Update(){
-        if(Input.GetKey("space")){
-            this.ConnectArtist();
+    public void ManagePoints(){
+        for(int i = 0; i < artistList.Count; i++){
+            if(artistList[i].validConstraint){
+                satisfactionPoints += artistList[i].rewardPoints * artistList[i].pointMultiplier;
+            } else{
+                satisfactionPoints += artistList[i].rewardPoints;
+            }
+            print(satisfactionPoints);
         }
     }
 }

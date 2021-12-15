@@ -6,6 +6,8 @@ public class DragNDrop : MonoBehaviour{
     public Halls objectToSnap;
     public Button btn;
 
+    public GameManager gameManager;
+
     public bool inHall = false;
 
     private bool moving = false;
@@ -15,7 +17,7 @@ public class DragNDrop : MonoBehaviour{
     }
 
     void Update(){
-        if(moving){
+        if(moving && !gameManager.isFinished){
             Vector3 mousePos = Input.mousePosition;
 
             this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y, this.gameObject.transform.position.z);
@@ -34,6 +36,7 @@ public class DragNDrop : MonoBehaviour{
         objectToSnap.PiecePlaced(this);
     }
 
+    // pour pas que l'élément se retrouve en dehors de l'écran, marche pas vraiment // pas une priorité
     // private void ResetMousePosition(Vector3 mousePositon){
     //     // Debug.Log(mousePositon);
     //     if(mousePositon.x <= 0){

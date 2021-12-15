@@ -14,6 +14,11 @@ public class ArtistsAttributes : MonoBehaviour{
     public GameManager gameManager;
     private int randomPositionMusicStyle;
 
+    public string constraint;
+    public float rewardPoints;
+    public float pointMultiplier;
+    public bool validConstraint = false;
+
     private void Start(){
         this.FixNameReferences();
         randomPositionMusicStyle = gameManager.musicStyles.IndexOf(preferencesName);
