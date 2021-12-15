@@ -14,7 +14,7 @@ public class StopMusic : MonoBehaviour{
         btn.onClick.AddListener(Stop);
     }
 
-    private void Update() {
+    private void Update(){
         if(!musicToStop.isPlaying){
             // stop la musique si elle s'arrette
             this.gameObject.SetActive(false);

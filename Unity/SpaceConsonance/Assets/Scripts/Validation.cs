@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Validation : MonoBehaviour{
 
     public Button btn;
     public RawImage resultsImage;
     public GameManager gameManager;
+
+    public List<ArtistsAttributes> artistList;
 
     public Halls halls;
 
@@ -29,7 +32,7 @@ public class Validation : MonoBehaviour{
             if(canValidate){
                 gameManager.isFinished = true;
 
-                gameManager.ManagePoints();
+                gameManager.ManagePoints(artistList);
 
                 endMessage = gameManager.satisfactionPoints >= gameManager.enoughPoints ? "Bravo !" : "Le public n'a pas été convaincu par le festival";
 
