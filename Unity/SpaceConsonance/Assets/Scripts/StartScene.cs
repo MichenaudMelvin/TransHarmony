@@ -4,13 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour{
 
+    public string sceneName;
     public Button btn;
 
     private void Start(){
-        btn.onClick.AddListener(StartGame);
+        btn.onClick.AddListener(ChangeScene);
     }
 
-    private void StartGame(){
-        SceneManager.LoadScene("ParcExpo");
+    private void ChangeScene(){
+        SceneManager.LoadScene(sceneName);
     }
 }

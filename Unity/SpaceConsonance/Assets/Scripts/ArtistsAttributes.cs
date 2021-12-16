@@ -36,59 +36,59 @@ public class ArtistsAttributes : MonoBehaviour{
 
     private void changeConstraintText(){
         if(constraint == "LikePlayNearTechno"){
-            constraintText.text = "Aime jouer à coté d'un groupe de Techno";
+            constraintText.text = "Likes to play next to a Techno group";
         } else if(constraint == "DislikePlayNearTechno"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de Techno";
+            constraintText.text = "Don't likes to play next to a Techno group";
         }
 
         else if(constraint == "LikePlayNearHouse"){
-            constraintText.text = "Aime jouer à coté d'un groupe de House";
+            constraintText.text = "Likes to play next to a House group";
         } else if(constraint == "DislikePlayNearHouse"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de House";
+            constraintText.text = "Don't likes to play next to a House group";
         }
 
         else if(constraint == "LikePlayNearElectro"){
-            constraintText.text = "Aime jouer à coté d'un groupe d'Electro";
+            constraintText.text = "Likes to play next to a Electro group";
         } else if(constraint == "DislikePlayNearElectro"){
-            constraintText.text = "N'aime jouer à coté d'un groupe d'Electro";
+            constraintText.text = "Don't likes to play next to a Electro group";
         }
 
         // famille de musique 2
         else if(constraint == "LikePlayNearFunk"){
-            constraintText.text = "Aime jouer à coté d'un groupe de Funk";
+            constraintText.text = "Likes to play next to a Funk group";
         } else if(constraint == "DislikePlayNearFunk"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de Funk";
+            constraintText.text = "Don't likes to play next to a Funk group";
         }
 
         else if(constraint == "LikePlayNearRap"){
-            constraintText.text = "Aime jouer à coté d'un groupe de Rap";
+            constraintText.text = "Likes to play next to a Rap group";
         } else if(constraint == "DislikePlayNearRap"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de Rap";
+            constraintText.text = "Don't likes to play next to a Rap group";
         }
 
         else if(constraint == "LikePlayNearJazz"){
-            constraintText.text = "Aime jouer à coté d'un groupe de Jazz";
+            constraintText.text = "Likes to play next to a Jazz group";
         } else if(constraint == "DislikePlayNearJazz"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de Jazz";
+            constraintText.text = "Don't likes to play next to a Jazz group";
         }
 
         // famille de musique 3
         else if(constraint == "LikePlayNearRock"){
-            constraintText.text = "Aime jouer à coté d'un groupe de Rock";
+            constraintText.text = "Likes to play next to a Rock group";
         } else if(constraint == "DislikePlayNearRock"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de Rock";
+            constraintText.text = "Don't likes to play next to a Rock group";
         }
 
         else if(constraint == "LikePlayNearPunk"){
-            constraintText.text = "Aime jouer à coté d'un groupe de Punk";
+            constraintText.text = "Likes to play next to a Punk group";
         } else if(constraint == "DislikePlayNearPunk"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de Punk";
+            constraintText.text = "Don't likes to play next to a Punk group";
         }
 
         else if(constraint == "LikePlayNearMetal"){
-            constraintText.text = "Aime jouer à coté d'un groupe de Metal";
+            constraintText.text = "Likes to play next to a Metal group";
         } else if(constraint == "DislikePlayNearMetal"){
-            constraintText.text = "N'aime jouer à coté d'un groupe de Metal";
+            constraintText.text = "Don't likes to play next to a Metal group";
         }
     }
 }

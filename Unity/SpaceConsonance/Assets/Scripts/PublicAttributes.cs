@@ -6,6 +6,7 @@ public class PublicAttributes : MonoBehaviour{
     public RawImage preferences;
 
     public GameManager gameManager;
+    public Text debugText;
 
     public string preferencesName0;
     public string preferencesName1;
@@ -53,5 +54,6 @@ public class PublicAttributes : MonoBehaviour{
         }
 
         gameManager.changePrefrenceColor(preferences, randomPositionMusicStyle0, randomPositionMusicStyle1, randomPositionMusicStyle2, randomPositionMusicStyle3);
+        debugText.text = preferencesName0 + "\n" + preferencesName1 + "\n" + preferencesName2 + "\n" + preferencesName3;
     }
 }

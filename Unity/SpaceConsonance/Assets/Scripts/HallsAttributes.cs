@@ -26,17 +26,19 @@ public class HallsAttributes : MonoBehaviour{
                 // }
                 // nearHalls[0].nearArtists.Remove(nearHalls[0].nearArtists[0]);
 
-                nearHalls[0].nearArtists.RemoveAt(0); // problème ici
+                // nearHalls[0].nearArtists.RemoveAt(0); // problème ici
 
-                // possibilité de kill cette fonctionnalité
+                // possibilité de kill cette fonctionnalité (retirer l'artiste d'un hall, si la personne s'est trompé de hall, pas censé etre pénalisant)
                 // veut dire qu'une fois qu'un artiste est placé dans un hall, impossible de le bouger
                 // si c'est le cas --> l'indiquer au debut du jeu
 
-                // ici enlever la validation des contraintes des artistes
-
+                // marche a peus pres sauf pour le hall 4
+                // s'update si on l'enleve puis le remet
+                element = null;
                 artistInHall.validConstraint = false;
                 artistInHall = null;
                 artistPlaced = false;
+                nearArtists.Clear();
             }
         }
 
@@ -64,7 +66,9 @@ public class HallsAttributes : MonoBehaviour{
                     //     artistPlaced = true;
                     // }
 
-                    this.CheckArtistConstraint(i);
+                    if(artistInHall != null){
+                        this.CheckArtistConstraint(i);
+                    }
                 }
             }
         }
