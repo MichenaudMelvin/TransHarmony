@@ -66,7 +66,7 @@ public class HallsAttributes : MonoBehaviour{
                     //     artistPlaced = true;
                     // }
 
-                    if(artistInHall != null){
+                    if(artistInHall != null && !artistInHall.validConstraint){
                         this.CheckArtistConstraint(i);
                     }
                 }
@@ -76,6 +76,7 @@ public class HallsAttributes : MonoBehaviour{
 
     private void CheckArtistConstraint(int index){
         // en gros ça, pour multiplier ça [Shift+Alt+Up/Down] et remplacer le style de musique
+        // 3 familles de musiques
         // 9 styles de musiques
         // normalement c'est bon
         // téma la taille du code

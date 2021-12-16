@@ -63,7 +63,13 @@ MonoBehaviour:
   - {r: 0.23137255, g: 0.7176471, b: 0.07058824, a: 0}
   - {r: 0.8666667, g: 0.45882353, b: 0.15294118, a: 0}
   - {r: 1, g: 0.47843137, b: 0.47843137, a: 0}
-  satisfactionPoints: 0
+  satisfactionPoints: 320
   enoughPoints: 100
-  isFinished: 0
-  artistList: []
+  isFinished: 1
+  finalMusicList:
+  - Techno
+  - House
+  - Jazz
+  - Metal
+  correctMusicStyles: 1
+  mixedColor: {r: 0.509434, g: 0.21867214, b: 0.21867214, a: 0}

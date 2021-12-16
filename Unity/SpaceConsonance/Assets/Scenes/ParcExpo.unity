@@ -189,7 +189,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: constraint
-      value: LikePlayNearRap
+      value: DislikePlayNearHouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -314,6 +322,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: Freak It Out
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -569,6 +589,18 @@ PrefabInstance:
       value: Metalilou
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearTechno
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
       value: Metal
       objectReference: {fileID: 0}
@@ -680,6 +712,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: Funkyfunk Group
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearJazz
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -964,6 +1008,18 @@ PrefabInstance:
       value: Lalalar
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearRock
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
       value: Electro
       objectReference: {fileID: 0}
@@ -1095,8 +1151,24 @@ PrefabInstance:
       value: Artist (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: saucisse
+      value: '[Tooltip("Set loopQuantity to zero for infinite loop")]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: KAS:ST
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearMetal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -1304,6 +1376,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: Folly Group
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearPunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -1555,6 +1639,18 @@ PrefabInstance:
       value: Eighty
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearFunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
       value: Funk
       objectReference: {fileID: 0}
@@ -1666,6 +1762,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: Kind of Guru
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearRap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -1803,6 +1911,18 @@ PrefabInstance:
       value: Vapa
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearPunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
       value: House
       objectReference: {fileID: 0}
@@ -1917,7 +2037,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: constraint
-      value: DislikePlayNearTechno
+      value: LikePlayNearRap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -2044,6 +2172,18 @@ PrefabInstance:
       value: JazzyJazzou
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearFunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
       value: Jazz
       objectReference: {fileID: 0}
@@ -2137,6 +2277,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+--- !u!114 &1633106193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1066394501241514605, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+  m_PrefabInstance: {fileID: 7151109928152917678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df3046af83f3134abea2622b5513f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1639455007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2155,6 +2306,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: Vinicius Honorio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearTechno
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -2275,6 +2438,18 @@ PrefabInstance:
       value: Voice Of Baceprot
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearMetal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
       value: Metal
       objectReference: {fileID: 0}
@@ -2386,6 +2561,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: Aleksandir
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearHouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -2521,6 +2708,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: El Combo Batanga
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearJazz
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -2866,6 +3065,18 @@ PrefabInstance:
       value: Yann Tiersen
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: LikePlayNearElectro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
       value: Electro
       objectReference: {fileID: 0}
@@ -2977,6 +3188,18 @@ PrefabInstance:
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: artistName
       value: Komodor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: constraint
+      value: DislikePlayNearElectro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: rewardPoints
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: pointMultiplier
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: preferencesName
@@ -3095,6 +3318,10 @@ PrefabInstance:
       propertyPath: preferences
       value: Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 2151208908697281107, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: publicAttributes
+      value: 
+      objectReference: {fileID: 1633106193}
     - target: {fileID: 2151208908697281107, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: artistList.Array.data[0]
       value: 
