@@ -13,8 +13,6 @@ public class Validation : MonoBehaviour{
 
     public Halls halls;
 
-    private string endMessage;
-
     private bool canValidate;
 
     private void Start(){
@@ -35,9 +33,7 @@ public class Validation : MonoBehaviour{
 
                 gameManager.ManagePoints(artistList, publicAttributes.publicPreferences, publicAttributes.preferences);
 
-                // endMessage = gameManager.satisfactionPoints >= gameManager.enoughPoints ? "Bravo !" : "Le public n'a pas été convaincu par le festival";
-
-                resultsImage.GetComponentInChildren<Text>().text = "Points de satisfactions accumulés " + gameManager.satisfactionPoints.ToString() + ".\n\n" + endMessage;
+                resultsImage.GetComponentInChildren<Text>().text = "Points de satisfactions accumulés " + gameManager.satisfactionPoints.ToString();
                 resultsImage.gameObject.SetActive(true);
             }
         }

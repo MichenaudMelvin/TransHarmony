@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour{
     public List<Color> musicColors;
 
     public float satisfactionPoints;
-    public int enoughPoints;
 
     public bool isFinished;
 
@@ -72,11 +71,85 @@ public class GameManager : MonoBehaviour{
             satisfactionPoints *= correctMusicStyles;
         }
 
-        // Comparer ces deux la
-        mixedColor = ((artistList[index1].preferences.color - artistList[index0].preferences.color)/2) + ((artistList[index3].preferences.color - artistList[index2].preferences.color)/2);
-        print(preferences.color);
-        print(mixedColor);
-        // convertir la couleur en décimal
-        // et faire un rapprochement entre les deux nombres
+        // mixedColor = ((artistList[index1].preferences.color - artistList[index0].preferences.color)/2) + ((artistList[index3].preferences.color - artistList[index2].preferences.color)/2);
+
+        // // téma l'enfer, et c'est meme pas bon
+        // RGB data = new RGB((int)Mathf.Round(Mathf.Abs(mixedColor.r * 255)), (int)Mathf.Round(Mathf.Abs(mixedColor.g * 255)), (int)Mathf.Round(Mathf.Abs(mixedColor.b * 255)));
+        // string decimalMixedColor = RGBToHexadecimal(data);
+        // RGB data2 = new RGB((int)Mathf.Round(Mathf.Abs(preferences.color.r * 255)), (int)Mathf.Round(Mathf.Abs(preferences.color.g * 255)), (int)Mathf.Round(Mathf.Abs(preferences.color.b * 255)));
+        // string decimalPreferences = RGBToHexadecimal(data2);
+
+        // int newDecimalMixedColor = int.Parse(decimalMixedColor, System.Globalization.NumberStyles.HexNumber);
+        // int newDecimalPreferences = int.Parse(decimalPreferences, System.Globalization.NumberStyles.HexNumber);
+
+        // print(newDecimalMixedColor);
+        // print(newDecimalPreferences);
+        // if(newDecimalMixedColor > newDecimalPreferences){
+        //     print(((newDecimalPreferences - newDecimalMixedColor) / newDecimalPreferences) * 100);
+        // } else {
+        //     print(((newDecimalMixedColor - newDecimalPreferences) / newDecimalMixedColor) * 100);
+        // }
+    }
+
+    // pris d'ici : https://www.programmingalgorithms.com/algorithm/rgb-to-hexadecimal/
+    public struct RGB{
+        private int _r;
+        private int _g;
+        private int _b;
+
+        public RGB(int r, int g, int b){
+            this._r = r;
+            this._g = g;
+            this._b = b;
+        }
+
+        public int R{
+            get { return this._r; }
+            set { this._r = value; }
+        }
+
+        public int G{
+            get { return this._g; }
+            set { this._g = value; }
+        }
+
+        public int B{
+            get { return this._b; }
+            set { this._b = value; }
+        }
+
+        public bool Equals(RGB rgb){
+            return (this.R == rgb.R) && (this.G == rgb.G) && (this.B == rgb.B);
+        }
+    }
+
+    public static string RGBToHexadecimal(RGB rgb){
+        string rs = DecimalToHexadecimal(rgb.R);
+        string gs = DecimalToHexadecimal(rgb.G);
+        string bs = DecimalToHexadecimal(rgb.B);
+
+        return rs + gs + bs;
+    }
+
+    private static string DecimalToHexadecimal(int dec){
+        if (dec <= 0)
+            return "00";
+
+        int hex = dec;
+        string hexStr = string.Empty;
+
+        while (dec > 0)
+        {
+            hex = dec % 16;
+
+            if (hex < 10)
+                hexStr = hexStr.Insert(0, System.Convert.ToChar(hex + 48).ToString());
+            else
+                hexStr = hexStr.Insert(0, System.Convert.ToChar(hex + 55).ToString());
+
+            dec /= 16;
+        }
+
+        return hexStr;
     }
 }
