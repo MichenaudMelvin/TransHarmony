@@ -4,8 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour{
 
-    public string sceneName;
-    public Button btn;
+    [SerializeField]
+    private string sceneName;
+
+    [SerializeField]
+    private Button btn;
 
     private void Start(){
         btn.onClick.AddListener(ChangeScene);
@@ -14,4 +17,5 @@ public class StartScene : MonoBehaviour{
     private void ChangeScene(){
         SceneManager.LoadScene(sceneName);
     }
+
 }

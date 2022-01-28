@@ -3,37 +3,40 @@ using UnityEngine.UI;
 
 public class DragNDrop : MonoBehaviour{
 
-    public Halls objectToSnap;
-    public Button btn;
+    [SerializeField]
+    private ArtistsAttributes _objectToSnap;
 
-    public GameManager gameManager;
+    [SerializeField]
+    private Button _btn;
 
-    public bool inHall = false;
+    [SerializeField]
+    private GameManager _gameManager;
 
-    private bool moving = false;
+    // private bool _isPlaced = false;
 
-    void Start(){
-        btn.onClick.AddListener(MoveElement);
+    private bool _moving = false;
+
+    private void Start(){
+        _btn.onClick.AddListener(MoveElement);
     }
 
-    void Update(){
-        if(moving && !gameManager.isFinished){
+    private void Update(){
+        if(_moving){
             Vector3 mousePos = Input.mousePosition;
 
             this.gameObject.transform.position = new Vector3(mousePos.x, mousePos.y, this.gameObject.transform.position.z);
-            // this.ResetMousePosition(mousePos);
-        } else if(!moving){
+        } else if(!_moving){
             this.StopElement();
         }
     }
 
     private void MoveElement(){
-        inHall = false;
-        moving = moving == true ? false : true;
+        // _isPlaced = false;
+        _moving = _moving == true ? false : true;
     }
 
     private void StopElement(){
-        objectToSnap.PiecePlaced(this);
+        // _objectToSnap.PiecePlaced(this);
     }
 
     // pour pas que l'élément se retrouve en dehors de l'écran, marche pas vraiment // pas une priorité

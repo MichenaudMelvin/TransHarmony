@@ -3,18 +3,19 @@ using UnityEngine.UI;
 
 public class PlayMusic : MonoBehaviour{
 
-    public Button btn;
-    public AudioSource musicToPlay;
+    [SerializeField]
+    private Button _btn;
 
-    public GameManager gameManager;
+    [SerializeField]
+    private AudioSource _musicToPlay;
 
     private void Start(){
-        btn.onClick.AddListener(Play);
+        _btn.onClick.AddListener(Play);
     }
 
     private void Play(){
-        if(musicToPlay.clip != null && !gameManager.isFinished){
-            musicToPlay.Play();
+        if(_musicToPlay.clip != null){
+            _musicToPlay.Play();
         }
     }
 }

@@ -1,12 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ChangeHallNames : MonoBehaviour{
 
-    public HallsAttributes hall;
-    public Text textToChange;
+    [SerializeField]
+    private HallsAttributes _hall;
+
+    [SerializeField]
+    private TextMesh _textToChange;
 
     private void Start(){
-        textToChange.text = hall.name;
+        _textToChange.text = _hall.name;
     }
 }

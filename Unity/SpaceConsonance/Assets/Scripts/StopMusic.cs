@@ -3,28 +3,30 @@ using UnityEngine.UI;
 
 public class StopMusic : MonoBehaviour{
 
-    public Button btn;
-    public Button playBtn;
+    [SerializeField]
+    private Button _btn;
 
-    public AudioSource musicToStop;
+    [SerializeField]
+    private Button _playBtn;
 
-    public GameManager gameManager;
+    [SerializeField]
+    private AudioSource _musicToStop;
 
     private void Start(){
-        btn.onClick.AddListener(Stop);
+        _btn.onClick.AddListener(Stop);
     }
 
     private void Update(){
-        if(!musicToStop.isPlaying){
+        if(!_musicToStop.isPlaying){
             // stop la musique si elle s'arrette
             this.gameObject.SetActive(false);
-            playBtn.gameObject.SetActive(true);
+            _playBtn.gameObject.SetActive(true);
         }
     }
 
     private void Stop(){
-        if(musicToStop.clip != null && !gameManager.isFinished){
-            musicToStop.Stop();
+        if(_musicToStop.clip != null){
+            _musicToStop.Stop();
         }
     }
 }
