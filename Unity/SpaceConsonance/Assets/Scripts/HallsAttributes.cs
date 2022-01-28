@@ -3,30 +3,39 @@ using UnityEngine;
 
 public class HallsAttributes : MonoBehaviour{
 
-    [SerializeField]
-    private GameManager _gameManager;
-
     [Tooltip("GameObject empty où sont placés tout les artistes créés")]
     [SerializeField]
-    private GameObject _artistContainers;
+    private Transform _artistContainers;
 
-    [Tooltip("GameObject empty où sont placés tout les halls")]
-    [SerializeField]
-    private GameObject _hallsContainers;
+    private ArtistsAttributes _artistInHall;
+
+    private Transform _artistPlacement;
 
     private void Start(){
-        // _hallsContainers.GetComponentInChildren<ArtistsAttributes>()
-        this.ChangeArtist();
+        _artistPlacement = this.transform.Find("ArtistPlacement");
+
+        Transform newArtist = _artistContainers.GetChild(Random.Range(1, _artistContainers.childCount));
+        _artistInHall = newArtist.GetComponent<ArtistsAttributes>();
+        this.SetupArtist();
     }
 
-    private void Update(){
-        if(_gameManager.GetTime() <= 0f){
-            this.ChangeArtist();
+    public void ChangeArtist(){
+        _artistInHall.gameObject.SetActive(false);
+        _artistInHall.transform.SetPositionAndRotation(new Vector3(), new Quaternion());
+
+        while(_artistInHall.GetStatus()){
+            print("change");
+            Transform newArtist = _artistContainers.GetChild(Random.Range(1, _artistContainers.childCount));
+            _artistInHall = newArtist.GetComponent<ArtistsAttributes>();
         }
+
+        this.SetupArtist();
     }
 
-    private void ChangeArtist(){
-
+    private void SetupArtist(){
+        _artistInHall.gameObject.SetActive(true);
+        _artistInHall.SetStatus(true);
+        _artistInHall.transform.SetPositionAndRotation(_artistPlacement.position, new Quaternion());
     }
 
 }

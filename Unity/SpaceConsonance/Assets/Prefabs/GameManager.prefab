@@ -43,36 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff4258c3be1e143ba17c2abaec3ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicStyles:
-  - Techno
-  - House
-  - Electro
-  - Funk
-  - Rap
-  - Jazz
-  - Rock
-  - Punk
-  - Metal
-  musicColors:
-  - {r: 0.92941177, g: 0.15294118, b: 0.9843137, a: 0}
-  - {r: 0.45882353, g: 0.98039216, b: 0.14117648, a: 0}
-  - {r: 0.14117648, g: 0.6784314, b: 0.98039216, a: 0}
-  - {r: 0.98039216, g: 0.9411765, b: 0.14117648, a: 0}
-  - {r: 0.98039216, g: 0.14117648, b: 0.14117648, a: 0}
-  - {r: 0.14117648, g: 0.98039216, b: 0.94509804, a: 0}
-  - {r: 0.23137255, g: 0.7176471, b: 0.07058824, a: 0}
-  - {r: 0.8666667, g: 0.45882353, b: 0.15294118, a: 0}
-  - {r: 1, g: 0.47843137, b: 0.47843137, a: 0}
-  satisfactionPoints: 0
-  isFinished: 1
-  finalMusicList:
-  - Techno
-  - House
-  - Electro
-  - Funk
-  correctMusicStyles: 0
-  mixedColor: {r: 0, g: 0, b: 0, a: 0}
-  index0: -1
-  index1: -1
-  index2: -1
-  index3: -1
+  _timeOfADay: 300
+  _timerText: {fileID: 0}
+  _dayText: {fileID: 0}
+  resultImage: {fileID: 0}
+  _listHalls:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
