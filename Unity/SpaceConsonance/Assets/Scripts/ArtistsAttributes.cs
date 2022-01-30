@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ArtistsAttributes : MonoBehaviour{
 
@@ -16,7 +17,6 @@ public class ArtistsAttributes : MonoBehaviour{
 
     [SerializeField]
     private AudioSource _music;
-
 
     [SerializeField]
     private GameManager _gameManager;
@@ -43,4 +43,11 @@ public class ArtistsAttributes : MonoBehaviour{
 
     public void SetStatus(bool boolean){_alreadyPerform = boolean;}
 
+    public void PiecePlaced(DragNDrop piece){
+        if(Mathf.Abs(piece.transform.position.x - this.transform.position.x) <= 100f && Mathf.Abs(piece.transform.position.y - this.transform.position.y) <= 100f && this.transform.eulerAngles.y ==0){
+            piece.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+            Destroy(piece);
+            // ajouter des points ici toussa toussa
+        }
+    }
 }

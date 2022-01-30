@@ -24,7 +24,6 @@ public class HallsAttributes : MonoBehaviour{
         _artistInHall.transform.SetPositionAndRotation(new Vector3(), new Quaternion());
 
         while(_artistInHall.GetStatus()){
-            print("change");
             Transform newArtist = _artistContainers.GetChild(Random.Range(1, _artistContainers.childCount));
             _artistInHall = newArtist.GetComponent<ArtistsAttributes>();
         }

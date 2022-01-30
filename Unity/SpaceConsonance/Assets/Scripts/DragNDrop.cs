@@ -1,23 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class DragNDrop : MonoBehaviour{
 
     [SerializeField]
     private ArtistsAttributes _objectToSnap;
 
     [SerializeField]
-    private Button _btn;
-
-    [SerializeField]
     private GameManager _gameManager;
-
-    // private bool _isPlaced = false;
 
     private bool _moving = false;
 
     private void Start(){
-        _btn.onClick.AddListener(MoveElement);
+        this.GetComponent<Button>().onClick.AddListener(MoveElement);
+
+        // juste pour les différencier
+        this.GetComponent<RawImage>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
     }
 
     private void Update(){
@@ -31,12 +30,11 @@ public class DragNDrop : MonoBehaviour{
     }
 
     private void MoveElement(){
-        // _isPlaced = false;
         _moving = _moving == true ? false : true;
     }
 
     private void StopElement(){
-        // _objectToSnap.PiecePlaced(this);
+        _objectToSnap.PiecePlaced(this);
     }
 
     // pour pas que l'élément se retrouve en dehors de l'écran, marche pas vraiment // pas une priorité

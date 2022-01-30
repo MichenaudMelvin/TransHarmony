@@ -22,6 +22,12 @@ public class GameManager : MonoBehaviour{
     private Text _dayText;
     private string _dayTextPrefix;
 
+    [SerializeField]
+    private Slider _sliderTimer;
+
+    [SerializeField]
+    private Gradient _sliderGradient;
+
     [Space(10)]
 
     [Header("UI Results")]
@@ -31,8 +37,11 @@ public class GameManager : MonoBehaviour{
     [Space(10)]
 
     [Header("Halls")]
+
     [SerializeField]
-    private List<HallsAttributes> _listHalls;
+    private Transform _hallsContainer;
+
+    private List<HallsAttributes> _listHalls = new List<HallsAttributes>{};
 
     private void Start(){
         _timeLeft = _timeOfADay;
@@ -41,6 +50,12 @@ public class GameManager : MonoBehaviour{
         _timerTextPrefix = _timerText.text;
         _dayTextPrefix = _dayText.text;
         _dayText.text = _dayTextPrefix + _day.ToString();
+        _sliderTimer.maxValue = _timeOfADay;
+        _sliderTimer.value = _sliderTimer.maxValue;
+
+        for(int i = 0; i < _hallsContainer.childCount; i++){
+            _listHalls.Add(_hallsContainer.GetChild(i).GetComponent<HallsAttributes>());
+        }
     }
 
     private void Update(){
@@ -52,6 +67,8 @@ public class GameManager : MonoBehaviour{
             _timeLeft -= Time.deltaTime;
 
             _timerText.text = _timerTextPrefix + ((int)_timeLeft).ToString() + "s";
+            _sliderTimer.value = _timeLeft;
+            _sliderTimer.transform.Find("Fill").GetComponent<Image>().color = _sliderGradient.Evaluate(_sliderTimer.normalizedValue);
 
             if(_timeLeft <= 0f){
                 _day += 1;

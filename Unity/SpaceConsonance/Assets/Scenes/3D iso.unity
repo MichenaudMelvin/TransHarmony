@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &4133912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2591674855095699815, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+  m_PrefabInstance: {fileID: 3404696805194918510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8706904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,7 +753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130802654}
   m_Layer: 0
-  m_Name: Halls
+  m_Name: HallsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1484,12 +1495,64 @@ PrefabInstance:
       objectReference: {fileID: 582318123}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _timeOfADay
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: resultImage
       value: 
       objectReference: {fileID: 3404696805194918512}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderTimer
+      value: 
+      objectReference: {fileID: 4133912}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _hallsContainer
+      value: 
+      objectReference: {fileID: 130802654}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 1609049165}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.ctime1
+      value: 35081
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.key2.g
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _listHalls.Array.data[0]
       value: 
@@ -1506,6 +1569,10 @@ PrefabInstance:
       propertyPath: _listHalls.Array.data[3]
       value: 
       objectReference: {fileID: 275217686}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _sliderGradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6157,6 +6224,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1158820212361790715, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
   m_PrefabInstance: {fileID: 1605054488}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609049165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+  m_PrefabInstance: {fileID: 3404696805194918510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bc5454ad22566478d1a52dafa0863a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1641471450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8591,6 +8669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResultsPopUpImage
       objectReference: {fileID: 0}
+    - target: {fileID: 783238027579459315, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_Name
+      value: Command
+      objectReference: {fileID: 0}
     - target: {fileID: 1270075037755141264, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8611,9 +8693,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3550964335217293761, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550964335217293761, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545302602058936178, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545302602058936178, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5369246737538304206, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_Name
       value: ResultsText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5741275331026431667, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395737283019526561, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_Name
+      value: CommandesContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _hallsContainer
+      value: 
+      objectReference: {fileID: 130802654}
+    - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _commandForHalls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_RootOrder
