@@ -11,6 +11,10 @@ public class CommandAttributes : MonoBehaviour{
 
     private Vector2 _positionToSpawn;
 
+    [SerializeField]
+    [Range(10f, 25f)]
+    private float _availableTime;
+
     private void Start(){
         _hallName.text = _hallToGo;
 
@@ -20,6 +24,17 @@ public class CommandAttributes : MonoBehaviour{
         // this.GetComponent<RectTransform>().anchoredPosition = new Vector2(this.GetComponent<RectTransform>().sizeDelta.x/2, -(this.GetComponent<RectTransform>().sizeDelta.y/2));
 
         this.SetPosition();
+    }
+
+    private void Update(){
+        this.ManageTimer();
+
+    }
+
+    private void ManageTimer(){
+        _availableTime -= Time.deltaTime;
+
+        if(_availableTime <= 0){Destroy(this.gameObject);}
     }
 
     private void SetPosition(){this.GetComponent<RectTransform>().anchoredPosition = _positionToSpawn;}

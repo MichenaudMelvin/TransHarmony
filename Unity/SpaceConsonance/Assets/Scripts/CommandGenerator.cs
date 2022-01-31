@@ -42,7 +42,7 @@ public class CommandGenerator : MonoBehaviour{
     }
 
     private void CreateCommands(){
-        if(this.transform.childCount < _maxCommandNumber && _gameManager.GetTime() > 0){
+        if(this.transform.childCount < _maxCommandNumber && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist()){
             CommandAttributes newCommand = Instantiate(_commandToGenerate, this.transform);
             newCommand.SetPosition(new Vector2((newCommand.GetComponent<RectTransform>().sizeDelta.x * (this.transform.childCount-1)) + (_spaceBetweenCommands * this.transform.childCount) + ((newCommand.GetComponent<RectTransform>().sizeDelta.x/2) - _spaceBetweenCommands), -(newCommand.GetComponent<RectTransform>().sizeDelta.y/2)));
 

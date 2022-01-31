@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hallName: {fileID: 8787569699681622673}
+  _availableTime: 10
 --- !u!1 &4042972598902118082
 GameObject:
   m_ObjectHideFlags: 0

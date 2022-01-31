@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour{
 
     [Header("UI Results")]
     [SerializeField]
-    private RawImage resultImage;
+    private RawImage _resultImage;
 
     [Space(10)]
 
@@ -42,6 +42,15 @@ public class GameManager : MonoBehaviour{
     private Transform _hallsContainer;
 
     private List<HallsAttributes> _listHalls = new List<HallsAttributes>{};
+
+    [Space(10)]
+
+    [Header("Artists")]
+    [Tooltip("GameObject empty où sont placés tout les artistes créés")]
+    [SerializeField]
+    private Transform _artistContainers;
+
+    private bool _canChangeArtist = true;
 
     private void Start(){
         _timeLeft = _timeOfADay;
@@ -63,7 +72,7 @@ public class GameManager : MonoBehaviour{
     }
 
     private void ManageTimer(){
-        if(!resultImage.gameObject.activeInHierarchy){
+        if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist){
             _timeLeft -= Time.deltaTime;
 
             _timerText.text = _timerTextPrefix + ((int)_timeLeft).ToString() + "s";
@@ -73,9 +82,22 @@ public class GameManager : MonoBehaviour{
             if(_timeLeft <= 0f){
                 _day += 1;
                 _dayText.text = _dayTextPrefix + _day.ToString();
-                resultImage.gameObject.SetActive(true);
+                _resultImage.gameObject.SetActive(true);
+                _canChangeArtist = this.CheckArtistStatus();
             }
         }
+    }
+
+    private bool CheckArtistStatus(){
+        int artistAvailable = 0;
+        for(int i = 0; i < _artistContainers.childCount; i++){
+            if(!_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>().GetStatus()){
+                artistAvailable += 1;
+            }
+        }
+
+        if(artistAvailable > _hallsContainer.childCount){return true;}
+        else{return false;}
     }
 
     private void ManagePoints(){
@@ -87,10 +109,12 @@ public class GameManager : MonoBehaviour{
 
     public int GetDay(){return _day;}
 
+    public bool GetCanChangeArtist(){return _canChangeArtist;}
+
     public void RestartDay(){
         _timeLeft = _timeOfADay;
 
-        resultImage.gameObject.SetActive(false);
+        _resultImage.gameObject.SetActive(false);
 
         for(int i = 0; i < _listHalls.Count; i++){
             _listHalls[i].ChangeArtist();

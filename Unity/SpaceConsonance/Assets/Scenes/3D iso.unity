@@ -1256,6 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _artistContainers: {fileID: 1868080434}
+  _gameManager: {fileID: 453508979}
 --- !u!1001 &280330727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1495,10 +1496,14 @@ PrefabInstance:
       objectReference: {fileID: 582318123}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _timeOfADay
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: resultImage
+      value: 
+      objectReference: {fileID: 3404696805194918512}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _resultImage
       value: 
       objectReference: {fileID: 3404696805194918512}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
@@ -1509,6 +1514,10 @@ PrefabInstance:
       propertyPath: _hallsContainer
       value: 
       objectReference: {fileID: 130802654}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _artistContainers
+      value: 
+      objectReference: {fileID: 1868080434}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _commandsContainer
       value: 
@@ -1719,6 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _artistContainers: {fileID: 1868080434}
+  _gameManager: {fileID: 453508979}
 --- !u!1001 &373315744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3574,6 +3584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _artistContainers: {fileID: 1868080434}
+  _gameManager: {fileID: 453508979}
 --- !u!4 &765946869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3629670176184919011, guid: 197af923d8ff81748b7faafbf6cae3a8, type: 3}
@@ -7825,6 +7836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _artistContainers: {fileID: 1868080434}
+  _gameManager: {fileID: 453508979}
 --- !u!4 &1942723455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ff379dbde116b0042aeabbe9bb82054d, type: 3}
