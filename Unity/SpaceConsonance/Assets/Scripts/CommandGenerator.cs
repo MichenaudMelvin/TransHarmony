@@ -60,4 +60,7 @@ public class CommandGenerator : MonoBehaviour{
         }
     }
 
+    // public functions
+    public int GetMaxCommandNumber(){return _maxCommandNumber;}
+
 }

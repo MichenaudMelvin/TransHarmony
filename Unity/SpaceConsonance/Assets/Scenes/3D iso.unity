@@ -8681,6 +8681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResultsPopUpImage
       objectReference: {fileID: 0}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
     - target: {fileID: 783238027579459315, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_Name
       value: Command

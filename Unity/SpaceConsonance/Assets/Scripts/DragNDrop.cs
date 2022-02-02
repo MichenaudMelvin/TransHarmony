@@ -7,7 +7,6 @@ public class DragNDrop : MonoBehaviour{
     [SerializeField]
     private ArtistsAttributes _objectToSnap;
 
-    [SerializeField]
     private GameManager _gameManager;
 
     private bool _moving = false;
@@ -16,7 +15,7 @@ public class DragNDrop : MonoBehaviour{
         this.GetComponent<Button>().onClick.AddListener(MoveElement);
 
         // juste pour les différencier
-        this.GetComponent<RawImage>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
+        // this.GetComponent<RawImage>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
     }
 
     private void Update(){
@@ -36,6 +35,9 @@ public class DragNDrop : MonoBehaviour{
     private void StopElement(){
         _objectToSnap.PiecePlaced(this);
     }
+
+    // public functions
+    public void SetGamemanager(GameManager gameManagerVariable){_gameManager = gameManagerVariable;}
 
     // pour pas que l'élément se retrouve en dehors de l'écran, marche pas vraiment // pas une priorité
     // private void ResetMousePosition(Vector3 mousePositon){
