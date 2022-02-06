@@ -194,6 +194,10 @@ PrefabInstance:
       value: ZIAK
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Hip hop
       objectReference: {fileID: 0}
@@ -297,6 +301,10 @@ PrefabInstance:
       propertyPath: _name
       value: LUJIPEKA
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Hip hop / pop
@@ -433,6 +441,10 @@ PrefabInstance:
       value: CHEAP HOUSE ft. ARNAUD REBOTINI
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Techno jazz
       objectReference: {fileID: 0}
@@ -506,6 +518,10 @@ PrefabInstance:
       propertyPath: _name
       value: KAS:ST
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Techno
@@ -581,6 +597,10 @@ PrefabInstance:
       value: ZAZU
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Global house
       objectReference: {fileID: 0}
@@ -655,6 +675,10 @@ PrefabInstance:
       value: TANKUS THE HENGE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Rock
       objectReference: {fileID: 0}
@@ -728,6 +752,10 @@ PrefabInstance:
       propertyPath: _name
       value: MONSIEUR DOUMANI
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Rock psych\xE9d\xE9lique chypriote"
@@ -867,6 +895,10 @@ PrefabInstance:
       value: NOISY
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Breakbeat / hip hop
       objectReference: {fileID: 0}
@@ -940,6 +972,10 @@ PrefabInstance:
       propertyPath: _name
       value: RODRIGO CUEVAS
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Queer folk asturienne
@@ -1015,6 +1051,10 @@ PrefabInstance:
       value: ALEKSANDIR
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: House
       objectReference: {fileID: 0}
@@ -1089,6 +1129,10 @@ PrefabInstance:
       value: 'BATIDA apresenta : IKOQWE'
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Hip hop afro-electro
       objectReference: {fileID: 0}
@@ -1162,6 +1206,10 @@ PrefabInstance:
       propertyPath: _name
       value: ANATOLE TRANSE
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Beat & mods
@@ -1317,6 +1365,10 @@ PrefabInstance:
       value: EL COMBO BATANGA
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Boogaloo / rhythm and blues
       objectReference: {fileID: 0}
@@ -1390,6 +1442,10 @@ PrefabInstance:
       propertyPath: _name
       value: BRIEG GUERVENO
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Neofolk breton
@@ -1465,6 +1521,10 @@ PrefabInstance:
       value: "G\u042FEG"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Dembow
       objectReference: {fileID: 0}
@@ -1510,6 +1570,10 @@ PrefabInstance:
       propertyPath: _sliderTimer
       value: 
       objectReference: {fileID: 4133912}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _musicManager
+      value: 
+      objectReference: {fileID: 1419044333}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _hallsContainer
       value: 
@@ -1696,6 +1760,10 @@ PrefabInstance:
       value: EIGHTY
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Disco funk
       objectReference: {fileID: 0}
@@ -1788,6 +1856,10 @@ PrefabInstance:
       propertyPath: _name
       value: W!ZARD
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Post-hardcore
@@ -1958,6 +2030,10 @@ PrefabInstance:
       propertyPath: _name
       value: SPACE 92
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Techno
@@ -2179,6 +2255,10 @@ PrefabInstance:
       value: VAPA
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Tech-house
       objectReference: {fileID: 0}
@@ -2252,6 +2332,10 @@ PrefabInstance:
       propertyPath: _name
       value: FREAK IT OUT
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Prog rock / rap / post-jazz
@@ -2327,6 +2411,10 @@ PrefabInstance:
       value: KOSMO PILOT
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Sono mondiale
       objectReference: {fileID: 0}
@@ -2401,6 +2489,10 @@ PrefabInstance:
       value: POUSS-DISK
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Sono mondiale
       objectReference: {fileID: 0}
@@ -2474,6 +2566,10 @@ PrefabInstance:
       propertyPath: _name
       value: FLO/SO
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Musiques \xE9lectroniques"
@@ -2565,6 +2661,10 @@ PrefabInstance:
       value: SUSOBRINO
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Musique \xE9lectronique andine"
       objectReference: {fileID: 0}
@@ -2638,6 +2738,10 @@ PrefabInstance:
       propertyPath: _name
       value: REY SAPIENZ
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Congo techno
@@ -2779,6 +2883,10 @@ PrefabInstance:
       value: BYE BYE PANKE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Techno
       objectReference: {fileID: 0}
@@ -2853,6 +2961,10 @@ PrefabInstance:
       value: MASMA DREAM WORLD
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Rituel de gu\xE9rison"
       objectReference: {fileID: 0}
@@ -2926,6 +3038,10 @@ PrefabInstance:
       propertyPath: _name
       value: BAD PELICANS
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Garage punk
@@ -3012,6 +3128,10 @@ PrefabInstance:
       value: MY BABY
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Pop
       objectReference: {fileID: 0}
@@ -3085,6 +3205,10 @@ PrefabInstance:
       propertyPath: _name
       value: ANDREA LASZLO DE SIMONE
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Pop orchestrale
@@ -3160,6 +3284,10 @@ PrefabInstance:
       value: "SINEAD O\u2019BRIEN"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Po\xE9sie post-punk"
       objectReference: {fileID: 0}
@@ -3233,6 +3361,10 @@ PrefabInstance:
       propertyPath: _name
       value: FOLLY GROUP
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Post-punk
@@ -3308,6 +3440,10 @@ PrefabInstance:
       value: PALOMA COLOMBE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Musiques \xE9lectroniques arabes et moyen-orientales"
       objectReference: {fileID: 0}
@@ -3381,6 +3517,10 @@ PrefabInstance:
       propertyPath: _name
       value: URBAN VILLAGE
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Jazz folk sud-africain
@@ -3552,6 +3692,10 @@ PrefabInstance:
       value: WET LEG
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Pop rock
       objectReference: {fileID: 0}
@@ -3679,6 +3823,10 @@ PrefabInstance:
       propertyPath: _name
       value: GUADAL TEJAZ
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Garage rock psych\xE9d\xE9lique"
@@ -3845,6 +3993,10 @@ PrefabInstance:
       value: ZINDA REINHARDT
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: 'Electro gypsy waves '
       objectReference: {fileID: 0}
@@ -3918,6 +4070,10 @@ PrefabInstance:
       propertyPath: _name
       value: ANTOINE
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Techno downtempo
@@ -3993,6 +4149,10 @@ PrefabInstance:
       value: HENGE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Rock \xE9lectro-psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
@@ -4066,6 +4226,10 @@ PrefabInstance:
       propertyPath: _name
       value: HELLO FOREVER
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Pop psych\xE9d\xE9lique"
@@ -4141,6 +4305,10 @@ PrefabInstance:
       value: DJ PONE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Pop
       objectReference: {fileID: 0}
@@ -4214,6 +4382,10 @@ PrefabInstance:
       propertyPath: _name
       value: ANTTI PAALANEN
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Transe viking
@@ -4289,6 +4461,10 @@ PrefabInstance:
       value: INZPECTOR TANZI
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Musiques \xE9lectroniques"
       objectReference: {fileID: 0}
@@ -4362,6 +4538,10 @@ PrefabInstance:
       propertyPath: _name
       value: UTILITAIRE DISK
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Exotica
@@ -4437,6 +4617,10 @@ PrefabInstance:
       value: MAD FOXES
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Nuevo flamenco / pop
       objectReference: {fileID: 0}
@@ -4510,6 +4694,10 @@ PrefabInstance:
       propertyPath: _name
       value: VOICE OF BACEPROT
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Groove metal
@@ -4585,6 +4773,10 @@ PrefabInstance:
       value: GWENDOLINE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: New wave
       objectReference: {fileID: 0}
@@ -4659,6 +4851,10 @@ PrefabInstance:
       value: KOMODOR
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Rock prog psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
@@ -4732,6 +4928,10 @@ PrefabInstance:
       propertyPath: _name
       value: "SALIM MZ\xC9 HAMADI MOISSI : L\u2019EXPAT + MASSIWA"
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Danse
@@ -5005,6 +5205,10 @@ PrefabInstance:
       value: BARBARA RIVAGE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Pop rock
       objectReference: {fileID: 0}
@@ -5078,6 +5282,10 @@ PrefabInstance:
       propertyPath: _name
       value: KIND OF GURU
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Jazz rap
@@ -5245,7 +5453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1762946533}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1300230132
 PrefabInstance:
@@ -5306,6 +5514,10 @@ PrefabInstance:
       propertyPath: _name
       value: HEY DJAN
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Pop arm\xE9nienne"
@@ -5392,6 +5604,10 @@ PrefabInstance:
       value: IA404
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Electro-pop
       objectReference: {fileID: 0}
@@ -5471,6 +5687,10 @@ PrefabInstance:
       value: TEKE::TEKE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Eleki / surf rock psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
@@ -5544,6 +5764,10 @@ PrefabInstance:
       propertyPath: _name
       value: ALIMA ROLLAND
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Danse
@@ -5619,6 +5843,10 @@ PrefabInstance:
       value: NURI
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Afro-electro / percussions
       objectReference: {fileID: 0}
@@ -5633,6 +5861,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1158820212361790715, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
   m_PrefabInstance: {fileID: 1382031697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1419044333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8633180596233109736, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+  m_PrefabInstance: {fileID: 1698550703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a448395692d103648af8834401ff5088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1420203515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac618e96aa3eed64aa76597c2725f9ec, type: 3}
@@ -5697,6 +5936,10 @@ PrefabInstance:
       propertyPath: _name
       value: BADI
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Afro-rap
@@ -5771,6 +6014,10 @@ PrefabInstance:
       propertyPath: _name
       value: "DA\xD0I FREYR"
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Electro-pop
@@ -5851,6 +6098,10 @@ PrefabInstance:
       value: MAD FOXES
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Grunge
       objectReference: {fileID: 0}
@@ -5924,6 +6175,10 @@ PrefabInstance:
       propertyPath: _name
       value: SNOOPLOG
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Abstract hip hop
@@ -5999,6 +6254,10 @@ PrefabInstance:
       value: LB AKA LABAT
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: House / techno
       objectReference: {fileID: 0}
@@ -6072,6 +6331,10 @@ PrefabInstance:
       propertyPath: _name
       value: BOB VYLAN
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Grime punk
@@ -6147,6 +6410,10 @@ PrefabInstance:
       value: DJ PONE
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Electro-hip hop / scratch music
       objectReference: {fileID: 0}
@@ -6220,6 +6487,10 @@ PrefabInstance:
       propertyPath: _name
       value: GUILLAUME BORDEL
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Discotek
@@ -6305,6 +6576,10 @@ PrefabInstance:
       propertyPath: _name
       value: CUFTEN (LIVE A/V)
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Acid techno
@@ -6453,6 +6728,10 @@ PrefabInstance:
       value: LOHARANO
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Rock / metal malgache
       objectReference: {fileID: 0}
@@ -6466,6 +6745,88 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1158820212361790715, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
   m_PrefabInstance: {fileID: 1682795228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1698550703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1762946533}
+    m_Modifications:
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566077244548776921, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633180596233109736, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: _musicName
+      value: 
+      objectReference: {fileID: 3404696805194918513}
+    - target: {fileID: 8633180596233109736, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: _artistName
+      value: 
+      objectReference: {fileID: 3404696805194918514}
+    - target: {fileID: 8633180596233109736, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 8633180596233109736, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: _hallsContainer
+      value: 
+      objectReference: {fileID: 130802654}
+    - target: {fileID: 8633180596233109736, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: _artistContainers
+      value: 
+      objectReference: {fileID: 1868080434}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+--- !u!4 &1698550704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+  m_PrefabInstance: {fileID: 1698550703}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1709134945
 PrefabInstance:
@@ -6526,6 +6887,10 @@ PrefabInstance:
       propertyPath: _name
       value: MATHILDE & GOMINA
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Rock
@@ -6601,6 +6966,10 @@ PrefabInstance:
       value: LALALAR
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Electro-pop turque
       objectReference: {fileID: 0}
@@ -6674,6 +7043,10 @@ PrefabInstance:
       propertyPath: _name
       value: S+C+A+R+R
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Synth-pop
@@ -6749,6 +7122,10 @@ PrefabInstance:
       value: KOMODOR
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Rock psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
@@ -6822,6 +7199,10 @@ PrefabInstance:
       propertyPath: _name
       value: NITEROY
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Pop tropicale
@@ -6897,6 +7278,10 @@ PrefabInstance:
       value: LAKSA
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Musiques \xE9lectroniques"
       objectReference: {fileID: 0}
@@ -6971,6 +7356,10 @@ PrefabInstance:
       value: JANKEV
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Discoth\xE8que tropicale"
       objectReference: {fileID: 0}
@@ -7013,6 +7402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453508978}
+  - {fileID: 1698550704}
   - {fileID: 1252186130}
   - {fileID: 765946869}
   - {fileID: 3404696805194918511}
@@ -7079,6 +7469,10 @@ PrefabInstance:
       propertyPath: _name
       value: ALVAN
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Blues rock electro
@@ -7283,6 +7677,10 @@ PrefabInstance:
       value: AMYL AND THE SNIFFERS
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Punk rock
       objectReference: {fileID: 0}
@@ -7486,7 +7884,7 @@ Transform:
   - {fileID: 2048650440}
   - {fileID: 879381164}
   m_Father: {fileID: 1762946533}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1877427732
 PrefabInstance:
@@ -7547,6 +7945,10 @@ PrefabInstance:
       propertyPath: _name
       value: CHRIS DOGZOUT
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Hip hop
@@ -7656,6 +8058,10 @@ PrefabInstance:
       value: LADANIVA
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Fusion balkanique
       objectReference: {fileID: 0}
@@ -7730,6 +8136,10 @@ PrefabInstance:
       value: YANN TIERSEN
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Electro
       objectReference: {fileID: 0}
@@ -7803,6 +8213,10 @@ PrefabInstance:
       propertyPath: _name
       value: PRIYA RAGU
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: R&B
@@ -7902,6 +8316,10 @@ PrefabInstance:
       value: BLANKETMAN
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Pop rock
       objectReference: {fileID: 0}
@@ -7975,6 +8393,10 @@ PrefabInstance:
       propertyPath: _name
       value: WAQWAQ KINGDOM
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Min\u2019y\u014D electro"
@@ -8050,6 +8472,10 @@ PrefabInstance:
       value: MOLLY LEWIS
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Exotica / siffleuse
       objectReference: {fileID: 0}
@@ -8123,6 +8549,10 @@ PrefabInstance:
       propertyPath: _name
       value: RAMIN & REDA
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Musiques \xE9lectroniques"
@@ -8264,6 +8694,10 @@ PrefabInstance:
       value: SPACE 92
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Afro-pop
       objectReference: {fileID: 0}
@@ -8337,6 +8771,10 @@ PrefabInstance:
       propertyPath: _name
       value: TONN3RR3
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Electro-psych\xE9d\xE9lisme"
@@ -8412,6 +8850,10 @@ PrefabInstance:
       value: TAMAR APHEK
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Rock
       objectReference: {fileID: 0}
@@ -8485,6 +8927,10 @@ PrefabInstance:
       propertyPath: _name
       value: ABILE
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Techno
@@ -8656,6 +9102,10 @@ PrefabInstance:
       value: "OTTIS C\u0152UR"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06805f5398b474e4baeefdc953bd39b9, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Rop rock
       objectReference: {fileID: 0}
@@ -8725,10 +9175,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5369246737538304206, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_Name
-      value: ResultsText
-      objectReference: {fileID: 0}
     - target: {fileID: 5741275331026431667, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8751,7 +9197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8811,6 +9257,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3404696805194918513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4738443859382551007, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+  m_PrefabInstance: {fileID: 3404696805194918510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3404696805194918514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7420997743395183453, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+  m_PrefabInstance: {fileID: 3404696805194918510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3629670176302275238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8820,7 +9288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3629670176184919011, guid: 197af923d8ff81748b7faafbf6cae3a8, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3629670176184919011, guid: 197af923d8ff81748b7faafbf6cae3a8, type: 3}
       propertyPath: m_LocalPosition.x

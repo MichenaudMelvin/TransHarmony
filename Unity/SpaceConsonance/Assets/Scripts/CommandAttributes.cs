@@ -4,15 +4,19 @@ using UnityEngine.UI;
 public class CommandAttributes : MonoBehaviour{
 
     [Header("Halls")]
+    [Tooltip("Hall dans lequel la commande doit aller")]
     private string _hallToGo;
 
     [SerializeField]
+    [Tooltip("Texte qui permet de connaitre le hall dans lequel la commande doit aller")]
     private Text _hallName;
 
+    [Tooltip("La position où spawn la commande (Position en UI)")]
     private Vector2 _positionToSpawn;
 
     [SerializeField]
     [Range(10f, 25f)]
+    [Tooltip("Temps restant avant que la commande disparaisse (lifetime)")]
     private float _availableTime;
 
     private void Start(){
@@ -28,9 +32,9 @@ public class CommandAttributes : MonoBehaviour{
 
     private void Update(){
         this.ManageTimer();
-
     }
 
+    // detruit les commande à partir d'un temps donné
     private void ManageTimer(){
         _availableTime -= Time.deltaTime;
 

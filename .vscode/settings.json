@@ -31,8 +31,6 @@
         "**/*.flare":true,
         "**/*.mat":true,
         "**/*.meta":true,
-        "**/*.prefab":true,
-        "**/*.unity":true,
         "**/Library/":true,
         "**/library/":true,
         "**/obj/":true,

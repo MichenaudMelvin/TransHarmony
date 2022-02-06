@@ -1,18 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
+[RequireComponent(typeof(RectTransform), typeof(Button))]
 public class DragNDrop : MonoBehaviour{
 
     [SerializeField]
+    [Tooltip("Element auquel s'accrocher")]
     private ArtistsAttributes _objectToSnap;
 
+    [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
+    [SerializeField]
+    [Tooltip("Bouton qu'il y a sur l'élément à drag n drop (self)")]
+    private Button _btn;
+
+    [Tooltip("Si l'élément est en train de bouger ou non")]
     private bool _moving = false;
 
     private void Start(){
-        this.GetComponent<Button>().onClick.AddListener(MoveElement);
+        _btn.onClick.AddListener(MoveElement);
 
         // juste pour les différencier
         // this.GetComponent<RawImage>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
@@ -29,6 +36,7 @@ public class DragNDrop : MonoBehaviour{
     }
 
     private void MoveElement(){
+        print("ya");
         _moving = _moving == true ? false : true;
     }
 
@@ -37,6 +45,7 @@ public class DragNDrop : MonoBehaviour{
     }
 
     // public functions
+    // donne la référence GameManager quand l'élément est créé
     public void SetGamemanager(GameManager gameManagerVariable){_gameManager = gameManagerVariable;}
 
     // pour pas que l'élément se retrouve en dehors de l'écran, marche pas vraiment // pas une priorité

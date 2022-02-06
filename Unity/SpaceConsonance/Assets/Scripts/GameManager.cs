@@ -7,31 +7,41 @@ public class GameManager : MonoBehaviour{
     [Header("Timer")]
     [SerializeField]
     [Range(1f, 300f)]
-    [Tooltip("60 = 1min, 300 = 5min, (temps en secondes)")]
+    [Tooltip("Temps d'une journée au festival // 60 = 1min, 300 = 5min, (temps en secondes)")]
     private float _timeOfADay = 300f;
 
+    [Tooltip("Temps restant de la journée")]
     private float _timeLeft = 0f;
 
+    [Tooltip("Nombre de jours écoulés")]
     private int _day = 0;
 
     [SerializeField]
+    [Tooltip("Temps restant de la journée (Visuel)")]
     private Text _timerText;
+    [Tooltip("Préfix du temps restant (Visuel)")]
     private string _timerTextPrefix;
 
     [SerializeField]
+    [Tooltip("Nombre de jours écoulés (Visuel)")]
     private Text _dayText;
+
+    [Tooltip("Préfix des jours restant (Visuel)")]
     private string _dayTextPrefix;
 
     [SerializeField]
+    [Tooltip("Timer sous forme de slider")]
     private Slider _sliderTimer;
 
     [SerializeField]
+    [Tooltip("Dégradé du Slider Timer")]
     private Gradient _sliderGradient;
 
     [Space(10)]
 
     [Header("UI Results")]
     [SerializeField]
+    [Tooltip("Image qui donne les resultas")]
     private RawImage _resultImage;
 
     [Space(10)]
@@ -39,18 +49,28 @@ public class GameManager : MonoBehaviour{
     [Header("Halls")]
 
     [SerializeField]
+    [Tooltip("Parent qui contient tous les halls")]
     private Transform _hallsContainer;
 
+    [Tooltip("Liste contenant tous les halls")]
     private List<HallsAttributes> _listHalls = new List<HallsAttributes>{};
 
     [Space(10)]
 
     [Header("Artists")]
-    [Tooltip("GameObject empty où sont placés tout les artistes créés")]
     [SerializeField]
+    [Tooltip("Parent qui contient tous les artistes")]
     private Transform _artistContainers;
 
+    [Tooltip("Si il est encore possible de changer les artistes ou non")]
     private bool _canChangeArtist = true;
+
+    [Space(10)]
+
+    [Header("Music")]
+    [SerializeField]
+    [Tooltip("Référence au Music Manager")]
+    private MusicManager _musicManager;
 
     private void Start(){
         _timeLeft = _timeOfADay;
@@ -71,6 +91,7 @@ public class GameManager : MonoBehaviour{
         this.ManageTimer();
     }
 
+    // gère de le timer du festival entre chaque journées
     private void ManageTimer(){
         if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist){
             _timeLeft -= Time.deltaTime;
@@ -88,6 +109,7 @@ public class GameManager : MonoBehaviour{
         }
     }
 
+    // regarde parmis tous les artistes si certains non pas encore fait un concert
     private bool CheckArtistStatus(){
         int artistAvailable = 0;
         for(int i = 0; i < _artistContainers.childCount; i++){
@@ -111,6 +133,7 @@ public class GameManager : MonoBehaviour{
 
     public bool GetCanChangeArtist(){return _canChangeArtist;}
 
+    // recommence une journée
     public void RestartDay(){
         _timeLeft = _timeOfADay;
 

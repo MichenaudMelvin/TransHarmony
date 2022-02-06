@@ -9,6 +9,7 @@ public class ChangeHallNames : MonoBehaviour{
     private TextMesh _textToChange;
 
     private void Start(){
+        // écrit le nom du hall au sol
         _textToChange.text = _hall.name;
     }
 }

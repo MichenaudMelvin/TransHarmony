@@ -1,17 +1,19 @@
 using UnityEngine;
 
-
 public class HallsAttributes : MonoBehaviour{
 
-    [Tooltip("GameObject empty où sont placés tout les artistes créés")]
     [SerializeField]
+    [Tooltip("Parent qui contient tous les artistes")]
     private Transform _artistContainers;
 
+    [Tooltip("Artiste actuellement dans le hall")]
     private ArtistsAttributes _artistInHall;
 
+    [Tooltip("Position où l'artiste va être placé dans le hall")]
     private Transform _artistPlacement;
 
     [SerializeField]
+    [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
     private void Start(){
@@ -22,6 +24,7 @@ public class HallsAttributes : MonoBehaviour{
         this.SetupArtist();
     }
 
+    // permet le changement d'artiste après une journée passé dans le festival
     public void ChangeArtist(){
         _artistInHall.gameObject.SetActive(false);
         _artistInHall.transform.SetPositionAndRotation(new Vector3(), new Quaternion());
@@ -40,6 +43,7 @@ public class HallsAttributes : MonoBehaviour{
         }
     }
 
+    // Setup le nouvel artiste qui entre dans le hall
     private void SetupArtist(){
         _artistInHall.gameObject.SetActive(true);
         _artistInHall.SetStatus(true);

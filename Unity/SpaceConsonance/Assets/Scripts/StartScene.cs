@@ -5,17 +5,19 @@ using UnityEngine.SceneManagement;
 public class StartScene : MonoBehaviour{
 
     [SerializeField]
-    private string sceneName;
+    [Tooltip("La scène qui va être lancé")]
+    private string _sceneName;
 
     [SerializeField]
-    private Button btn;
+    [Tooltip("Bouton qui démarre la scène")]
+    private Button _btn;
 
     private void Start(){
-        btn.onClick.AddListener(ChangeScene);
+        _btn.onClick.AddListener(ChangeScene);
     }
 
     private void ChangeScene(){
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(_sceneName);
     }
 
 }

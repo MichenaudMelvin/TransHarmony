@@ -8,6 +8,8 @@
   - [Si Able to merge.](#si-able-to-merge)
   - [Si Can't automaticly merge.](#si-cant-automaticly-merge)
   - [Si vous avez commit sur main sans faire exprès](#si-vous-avez-commit-sur-main-sans-faire-exprès)
+- [Nommenlacture](#nommenlacture)
+  - [Dans le code](#dans-le-code)
 - [Coder sur téléphone](#coder-sur-téléphone)
 
 # Version de Unity
@@ -82,6 +84,24 @@ Vous avez finalisé ce que vous voulez intégrer au projet, pour ça il faut fus
 Utiliser l'extension "[Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)" sur [VScode](https://code.visualstudio.com/), sélectionner un commit, cliquer sur "Revert...", puis commit votre revert commit.
 
 Egalement possible avec [SourceTree](https://www.sourcetreeapp.com/), sélectionner un commit, cliquer sur "Reverse commit...", puis commit votre revert commit.
+
+# Nommenlacture
+
+CamelCase pour TOUS les fichiers et variables, aucun accents ou espaces  
+exemple : maVariableTropStylee  
+
+## Dans le code
+
+| Variable | Nommenclature |
+| -------- | ------------- |
+| private  | _myVar        |
+| public   | myVar         |
+
+| Fonction | Nommenclature |
+| -------- | ------------- |
+| private  | MyFunction()  |
+| public   | MyFunction()  |
+
 
 # Coder sur téléphone
 1. Utiliser l'application Unity Remote 5.

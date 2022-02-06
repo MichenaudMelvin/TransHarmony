@@ -5,25 +5,32 @@ public class CommandGenerator : MonoBehaviour{
 
     [Header("Commands")]
     [SerializeField]
+    [Tooltip("Prefab de la commande")]
     private CommandAttributes _commandToGenerate;
 
     [SerializeField]
+    [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
     [SerializeField]
     [Range(1, 10)]
+    [Tooltip("Nombre de commande maximales")]
     private int _maxCommandNumber;
 
     [SerializeField]
     [Range(10f, 100f)]
+    [Tooltip("Espace entre les commandes (UI)")]
     private float _spaceBetweenCommands;
 
     [Header("Halls")]
     [SerializeField]
+    [Tooltip("Parent qui contient tous les halls")]
     private Transform _hallsContainer;
 
+    [Tooltip("Liste contenant tous les halls")]
     private List<HallsAttributes> _listHalls = new List<HallsAttributes>{};
 
+    [Tooltip("Commande demandé")]
     private List<string> _commandForHalls;
 
     private void Start(){
