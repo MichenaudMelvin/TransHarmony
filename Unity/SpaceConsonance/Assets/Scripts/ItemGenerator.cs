@@ -15,7 +15,12 @@ public class ItemGenerator : MonoBehaviour{
     [Tooltip("Liste de besoins des artistes (items)")]
     private List<string> _listNeeds;
 
-    private bool hasFinishedCreateItem = false;
+    [Tooltip("Booléen pour savoir si le nombre d'items demmandé à été créé")]
+    private bool _hasFinishedCreateItems = false;
+
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les positions des items")]
+    private Transform _itemsPositions;
 
     [Space(10)]
 
@@ -28,8 +33,12 @@ public class ItemGenerator : MonoBehaviour{
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les artistes")]
+    private Transform _artistContainers;
+
     private void Start(){
-        // génère 2 fois plus d'item que de commande (pour l'instant)
+        // génère 2 fois plus d'items que de commande (pour l'instant)
         _maxItemNumber = _commandGenerator.GetMaxCommandNumber()*2;
     }
 
@@ -40,25 +49,30 @@ public class ItemGenerator : MonoBehaviour{
 
     // créé les items
     private void CreateItems(){
-        if(this.transform.childCount < _maxItemNumber && !hasFinishedCreateItem && _gameManager.GetTime() > 0){
+        if(this.transform.childCount < _maxItemNumber && !_hasFinishedCreateItems && _gameManager.GetTime() > 0){
             ItemAttributes newItem = Instantiate(_itemToGenerate, this.transform);
             newItem.SetItem(_listNeeds[Random.Range(0, _listNeeds.Count-1)]);
-            // newItem.GetComponent<DragNDrop>().SetGamemanager(_gameManager);
+            newItem.GetComponent<DragNDrop>().SetupVariables(_gameManager, _artistContainers);
+            newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
         }
 
         if(this.transform.childCount >= _maxItemNumber){
-            hasFinishedCreateItem = true;
+            _hasFinishedCreateItems = true;
         }
     }
 
     // détruits les items (à la fin de chaque journée)
     private void DestroyItems(){
+        // détruits tous les items encore restants
         if(this.transform.childCount > 0 && _gameManager.GetTime() <= 0){
             for(int i = 0; i < this.transform.childCount; i++){
                 Destroy(this.transform.GetChild(i).gameObject);
             }
+        }
 
-            hasFinishedCreateItem = false;
+        // reset pour recréer des items
+        if(_gameManager.GetTime() <= 0){
+            _hasFinishedCreateItems = false;
         }
     }
 }

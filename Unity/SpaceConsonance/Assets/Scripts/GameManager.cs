@@ -131,6 +131,8 @@ public class GameManager : MonoBehaviour{
 
     public int GetDay(){return _day;}
 
+    public Gradient GetTimerGradient(){return _sliderGradient;}
+
     public bool GetCanChangeArtist(){return _canChangeArtist;}
 
     // recommence une journée

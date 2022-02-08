@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8422009848808409523}
   - component: {fileID: 4851471760098595466}
   - component: {fileID: 7024876384151183063}
-  - component: {fileID: -6104204249089720828}
   - component: {fileID: 5539164051804856674}
+  - component: {fileID: -6104204249089720828}
   - component: {fileID: 7264379726681997044}
   m_Layer: 0
   m_Name: Item
@@ -79,20 +79,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-6104204249089720828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2716348755308242883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cb30cebf404b46468f1ffac9bc8b009, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _textName: {fileID: 6396948108659713218}
-  _image: {fileID: 7024876384151183063}
 --- !u!114 &5539164051804856674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +123,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-6104204249089720828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2716348755308242883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb30cebf404b46468f1ffac9bc8b009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textName: {fileID: 6396948108659713218}
+  _image: {fileID: 7024876384151183063}
 --- !u!114 &7264379726681997044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7423669867323484a9d65cb5f8818d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectToSnap: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
   _btn: {fileID: 5539164051804856674}
 --- !u!1 &4895643930786246596
 GameObject:

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ArtistsAttributes : MonoBehaviour{
 
@@ -17,6 +18,10 @@ public class ArtistsAttributes : MonoBehaviour{
 
     [Tooltip("Si l'artiste a déjà fait un concert")]
     private bool _alreadyPerform;
+
+    [SerializeField]
+    [Tooltip("Liste de besoins des artistes (items)")]
+    private List<string> _listNeeds;
 
     [Space(10)]
 
@@ -37,23 +42,37 @@ public class ArtistsAttributes : MonoBehaviour{
     }
 
     // public functions
-    public string Getname(){return _name;}
+    public string GetName(){return _name;}
 
     public AudioClip GetMusic(){return _music;}
 
     public bool GetStatus(){return _alreadyPerform;}
 
+    public List<string> GetListNeeds(){return _listNeeds;}
+
     public void SetStatus(bool boolean){_alreadyPerform = boolean;}
 
     // place l'item sur l'artiste et permet le snap
     public void PiecePlaced(DragNDrop piece){
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
-        print(piece.transform.position);
+        if(this.gameObject.activeInHierarchy){
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
 
-        if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 100f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 100f && this.transform.eulerAngles.y ==0){
-            piece.transform.position = new Vector3(screenPos.x, screenPos.y, screenPos.z);
-            Destroy(piece);
-            // ajouter des points ici toussa toussa
+            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 100f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 100f && this.transform.eulerAngles.y ==0){
+                Destroy(piece.gameObject);
+                // probablement faire des effets pour montrer que c'est bien comptabilisé
+                // ajouter des points ici toussa toussa
+            }
         }
     }
 }
+
+
+
+// code pour coller la UI et les gameobject dans la scene
+// public Transform target;
+// Camera cam;
+
+// void Update(){
+//     Vector3 screenPos = cam.WorldToScreenPoint(target.position);
+//     Debug.Log("target is " + screenPos.x + " pixels from the left");
+// }

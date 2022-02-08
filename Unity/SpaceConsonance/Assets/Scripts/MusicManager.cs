@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 public class MusicManager : MonoBehaviour{
 
@@ -44,7 +45,7 @@ public class MusicManager : MonoBehaviour{
 
     private void Start(){
         // pour laisser le temps à Unity d'instancier les artistes // sinon marche pas
-        StartCoroutine(LateStart(0.5f));
+        StartCoroutine(this.LateStart(0.001f));
     }
 
     private IEnumerator LateStart(float time){
@@ -59,11 +60,12 @@ public class MusicManager : MonoBehaviour{
         // this.DisplayMusicName();
     }
 
+    // gère le volume de la musique en fonciton des actions du joueur
     private void ManageVolume(){
         if(_gameManager.GetTime() > 0){
 
         }
-            // float time = _gameManager.GetTime();
+        // float time = _gameManager.GetTime();
         // time = Mathf.Lerp()
     }
 
@@ -73,9 +75,19 @@ public class MusicManager : MonoBehaviour{
         // }
     }
 
+    // affiche le nom de la musique et de l'artiste
     private void SetMusicName(){
-        _musicName.text = _audioSource.clip.name;
-        _artistName.text = _actualArtist.Getname();
+        // split le nom de la musique
+        // passe de "MonTexteTropCool" à "Mon Texte Trop Cool "
+        string[] splitedString = Regex.Split(_audioSource.clip.name, @"(?<!^)(?=[A-Z])");
+        string result = "";
+        for(int i = 0; i < splitedString.Length; i++){
+            result += splitedString[i] + " ";
+            // result += splitedString.Length != i ? splitedString[i] + " " : splitedString[i];
+        }
+
+        _musicName.text = result;
+        _artistName.text = _actualArtist.GetName();
     }
 
     // public functions

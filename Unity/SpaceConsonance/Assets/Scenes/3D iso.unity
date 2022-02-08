@@ -1555,10 +1555,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 582318123}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _timeOfADay
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: resultImage
       value: 
       objectReference: {fileID: 3404696805194918512}
@@ -1587,46 +1583,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1609049165}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.ctime1
-      value: 35081
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.ctime2
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.key0.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.key1.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.key1.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.key1.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.key2.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _listHalls.Array.data[0]
       value: 
       objectReference: {fileID: 341838789}
@@ -1642,10 +1598,6 @@ PrefabInstance:
       propertyPath: _listHalls.Array.data[3]
       value: 
       objectReference: {fileID: 275217686}
-    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: _sliderGradient.m_NumColorKeys
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9135,6 +9087,10 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 453508979}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _artistContainers
+      value: 
+      objectReference: {fileID: 1868080434}
     - target: {fileID: 783238027579459315, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_Name
       value: Command
@@ -9158,6 +9114,22 @@ PrefabInstance:
     - target: {fileID: 1445994537837404071, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_Name
       value: UIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536885450498945594, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536885450498945594, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648317491538953858, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2648317491538953858, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550964335217293761, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9191,6 +9163,10 @@ PrefabInstance:
       propertyPath: _hallsContainer
       value: 
       objectReference: {fileID: 130802654}
+    - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _artistContainers
+      value: 
+      objectReference: {fileID: 1868080434}
     - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: _commandForHalls.Array.size
       value: 1

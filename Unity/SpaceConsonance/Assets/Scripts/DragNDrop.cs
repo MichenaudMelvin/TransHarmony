@@ -1,13 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(RectTransform), typeof(Button))]
 public class DragNDrop : MonoBehaviour{
 
-    [SerializeField]
-    [Tooltip("Element auquel s'accrocher")]
-    private ArtistsAttributes _objectToSnap;
+    [Header("Artists")]
+    [Tooltip("Parent qui contient tous les artistes")]
+    private Transform _artistContainers;
 
+    [Tooltip("Liste d'elements auquels s'accrocher")]
+    private List<ArtistsAttributes> _objectsToSnap = new List<ArtistsAttributes> {};
+
+    [Header("Others")]
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
@@ -21,6 +26,7 @@ public class DragNDrop : MonoBehaviour{
     private void Start(){
         _btn.onClick.AddListener(MoveElement);
 
+        this.UpdateArtistList();
         // juste pour les différencier
         // this.GetComponent<RawImage>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
     }
@@ -35,18 +41,33 @@ public class DragNDrop : MonoBehaviour{
         }
     }
 
+    // met à jour la liste d'objet avec lequel l'item peux snap
+    // se fait à chaque instantiation d'items
+    // pas besoin de remettre la lise à zero car supprimé après chaque jour
+    private void UpdateArtistList(){
+        for(int i = 0; i < _artistContainers.childCount; i++){
+            if(_artistContainers.GetChild(i).gameObject.activeInHierarchy){
+                _objectsToSnap.Add(_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>());
+            }
+        }
+    }
+
     private void MoveElement(){
-        print("ya");
         _moving = _moving == true ? false : true;
     }
 
     private void StopElement(){
-        _objectToSnap.PiecePlaced(this);
+        for(int i = 0; i < _objectsToSnap.Count; i++){
+            _objectsToSnap[i].PiecePlaced(this);
+        }
     }
 
     // public functions
     // donne la référence GameManager quand l'élément est créé
-    public void SetGamemanager(GameManager gameManagerVariable){_gameManager = gameManagerVariable;}
+    public void SetupVariables(GameManager gameManagerVariable, Transform artistContainersVariable){
+        _gameManager = gameManagerVariable;
+        _artistContainers = artistContainersVariable;
+    }
 
     // pour pas que l'élément se retrouve en dehors de l'écran, marche pas vraiment // pas une priorité
     // private void ResetMousePosition(Vector3 mousePositon){
