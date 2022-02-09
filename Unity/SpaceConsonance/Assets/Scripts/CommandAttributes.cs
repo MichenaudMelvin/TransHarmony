@@ -45,10 +45,6 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("La position où spawn la commande (Position en UI)")]
     private Vector2 _positionToSpawn;
 
-    private void Start(){
-        this.SetupCommand();
-    }
-
     private void Update(){
         this.ManageTimer();
     }
@@ -72,13 +68,21 @@ public class CommandAttributes : MonoBehaviour{
 
         _circleTimer.color = _gameManager.GetTimerGradient().Evaluate(_circleTimer.fillAmount);
 
-        if(_availableTime <= 0){Destroy(this.gameObject);}
+        if(_availableTime <= 0){
+            _gameManager.UpdatePoints(-50);
+            Destroy(this.gameObject);
+        }
     }
 
     // public functions
     public ArtistsAttributes GetArtisteWhoNeedIt(){return _artistWhoNeedIt;}
 
-    public void SetArtisteWhoNeedIt(ArtistsAttributes newArtiste){_artistWhoNeedIt = newArtiste;}
+    public string GetArtistNeed(){return _artistNeed;}
+
+    public void SetArtisteWhoNeedIt(ArtistsAttributes newArtiste){
+        _artistWhoNeedIt = newArtiste;
+        this.SetupCommand();
+    }
 
     // gère la position des commandes
     public void SetPosition(Vector2 newPosition){

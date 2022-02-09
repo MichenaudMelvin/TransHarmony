@@ -20,8 +20,17 @@ public class ArtistsAttributes : MonoBehaviour{
     private bool _alreadyPerform;
 
     [SerializeField]
+    [Tooltip("Référence au GameManager")]
+    private GameManager _gameManager;
+
+    [SerializeField]
     [Tooltip("Liste de besoins des artistes (items)")]
     private List<string> _listNeeds;
+
+    [Header("Commands")]
+    [SerializeField]
+    [Tooltip("Parent qui contient toutes les commandes")]
+    private Transform _commandsContainer;
 
     [Space(10)]
 
@@ -41,6 +50,19 @@ public class ArtistsAttributes : MonoBehaviour{
         _textName.transform.rotation = Quaternion.LookRotation(_textName.transform.position - Camera.main.transform.position);
     }
 
+    private void CheckItem(DragNDrop item){
+        for(int i = 0; i < _commandsContainer.childCount; i++){
+            if(this == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtisteWhoNeedIt() && item.GetComponent<ItemAttributes>().GetItemName() == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
+                Destroy(_commandsContainer.GetChild(i).gameObject);
+                // probablement faire des effets pour montrer que c'est bien comptabilisé
+                _gameManager.UpdatePoints(10);
+                return;
+            }
+        }
+
+        _gameManager.UpdatePoints(-10);
+    }
+
     // public functions
     public string GetName(){return _name;}
 
@@ -57,22 +79,11 @@ public class ArtistsAttributes : MonoBehaviour{
         if(this.gameObject.activeInHierarchy){
             Vector3 screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
 
-            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 100f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 100f && this.transform.eulerAngles.y ==0){
+            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 50f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 50f && this.transform.eulerAngles.y ==0){
+                this.CheckItem(piece);
+
                 Destroy(piece.gameObject);
-                // probablement faire des effets pour montrer que c'est bien comptabilisé
-                // ajouter des points ici toussa toussa
             }
         }
     }
 }
-
-
-
-// code pour coller la UI et les gameobject dans la scene
-// public Transform target;
-// Camera cam;
-
-// void Update(){
-//     Vector3 screenPos = cam.WorldToScreenPoint(target.position);
-//     Debug.Log("target is " + screenPos.x + " pixels from the left");
-// }

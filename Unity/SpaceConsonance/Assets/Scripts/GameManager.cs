@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Image qui donne les resultas")]
     private RawImage _resultImage;
 
+    [SerializeField]
+    [Tooltip("Texte qui donne les resultas")]
+    private Text _resultText;
+
     [Space(10)]
 
     [Header("Halls")]
@@ -67,10 +71,23 @@ public class GameManager : MonoBehaviour{
 
     [Space(10)]
 
+    [Header("Points")]
+    [Tooltip("Les points accumulés par le joueur")]
+    private float _playerPoints;
+
+    [Space(10)]
+
     [Header("Music")]
     [SerializeField]
     [Tooltip("Référence au Music Manager")]
     private MusicManager _musicManager;
+
+    [Space(10)]
+
+    [Header("Others")]
+    [SerializeField]
+    [Tooltip("GameObject qui créé les commandes")]
+    private CommandGenerator _commandGenerator;
 
     private void Start(){
         _timeLeft = _timeOfADay;
@@ -85,6 +102,8 @@ public class GameManager : MonoBehaviour{
         for(int i = 0; i < _hallsContainer.childCount; i++){
             _listHalls.Add(_hallsContainer.GetChild(i).GetComponent<HallsAttributes>());
         }
+
+        _commandGenerator.CreateCommands();
     }
 
     private void Update(){
@@ -96,17 +115,30 @@ public class GameManager : MonoBehaviour{
         if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist){
             _timeLeft -= Time.deltaTime;
 
+            // ajouter la fonction qui créer les commandes ici
             _timerText.text = _timerTextPrefix + ((int)_timeLeft).ToString() + "s";
             _sliderTimer.value = _timeLeft;
             _sliderTimer.transform.Find("Fill").GetComponent<Image>().color = _sliderGradient.Evaluate(_sliderTimer.normalizedValue);
 
             if(_timeLeft <= 0f){
-                _day += 1;
-                _dayText.text = _dayTextPrefix + _day.ToString();
-                _resultImage.gameObject.SetActive(true);
-                _canChangeArtist = this.CheckArtistStatus();
+                this.EndDay();
             }
         }
+    }
+
+    // ce qu'il se passe à la fin de charque jours
+    private void EndDay(){
+        // augmente de compteur de jours
+        _day += 1;
+        _dayText.text = _dayTextPrefix + _day.ToString();
+
+        // affichage des resultats
+        _resultText.text = "Votre score : " + _playerPoints;
+        _resultImage.gameObject.SetActive(true);
+
+        // préparation pour le prochain jours (destructions des commandes restantes, check les artistes encore disponibles)
+        _canChangeArtist = this.CheckArtistStatus();
+        _commandGenerator.DestroyCommands();
     }
 
     // regarde parmis tous les artistes si certains non pas encore fait un concert
@@ -129,6 +161,8 @@ public class GameManager : MonoBehaviour{
     // public functions
     public float GetTime(){return _timeLeft;}
 
+    public float GetTimeOfADay(){return _timeOfADay;}
+
     public int GetDay(){return _day;}
 
     public Gradient GetTimerGradient(){return _sliderGradient;}
@@ -144,6 +178,14 @@ public class GameManager : MonoBehaviour{
         for(int i = 0; i < _listHalls.Count; i++){
             _listHalls[i].ChangeArtist();
         }
+
+        _commandGenerator.CreateCommands();
+        _musicManager.SetAudioClip();
+    }
+
+    // pour ajouter ou enlever des points
+    public void UpdatePoints(float amount){
+        _playerPoints += amount;
     }
 
 }

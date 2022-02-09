@@ -26,4 +26,6 @@ public class ItemAttributes : MonoBehaviour{
 
     public void SetPosition(Vector2 newPosition){this.GetComponent<RectTransform>().anchoredPosition = newPosition;}
 
+    public string GetItemName(){return _name;}
+
 }

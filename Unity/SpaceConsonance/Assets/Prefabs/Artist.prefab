@@ -194,9 +194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: SampleName
+  _style: 
   _music: {fileID: 1079328234661581702}
   _gameManager: {fileID: 0}
-  needs: 
+  _listNeeds: []
+  _commandsContainer: {fileID: 0}
   _textName: {fileID: 176033888258457976}
 --- !u!1 &3392681038052164371
 GameObject:

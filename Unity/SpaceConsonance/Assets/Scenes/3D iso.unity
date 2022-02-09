@@ -202,8 +202,32 @@ PrefabInstance:
       value: Hip hop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -310,8 +334,32 @@ PrefabInstance:
       value: Hip hop / pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -449,8 +497,32 @@ PrefabInstance:
       value: Techno jazz
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -527,8 +599,32 @@ PrefabInstance:
       value: Techno
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -605,8 +701,32 @@ PrefabInstance:
       value: Global house
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -683,8 +803,32 @@ PrefabInstance:
       value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -761,8 +905,32 @@ PrefabInstance:
       value: "Rock psych\xE9d\xE9lique chypriote"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -903,8 +1071,32 @@ PrefabInstance:
       value: Breakbeat / hip hop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -981,8 +1173,32 @@ PrefabInstance:
       value: Queer folk asturienne
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1059,8 +1275,32 @@ PrefabInstance:
       value: House
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1137,8 +1377,32 @@ PrefabInstance:
       value: Hip hop afro-electro
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1215,8 +1479,32 @@ PrefabInstance:
       value: Beat & mods
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1373,8 +1661,32 @@ PrefabInstance:
       value: Boogaloo / rhythm and blues
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1451,8 +1763,32 @@ PrefabInstance:
       value: Neofolk breton
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1529,8 +1865,32 @@ PrefabInstance:
       value: Dembow
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1554,6 +1914,10 @@ PrefabInstance:
       propertyPath: _timerText
       value: 
       objectReference: {fileID: 582318123}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _resultText
+      value: 
+      objectReference: {fileID: 1704667652}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: resultImage
       value: 
@@ -1579,6 +1943,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1868080434}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
+      propertyPath: _commandGenerator
+      value: 
+      objectReference: {fileID: 1609049165}
+    - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _commandsContainer
       value: 
       objectReference: {fileID: 1609049165}
@@ -1600,34 +1968,6 @@ PrefabInstance:
       objectReference: {fileID: 275217686}
     - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
@@ -1720,8 +2060,32 @@ PrefabInstance:
       value: Disco funk
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1817,8 +2181,32 @@ PrefabInstance:
       value: Post-hardcore
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -1991,8 +2379,32 @@ PrefabInstance:
       value: Techno
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2215,8 +2627,32 @@ PrefabInstance:
       value: Tech-house
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2293,8 +2729,32 @@ PrefabInstance:
       value: Prog rock / rap / post-jazz
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2371,8 +2831,32 @@ PrefabInstance:
       value: Sono mondiale
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2449,8 +2933,32 @@ PrefabInstance:
       value: Sono mondiale
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2527,8 +3035,32 @@ PrefabInstance:
       value: "Musiques \xE9lectroniques"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2621,8 +3153,32 @@ PrefabInstance:
       value: "Musique \xE9lectronique andine"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2699,8 +3255,32 @@ PrefabInstance:
       value: Congo techno
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2843,8 +3423,32 @@ PrefabInstance:
       value: Techno
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2921,8 +3525,32 @@ PrefabInstance:
       value: "Rituel de gu\xE9rison"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -2999,8 +3627,32 @@ PrefabInstance:
       value: Garage punk
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3088,8 +3740,32 @@ PrefabInstance:
       value: Pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3166,8 +3842,32 @@ PrefabInstance:
       value: Pop orchestrale
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3244,8 +3944,32 @@ PrefabInstance:
       value: "Po\xE9sie post-punk"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3322,8 +4046,32 @@ PrefabInstance:
       value: Post-punk
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3400,8 +4148,32 @@ PrefabInstance:
       value: "Musiques \xE9lectroniques arabes et moyen-orientales"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3478,8 +4250,32 @@ PrefabInstance:
       value: Jazz folk sud-africain
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3652,8 +4448,32 @@ PrefabInstance:
       value: Pop rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3681,6 +4501,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _artistContainers: {fileID: 1868080434}
   _gameManager: {fileID: 453508979}
+--- !u!224 &763170901 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2648317491538953858, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+  m_PrefabInstance: {fileID: 3404696805194918510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &765946869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3629670176184919011, guid: 197af923d8ff81748b7faafbf6cae3a8, type: 3}
@@ -3784,8 +4609,32 @@ PrefabInstance:
       value: "Garage rock psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -3953,8 +4802,32 @@ PrefabInstance:
       value: 'Electro gypsy waves '
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4031,8 +4904,32 @@ PrefabInstance:
       value: Techno downtempo
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4109,8 +5006,32 @@ PrefabInstance:
       value: "Rock \xE9lectro-psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4187,8 +5108,32 @@ PrefabInstance:
       value: "Pop psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4265,8 +5210,32 @@ PrefabInstance:
       value: Pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4343,8 +5312,32 @@ PrefabInstance:
       value: Transe viking
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4421,8 +5414,32 @@ PrefabInstance:
       value: "Musiques \xE9lectroniques"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4499,8 +5516,32 @@ PrefabInstance:
       value: Exotica
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4577,8 +5618,32 @@ PrefabInstance:
       value: Nuevo flamenco / pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4655,8 +5720,32 @@ PrefabInstance:
       value: Groove metal
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4733,8 +5822,32 @@ PrefabInstance:
       value: New wave
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4811,8 +5924,32 @@ PrefabInstance:
       value: "Rock prog psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -4889,8 +6026,32 @@ PrefabInstance:
       value: Danse
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5165,8 +6326,32 @@ PrefabInstance:
       value: Pop rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5243,8 +6428,32 @@ PrefabInstance:
       value: Jazz rap
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5475,8 +6684,32 @@ PrefabInstance:
       value: "Pop arm\xE9nienne"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5564,8 +6797,32 @@ PrefabInstance:
       value: Electro-pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5647,8 +6904,32 @@ PrefabInstance:
       value: "Eleki / surf rock psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5725,8 +7006,32 @@ PrefabInstance:
       value: Danse
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5803,8 +7108,32 @@ PrefabInstance:
       value: Afro-electro / percussions
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5897,8 +7226,32 @@ PrefabInstance:
       value: Afro-rap
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -5975,8 +7328,32 @@ PrefabInstance:
       value: Electro-pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6058,8 +7435,32 @@ PrefabInstance:
       value: Grunge
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6136,8 +7537,32 @@ PrefabInstance:
       value: Abstract hip hop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6214,8 +7639,32 @@ PrefabInstance:
       value: House / techno
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6292,8 +7741,32 @@ PrefabInstance:
       value: Grime punk
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6370,8 +7843,32 @@ PrefabInstance:
       value: Electro-hip hop / scratch music
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6448,8 +7945,32 @@ PrefabInstance:
       value: Discotek
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6537,8 +8058,32 @@ PrefabInstance:
       value: Acid techno
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6688,8 +8233,32 @@ PrefabInstance:
       value: Rock / metal malgache
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6710,34 +8279,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -6749,6 +8290,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8566077244548776921, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8566077244548776921, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
       propertyPath: m_Name
       value: MusicManager
@@ -6780,6 +8325,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1322082148199524118, guid: 40b96d01d4a44b949ad0074c4ff24c43, type: 3}
   m_PrefabInstance: {fileID: 1698550703}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1704667652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7686332293371871495, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+  m_PrefabInstance: {fileID: 3404696805194918510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1709134945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6848,8 +8404,32 @@ PrefabInstance:
       value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -6926,8 +8506,32 @@ PrefabInstance:
       value: Electro-pop turque
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7004,8 +8608,32 @@ PrefabInstance:
       value: Synth-pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7082,8 +8710,32 @@ PrefabInstance:
       value: "Rock psych\xE9d\xE9lique"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7160,8 +8812,32 @@ PrefabInstance:
       value: Pop tropicale
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7238,8 +8914,32 @@ PrefabInstance:
       value: "Musiques \xE9lectroniques"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7316,8 +9016,32 @@ PrefabInstance:
       value: "Discoth\xE8que tropicale"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7430,8 +9154,32 @@ PrefabInstance:
       value: Blues rock electro
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7637,8 +9385,32 @@ PrefabInstance:
       value: Punk rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -7906,8 +9678,32 @@ PrefabInstance:
       value: Hip hop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8018,8 +9814,32 @@ PrefabInstance:
       value: Fusion balkanique
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8096,8 +9916,32 @@ PrefabInstance:
       value: Electro
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8174,8 +10018,32 @@ PrefabInstance:
       value: R&B
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8276,8 +10144,32 @@ PrefabInstance:
       value: Pop rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8354,8 +10246,32 @@ PrefabInstance:
       value: "Min\u2019y\u014D electro"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8432,8 +10348,32 @@ PrefabInstance:
       value: Exotica / siffleuse
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8510,8 +10450,32 @@ PrefabInstance:
       value: "Musiques \xE9lectroniques"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8654,8 +10618,32 @@ PrefabInstance:
       value: Afro-pop
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8732,8 +10720,32 @@ PrefabInstance:
       value: "Electro-psych\xE9d\xE9lisme"
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8810,8 +10822,32 @@ PrefabInstance:
       value: Rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -8888,8 +10924,32 @@ PrefabInstance:
       value: Techno
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Techno
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -9062,8 +11122,32 @@ PrefabInstance:
       value: Rop rock
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _styleOfMusic
       value: Danse
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _commandsContainer
+      value: 
+      objectReference: {fileID: 763170901}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[0]
+      value: Micro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[1]
+      value: Cables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _listNeeds.Array.data[2]
+      value: Enceintes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
@@ -9095,6 +11179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Command
       objectReference: {fileID: 0}
+    - target: {fileID: 1167461874532927488, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1270075037755141264, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9115,20 +11203,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2536885450498945594, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536885450498945594, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2648317491538953858, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2648317491538953858, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_SizeDelta.y
+    - target: {fileID: 1625606857091205651, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550964335217293761, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
@@ -9151,10 +11227,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6395737283019526561, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_Name
-      value: CommandesContainer
-      objectReference: {fileID: 0}
     - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: _gameManager
       value: 
@@ -9174,34 +11246,6 @@ PrefabInstance:
     - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6768802347235987829, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

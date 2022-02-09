@@ -14,23 +14,18 @@ public class CommandGenerator : MonoBehaviour{
     private GameManager _gameManager;
 
     [SerializeField]
-    [Range(1, 10)]
+    [Range(1, 8)]
     [Tooltip("Nombre de commande maximales")]
     private int _maxCommandNumber;
 
     [SerializeField]
-    [Range(1, 5)]
+    [Range(1f, 5f)]
     [Tooltip("Temps d'attente entre deux commandes")]
     private float _maxWaitingTime;
 
     [SerializeField]
     [Tooltip("Parent qui contient tous les positions des commandes")]
     private Transform _commandsPositions;
-
-    // [SerializeField]
-    // [Range(10f, 100f)]
-    // [Tooltip("Espace entre les commandes (UI)")]
-    // private float _spaceBetweenCommands;
 
     [Header("Artists")]
     [SerializeField]
@@ -43,45 +38,6 @@ public class CommandGenerator : MonoBehaviour{
     [Tooltip("Commande demandé")]
     private List<string> _commandForHalls;
 
-    private void Update(){
-        this.ManageCommands();
-    }
-
-    private void ManageCommands(){
-        this.CreateCommands();
-        this.DestroyCommands();
-    }
-
-    // temps d'attente entre deux commande
-    private IEnumerator WaitingTimeBeforeNewCommand(float time){
-        yield return new WaitForSeconds(time);
-
-        this.CreateCommands();
-    }
-
-    // créé les commandes
-    public void CreateCommands(){
-        if(this.transform.childCount < _maxCommandNumber && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist()){
-            if(this.transform.childCount == 0){
-                print("jupdate la liste");
-                this.UpdateArtistList();
-            }
-
-            CommandAttributes newCommand = Instantiate(_commandToGenerate, this.transform);
-
-            newCommand.SetGameManager(_gameManager);
-            newCommand.SetPosition(_commandsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
-
-            // la commande va être attribué à un artise aléatoire
-            int artistIndex = Random.Range(0, _listArtistesInHalls.Count-1);
-
-            newCommand.SetArtisteWhoNeedIt(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>());
-
-            StartCoroutine(this.WaitingTimeBeforeNewCommand(Random.Range(0, _maxWaitingTime)));
-        }
-
-    }
-
     // ajoute à la liste les artistes présent dans les halls
     private void UpdateArtistList(){
         _listArtistesInHalls = new List<ArtistsAttributes>{};
@@ -91,10 +47,62 @@ public class CommandGenerator : MonoBehaviour{
                 _listArtistesInHalls.Add(_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>());
             }
         }
+
+        for(int i = 0; i < _commandsPositions.childCount; i++){
+            _commandsPositions.GetChild(i).gameObject.SetActive(false);
+        }
+    }
+
+    // la commande va être attribué à un artise aléatoire si l'artiste n'a pas deja une commande
+    private void CheckAvailability(CommandAttributes command){
+        int artistIndex = Random.Range(0, _listArtistesInHalls.Count);
+        print(_listArtistesInHalls);
+
+        command.SetArtisteWhoNeedIt(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>());
+
+        // fait crash
+        // for(int i = 0; i < this.transform.childCount; i++){
+        //     print("je passe dans la boucle for");
+        //     if(command.GetArtisteWhoNeedIt() == this.transform.GetChild(i).GetComponent<CommandAttributes>().GetArtisteWhoNeedIt() && command != this.transform.GetChild(i).GetComponent<CommandAttributes>()){
+        //         print("je passe dans la boucle if");
+        //         this.CheckAvailability(command);
+        //     }
+        // }
+    }
+
+    // temps d'attente entre deux commande
+    private IEnumerator WaitingTimeBeforeNewCommand(float time){
+        yield return new WaitForSeconds(time);
+
+        this.CreateCommands();
+    }
+
+    // public functions
+    public int GetMaxCommandNumber(){return _maxCommandNumber;}
+
+    // créé les commandes
+    public void CreateCommands(){
+        if(this.transform.childCount < _maxCommandNumber && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist()){
+            if(this.transform.childCount == 0){
+                this.UpdateArtistList();
+            }
+
+            // à faire en fonction du nombre d'artistes
+
+            CommandAttributes newCommand = Instantiate(_commandToGenerate, this.transform);
+
+            newCommand.SetGameManager(_gameManager);
+            newCommand.SetPosition(_commandsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
+
+            // if(this.transform.childCount == 4){return;}
+            this.CheckAvailability(newCommand);
+
+            StartCoroutine(this.WaitingTimeBeforeNewCommand(Random.Range(0, _maxWaitingTime)));
+        }
     }
 
     // détruits les commandes
-    private void DestroyCommands(){
+    public void DestroyCommands(){
         if(this.transform.childCount > 0 && _gameManager.GetTime() <= 0){
             for(int i = 0; i < this.transform.childCount; i++){
                 Destroy(this.transform.GetChild(i).gameObject);
@@ -103,8 +111,4 @@ public class CommandGenerator : MonoBehaviour{
             _listArtistesInHalls.Clear();
         }
     }
-
-    // public functions
-    public int GetMaxCommandNumber(){return _maxCommandNumber;}
-
 }

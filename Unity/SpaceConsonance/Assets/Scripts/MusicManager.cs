@@ -55,18 +55,20 @@ public class MusicManager : MonoBehaviour{
     }
 
     private void Update(){
-        _audioSource.volume = _volume;
-        // Penser à afficher la musique joué et de quel artiste
+        this.ManageVolume();
         // this.DisplayMusicName();
     }
 
     // gère le volume de la musique en fonciton des actions du joueur
     private void ManageVolume(){
         if(_gameManager.GetTime() > 0){
-
+            _volume = Mathf.InverseLerp(0, _gameManager.GetTimeOfADay(), _gameManager.GetTime()) - 0.5f;
         }
+
         // float time = _gameManager.GetTime();
         // time = Mathf.Lerp()
+
+        _audioSource.volume = _volume;
     }
 
     private void DisplayMusicName(){
@@ -106,6 +108,8 @@ public class MusicManager : MonoBehaviour{
         ArtistsAttributes actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
         _audioSource.clip = actualArtist.GetMusic();
         _actualArtist = actualArtist;
+
         this.SetMusicName();
+        _audioSource.Play();
     }
 }

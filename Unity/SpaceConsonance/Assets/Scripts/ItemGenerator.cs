@@ -40,6 +40,10 @@ public class ItemGenerator : MonoBehaviour{
     private void Start(){
         // génère 2 fois plus d'items que de commande (pour l'instant)
         _maxItemNumber = _commandGenerator.GetMaxCommandNumber()*2;
+
+        for(int i = 0; i < _itemsPositions.childCount; i++){
+            _itemsPositions.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     private void Update(){
