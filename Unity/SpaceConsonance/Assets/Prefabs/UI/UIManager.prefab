@@ -2327,7 +2327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _commandToGenerate: {fileID: 6285085684001275044, guid: c841adda50b217449b3f2f21e2f76dfe, type: 3}
   _gameManager: {fileID: 0}
-  _maxCommandNumber: 3
+  _maxCommandNumberAtTime: 4
   _maxWaitingTime: 2.5
   _commandsPositions: {fileID: 6475892122832388176}
   _artistContainers: {fileID: 0}
