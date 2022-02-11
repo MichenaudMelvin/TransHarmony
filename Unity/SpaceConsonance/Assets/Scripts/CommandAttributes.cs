@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class CommandAttributes : MonoBehaviour{
 
@@ -23,6 +24,36 @@ public class CommandAttributes : MonoBehaviour{
 
     [Space(10)]
 
+    [Header("Feedback")]
+    [SerializeField]
+    [Tooltip("Image de la commande (est utilisé quand le joueur réussi ou rate)")]
+    private Image _image;
+
+    [Tooltip("Couleur initiale de cette image")]
+    private Color _initialColor;
+
+    [SerializeField]
+    [Tooltip("Couleur quand le joueur réussi")]
+    private Color _succeedColor;
+
+    [SerializeField]
+    [Tooltip("Couleur quand le joueur rate")]
+    private Color _failureColor;
+
+    [Space(10)]
+
+    [Header("Appearance")]
+    [SerializeField]
+    [Range(0.5f, 2.5f)]
+    [Tooltip("Temps du movement d'apparition")]
+    private float _movementDuration;
+
+    [SerializeField]
+    [Tooltip("Position finale (après un lerp)")]
+    private Vector3 _finalPosition;
+
+    [Space(10)]
+
     [Header("Timer")]
     [SerializeField]
     [Tooltip("Timer visuel de la commande")]
@@ -42,8 +73,9 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
-    [Tooltip("La position où spawn la commande (Position en UI)")]
-    private Vector2 _positionToSpawn;
+    private void Start(){
+        _initialColor = _image.color;
+    }
 
     private void Update(){
         this.ManageTimer();
@@ -57,6 +89,8 @@ public class CommandAttributes : MonoBehaviour{
         // génère un besoin aléatoire parmis les besoins de l'artiste
         _artistNeed = _artistWhoNeedIt.GetListNeeds()[Random.Range(0, _artistWhoNeedIt.GetListNeeds().Count-1)];
         _visualNeed.text = _artistNeed;
+
+        this.SetPosition();
     }
 
 
@@ -70,8 +104,78 @@ public class CommandAttributes : MonoBehaviour{
 
         if(_availableTime <= 0){
             _gameManager.UpdatePoints(-50);
+            // faire une animation de fin de timer
             Destroy(this.gameObject);
         }
+    }
+
+    // gère la position de la commande
+    private void SetPosition(){
+        Vector2 artistScreenPos = Camera.main.WorldToScreenPoint(_artistWhoNeedIt.transform.position);
+        this.transform.position = artistScreenPos;
+
+        this.Appearance();
+    }
+
+    // fait apparaitre la commande en fade in
+    private void Appearance(){
+        this.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
+        this.GetComponent<Image>().CrossFadeAlpha(1f, _movementDuration, false);
+        StartCoroutine(this.UpMovement());
+    }
+
+    // fait monter la commande quand elle apparait
+    private IEnumerator UpMovement(){
+        float time = 0f;
+        float normalizedValue;
+
+        Vector3 startPosition = this.transform.position;
+        this._finalPosition += startPosition;
+
+        while(time <= _movementDuration){
+            time += Time.deltaTime; 
+            normalizedValue = time / _movementDuration;
+
+            this.transform.position = Vector3.Lerp(startPosition, _finalPosition, normalizedValue);
+            yield return null;
+        }
+    }
+
+    // shake la commande quand le joueur fait une erreurs
+    private IEnumerator FailureMovement(){
+        float time = 0f;
+        float duration= 0.025f;
+        float normalizedValue;
+
+        Vector3 midPosition = this.transform.position;
+        Vector3 leftPositon = midPosition + new Vector3(5, 0, 0);
+        Vector3 rightPosition = midPosition + new Vector3(-5, 0, 0);
+
+        Vector3 startPosition = this.transform.position;
+
+        while(time <= duration){
+            time += Time.deltaTime; 
+            normalizedValue = time / duration;
+
+            this.transform.position = Vector3.Lerp(startPosition, leftPositon, normalizedValue);
+            yield return new WaitForSeconds(0.01f);
+
+            this.transform.position = Vector3.Lerp(startPosition, midPosition, normalizedValue);
+            yield return new WaitForSeconds(0.01f);
+
+            this.transform.position = Vector3.Lerp(startPosition, rightPosition, normalizedValue);
+            yield return new WaitForSeconds(0.01f);
+
+            this.transform.position = Vector3.Lerp(startPosition, midPosition, normalizedValue);
+        }
+
+    }
+
+    // change la couleur puis revient à sa couleur initiale
+    private IEnumerator ChangeColor(Color newColor){
+        _image.color = newColor;
+        yield return new WaitForSeconds(0.5f);
+        _image.color = _initialColor;
     }
 
     // public functions
@@ -84,16 +188,22 @@ public class CommandAttributes : MonoBehaviour{
         this.SetupCommand();
     }
 
-    // gère la position des commandes
-    public void SetPosition(Vector2 newPosition){
-        // set les anchors en haut à gauche du canvas
-        this.GetComponent<RectTransform>().anchorMin = new Vector2(0, 1);
-        this.GetComponent<RectTransform>().anchorMax = new Vector2(0, 1);
-
-        this.GetComponent<RectTransform>().anchoredPosition = newPosition;
-    }
-
     public void SetGameManager(GameManager gameManagerReference){_gameManager = gameManagerReference;}
 
+    // quand le joueur réussi a bien drag n dropé son item
+    public IEnumerator Succeed(){
+        StartCoroutine(this.ChangeColor(_succeedColor));
+        // ajouter un son
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
+    }
 
+    // quand le joueur rate
+    public void Failure(){
+        StartCoroutine(this.ChangeColor(_failureColor));
+        // ajouter un son
+        _finalPosition = this.transform.position;
+        StartCoroutine(this.FailureMovement());
+
+    }
 }

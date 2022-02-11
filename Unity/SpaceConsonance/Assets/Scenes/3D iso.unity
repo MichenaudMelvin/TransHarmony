@@ -11236,6 +11236,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 130802654}
     - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _maxWaitingTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: _artistContainers
       value: 
       objectReference: {fileID: 1868080434}

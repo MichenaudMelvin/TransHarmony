@@ -22,6 +22,10 @@ public class ItemGenerator : MonoBehaviour{
     [Tooltip("Parent qui contient tous les positions des items")]
     private Transform _itemsPositions;
 
+    [SerializeField]
+    [Tooltip("Liste contenant les sprites des items")]
+    private List<Sprite> _spriteList;
+
     [Space(10)]
 
     [Header("Others")]
@@ -79,4 +83,7 @@ public class ItemGenerator : MonoBehaviour{
             _hasFinishedCreateItems = false;
         }
     }
+
+    // public functions
+    public List<Sprite> GetSpriteList(){return _spriteList;}
 }

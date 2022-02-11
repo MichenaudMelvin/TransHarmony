@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,18 +13,23 @@ public class ItemAttributes : MonoBehaviour{
     private Text _textName;
 
     [SerializeField]
-    [Tooltip("Image de l'item")]
-    private Image _image;
+    [Tooltip("Sprite de l'item")]
+    private Image _sprite;
 
     // public functions
     public void SetItem(string itemType){
         // set et affiche le nom de l'item
         _name = itemType;
         _textName.text = _name;
+        // set le sprite de l'item
+        for(int i = 0; i < this.GetComponentInParent<ItemGenerator>().GetSpriteList().Count; i++){
+            if(this.GetComponentInParent<ItemGenerator>().GetSpriteList()[i].name == _name){
+                _sprite.sprite = this.GetComponentInParent<ItemGenerator>().GetSpriteList()[i];
+            }
+        }
     }
 
     public void SetPosition(Vector2 newPosition){this.GetComponent<RectTransform>().anchoredPosition = newPosition;}
 
     public string GetItemName(){return _name;}
-
 }

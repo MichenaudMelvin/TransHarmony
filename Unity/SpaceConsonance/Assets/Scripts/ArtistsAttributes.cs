@@ -52,11 +52,16 @@ public class ArtistsAttributes : MonoBehaviour{
 
     private void CheckItem(DragNDrop item){
         for(int i = 0; i < _commandsContainer.childCount; i++){
-            if(this == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtisteWhoNeedIt() && item.GetComponent<ItemAttributes>().GetItemName() == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
-                Destroy(_commandsContainer.GetChild(i).gameObject);
-                // probablement faire des effets pour montrer que c'est bien comptabilisé
-                _gameManager.UpdatePoints(10);
-                return;
+            if(this == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtisteWhoNeedIt()){
+                if(item.GetComponent<ItemAttributes>().GetItemName() == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
+                    // victoire
+                    StartCoroutine(_commandsContainer.GetChild(i).GetComponent<CommandAttributes>().Succeed());
+                    _gameManager.UpdatePoints(10);
+                    return;
+                } else if(item.GetComponent<ItemAttributes>().GetItemName() != _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
+                    // echec
+                    _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().Failure();
+                }
             }
         }
 

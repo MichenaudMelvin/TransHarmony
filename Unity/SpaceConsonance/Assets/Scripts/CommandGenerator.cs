@@ -23,10 +23,6 @@ public class CommandGenerator : MonoBehaviour{
     [Tooltip("Temps d'attente entre deux commandes")]
     private float _maxWaitingTime;
 
-    [SerializeField]
-    [Tooltip("Parent qui contient tous les positions des commandes")]
-    private Transform _commandsPositions;
-
     [Header("Artists")]
     [SerializeField]
     [Tooltip("Parent qui contient tous les artistes")]
@@ -45,11 +41,6 @@ public class CommandGenerator : MonoBehaviour{
         if(_maxCommandNumberAtTime > _artistContainers.childCount){
             _maxCommandNumberAtTime = _artistContainers.childCount;
         }
-
-        for(int i = 0; i < _commandsPositions.childCount; i++){
-            _commandsPositions.GetChild(i).gameObject.SetActive(false);
-        }
-
     }
 
     // ajoute à la liste les artistes présent dans les halls
@@ -63,10 +54,6 @@ public class CommandGenerator : MonoBehaviour{
             if(_artistContainers.GetChild(i).gameObject.activeInHierarchy){
                 _listArtistesInHalls.Add(_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>());
             }
-        }
-
-        for(int i = 0; i < _commandsPositions.childCount; i++){
-            _commandsPositions.GetChild(i).gameObject.SetActive(false);
         }
     }
 
@@ -82,8 +69,6 @@ public class CommandGenerator : MonoBehaviour{
         }
 
         command.SetArtisteWhoNeedIt(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>());
-        command.SetPosition(_commandsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
-
     }
 
     // temps d'attente entre deux commande
