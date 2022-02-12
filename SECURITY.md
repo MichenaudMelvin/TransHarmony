@@ -3,10 +3,14 @@
 - [Version de Unity](#version-de-unity)
 - [Comment collaborer sur un projet git](#comment-collaborer-sur-un-projet-git)
   - [Création de branch](#création-de-branch)
+  - [Rebase Commit](#rebase-commit)
   - [Pull Request](#pull-request)
   - [Si Able to merge.](#si-able-to-merge)
   - [Si Can't automaticly merge.](#si-cant-automaticly-merge)
   - [Si vous avez commit sur main sans faire exprès](#si-vous-avez-commit-sur-main-sans-faire-exprès)
+- [Nommenlacture](#nommenlacture)
+  - [Dans le code](#dans-le-code)
+- [Coder sur téléphone](#coder-sur-téléphone)
 
 # Version de Unity
 
@@ -19,24 +23,35 @@
 
 ## Création de branch
 
-On ne code jamais sur la branche main/master, il faut toujours coder sur une auter branche.
+On ne code jamais sur la branche main/master, il faut toujours coder sur une autre branche.  
 
 Pour créer une branche sur un projet GitHub :  
-aller dans l'onglet "Branch" --> "New Branch" (ou Ctrl+Shit+N)  
+Allez dans l'onglet "Branch" --> "New Branch" (ou Ctrl+Shit+N)  
 
-Nommez votre branch en fonciton de ce que vous voulez ajouter au projet comme une fonctionnalité ou des assets : (ex : personnages3D...)  
+Nommez votre branche par votre nom  
 
 Si vous avez deja fait des modifications avant de créer votre branch, git va vous proposer d'apporter vos changement sur la branche que vous venez de créer ou de les laisser sur la branche main.  
 
 Vous pouvez a présent travallier sur votre branche.  
 
+## Rebase Commit
+
+Chaque jour, faites un "Rebase commit", pour vérifier que votre branche est à jour par rapport à main  
+
+Dans github desktop, cliquer sur l'onglet "Branch", puis "Choose a branch to merge into [NomBranch]"  
+
+Séléctionnez la branche "main", et sélectionner "Rebase commit"  
+
+- [Si Able to merge.](#si-able-to-merge)  
+- [Si Can't automaticly merge.](#si-cant-automaticly-merge)  
+
 ## Pull Request
 
-Vous avez finalisé ce que vous voulez intégrer au projet, maintenant il faut fusionner votre branche à la branche main (un merge)  
+Quand vous comptez intégrez vos fonctionnalités/assets au projet, il faut fusionner votre branche à la branche main (un merge)  
 
-Il faut se rendre sur le projet GitHub en ligne (Ctrl+Shit+G dans github desktop)  
+Pour ça il faut se rendre sur le projet GitHub en ligne (Ctrl+Shit+G dans github desktop)  
 
-Si votre commit est récent cliquez sur "compare & pull request" sinon cliquez sur "X branches" (ici 2 branches sur l'exemple) cherchez le nom de votre branche et cliquez sur "New pull Request"
+Si votre commit est récent cliquez sur "compare & pull request" sinon cliquez sur "X branches", cherchez le nom de votre branche et cliquez sur "New pull Request"
 
 - [Si Able to merge.](#si-able-to-merge)  
 - [Si Can't automaticly merge.](#si-cant-automaticly-merge)  
@@ -69,3 +84,34 @@ Vous avez finalisé ce que vous voulez intégrer au projet, pour ça il faut fus
 Utiliser l'extension "[Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)" sur [VScode](https://code.visualstudio.com/), sélectionner un commit, cliquer sur "Revert...", puis commit votre revert commit.
 
 Egalement possible avec [SourceTree](https://www.sourcetreeapp.com/), sélectionner un commit, cliquer sur "Reverse commit...", puis commit votre revert commit.
+
+# Nommenlacture
+
+CamelCase pour TOUS les fichiers et variables, aucun accents ou espaces  
+exemple : maVariableTropStylee  
+
+## Dans le code
+
+| Variable | Nommenclature |
+| -------- | ------------- |
+| private  | _myVar        |
+| public   | myVar         |
+
+| Fonction | Nommenclature |
+| -------- | ------------- |
+| private  | MyFunction()  |
+| public   | MyFunction()  |
+
+
+# Coder sur téléphone
+1. Utiliser l'application Unity Remote 5.
+   - [Android](https://play.google.com/store/apps/details?id=com.unity3d.mobileremote&hl=fr&gl=US)  
+   - [IOS](https://apps.apple.com/fr/app/unity-remote-5/id871767552)  
+
+2. Activer le mode développeur du téléphone.
+
+3. Installer dans la [Version actuelle](#version-de-unity) de Unity les modules "Android SDK & NDK Tools" et "OpenJDK".
+
+4. Ouvrir le projet Unity, aller dans [Edit] > [Project Settings...] > [Editor] > [Device] et sélectionner "Any Android Device".
+
+5. Branchez un cable USB au téléphone et au PC, appuyez sur Play, le jeu devrait s'afficher sur votre téléphone.

@@ -4,14 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour{
 
-    public string sceneName;
-    public Button btn;
+    [SerializeField]
+    [Tooltip("La scène qui va être lancé")]
+    private string _sceneName;
+
+    [SerializeField]
+    [Tooltip("Bouton qui démarre la scène")]
+    private Button _btn;
 
     private void Start(){
-        btn.onClick.AddListener(ChangeScene);
+        _btn.onClick.AddListener(ChangeScene);
     }
 
     private void ChangeScene(){
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(_sceneName);
     }
+
 }

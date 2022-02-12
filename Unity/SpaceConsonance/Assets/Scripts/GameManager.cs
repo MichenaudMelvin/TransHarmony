@@ -4,152 +4,188 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour{
 
-    public List<string> musicStyles;
-    public List<Color> musicColors;
+    [Header("Timer")]
+    [SerializeField]
+    [Range(1f, 300f)]
+    [Tooltip("Temps d'une journée au festival // 60 = 1min, 300 = 5min, (temps en secondes)")]
+    private float _timeOfADay = 300f;
 
-    public float satisfactionPoints;
+    [Tooltip("Temps restant de la journée")]
+    private float _timeLeft = 0f;
 
-    public bool isFinished;
+    [Tooltip("Nombre de jours écoulés")]
+    private int _day = 0;
 
-    public List<string> finalMusicList;
-    public int correctMusicStyles;
+    [SerializeField]
+    [Tooltip("Temps restant de la journée (Visuel)")]
+    private Text _timerText;
+    [Tooltip("Préfix du temps restant (Visuel)")]
+    private string _timerTextPrefix;
 
-    public Color mixedColor;
+    [SerializeField]
+    [Tooltip("Nombre de jours écoulés (Visuel)")]
+    private Text _dayText;
 
-    public int index0;
-    public int index1;
-    public int index2;
-    public int index3;
+    [Tooltip("Préfix des jours restant (Visuel)")]
+    private string _dayTextPrefix;
 
-    public void changePrefrenceColor(RawImage rawImage, int index){
-        rawImage.color = musicColors[index];
-        Color currColor = rawImage.color;
-        currColor.a = 1f;
-        rawImage.color = currColor;
+    [SerializeField]
+    [Tooltip("Timer sous forme de slider")]
+    private Slider _sliderTimer;
+
+    [SerializeField]
+    [Tooltip("Dégradé du Slider Timer")]
+    private Gradient _sliderGradient;
+
+    [Space(10)]
+
+    [Header("UI Results")]
+    [SerializeField]
+    [Tooltip("Image qui donne les resultas")]
+    private RawImage _resultImage;
+
+    [SerializeField]
+    [Tooltip("Texte qui donne les resultas")]
+    private Text _resultText;
+
+    [Space(10)]
+
+    [Header("Halls")]
+
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les halls")]
+    private Transform _hallsContainer;
+
+    [Tooltip("Liste contenant tous les halls")]
+    private List<HallsAttributes> _listHalls = new List<HallsAttributes>{};
+
+    [Space(10)]
+
+    [Header("Artists")]
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les artistes")]
+    private Transform _artistContainers;
+
+    [Tooltip("Si il est encore possible de changer les artistes ou non")]
+    private bool _canChangeArtist = true;
+
+    [Space(10)]
+
+    [Header("Points")]
+    [Tooltip("Les points accumulés par le joueur")]
+    private float _playerPoints;
+
+    [Space(10)]
+
+    [Header("Music")]
+    [SerializeField]
+    [Tooltip("Référence au Music Manager")]
+    private MusicManager _musicManager;
+
+    [Space(10)]
+
+    [Header("Others")]
+    [SerializeField]
+    [Tooltip("GameObject qui créé les commandes")]
+    private CommandGenerator _commandGenerator;
+
+    private void Start(){
+        _timeLeft = _timeOfADay;
+
+        // initialisation du timer
+        _timerTextPrefix = _timerText.text;
+        _dayTextPrefix = _dayText.text;
+        _dayText.text = _dayTextPrefix + _day.ToString();
+        _sliderTimer.maxValue = _timeOfADay;
+        _sliderTimer.value = _sliderTimer.maxValue;
+
+        for(int i = 0; i < _hallsContainer.childCount; i++){
+            _listHalls.Add(_hallsContainer.GetChild(i).GetComponent<HallsAttributes>());
+        }
+
+        _commandGenerator.CreateCommands();
     }
 
-    public void changePrefrenceColor(RawImage rawImage, int index0, int index1){
-        // pas clair au niveau de la couleur
-        rawImage.color = musicColors[index0] + ((musicColors[index1] - musicColors[index0])/2);
-        Color currColor = rawImage.color;
-        currColor.a = 1f;
-        rawImage.color = currColor;
+    private void Update(){
+        this.ManageTimer();
     }
 
-    public void ManagePoints(List<ArtistsAttributes> artistList, List<string> publicPreferences, RawImage preferences){
-        for(int i = 0; i < artistList.Count; i++){
-            // check tous les artistes qui sont dans un hall
-            // et check si la contrainte de l'artiste est valide
-            if(artistList[i].GetComponent<DragNDrop>().inHall){
-                if(artistList[i].validConstraint){
-                    satisfactionPoints += artistList[i].rewardPoints * artistList[i].pointMultiplier;
-                } else{
-                    satisfactionPoints += artistList[i].rewardPoints;
-                }
+    // gère de le timer du festival entre chaque journées
+    private void ManageTimer(){
+        if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist){
+            _timeLeft -= Time.deltaTime;
 
-                if(index0 == -1){index0 = i;}
-                else if(index1 == -1){index1 = i;}
-                else if(index2 == -1){index2 = i;}
-                else if(index3 == -1){index3 = i;}
+            // ajouter la fonction qui créer les commandes ici
+            _timerText.text = _timerTextPrefix + ((int)_timeLeft).ToString() + "s";
+            _sliderTimer.value = _timeLeft;
+            _sliderTimer.transform.Find("Fill").GetComponent<Image>().color = _sliderGradient.Evaluate(_sliderTimer.normalizedValue);
 
-                finalMusicList.Add(artistList[i].preferencesName);
+            if(_timeLeft <= 0f){
+                this.EndDay();
+            }
+        }
+    }
+
+    // ce qu'il se passe à la fin de charque jours
+    private void EndDay(){
+        // augmente de compteur de jours
+        _day += 1;
+        _dayText.text = _dayTextPrefix + _day.ToString();
+
+        // affichage des resultats
+        _resultText.text = "Votre score : " + _playerPoints;
+        _resultImage.gameObject.SetActive(true);
+
+        // préparation pour le prochain jours (destructions des commandes restantes, check les artistes encore disponibles)
+        _canChangeArtist = this.CheckArtistStatus();
+        _commandGenerator.DestroyCommands();
+    }
+
+    // regarde parmis tous les artistes si certains non pas encore fait un concert
+    private bool CheckArtistStatus(){
+        int artistAvailable = 0;
+        for(int i = 0; i < _artistContainers.childCount; i++){
+            if(!_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>().GetStatus()){
+                artistAvailable += 1;
             }
         }
 
-
-        // à faire : calcul des points du public
-        // pour l'instant ça
-        for(int i = 0; i < publicPreferences.Count; i++){
-            for(int j = 0; j < finalMusicList.Count; j++){
-                if(publicPreferences[i] == finalMusicList[j]){
-                    correctMusicStyles += 1;
-                }
-            }
-        }
-
-        if(correctMusicStyles > 0){
-            satisfactionPoints *= correctMusicStyles;
-        }
-
-        // mixedColor = ((artistList[index1].preferences.color - artistList[index0].preferences.color)/2) + ((artistList[index3].preferences.color - artistList[index2].preferences.color)/2);
-
-        // // téma l'enfer, et c'est meme pas bon
-        // RGB data = new RGB((int)Mathf.Round(Mathf.Abs(mixedColor.r * 255)), (int)Mathf.Round(Mathf.Abs(mixedColor.g * 255)), (int)Mathf.Round(Mathf.Abs(mixedColor.b * 255)));
-        // string decimalMixedColor = RGBToHexadecimal(data);
-        // RGB data2 = new RGB((int)Mathf.Round(Mathf.Abs(preferences.color.r * 255)), (int)Mathf.Round(Mathf.Abs(preferences.color.g * 255)), (int)Mathf.Round(Mathf.Abs(preferences.color.b * 255)));
-        // string decimalPreferences = RGBToHexadecimal(data2);
-
-        // int newDecimalMixedColor = int.Parse(decimalMixedColor, System.Globalization.NumberStyles.HexNumber);
-        // int newDecimalPreferences = int.Parse(decimalPreferences, System.Globalization.NumberStyles.HexNumber);
-
-        // print(newDecimalMixedColor);
-        // print(newDecimalPreferences);
-        // if(newDecimalMixedColor > newDecimalPreferences){
-        //     print(((newDecimalPreferences - newDecimalMixedColor) / newDecimalPreferences) * 100);
-        // } else {
-        //     print(((newDecimalMixedColor - newDecimalPreferences) / newDecimalMixedColor) * 100);
-        // }
+        if(artistAvailable > _hallsContainer.childCount){return true;}
+        else{return false;}
     }
 
-    // pris d'ici : https://www.programmingalgorithms.com/algorithm/rgb-to-hexadecimal/
-    public struct RGB{
-        private int _r;
-        private int _g;
-        private int _b;
-
-        public RGB(int r, int g, int b){
-            this._r = r;
-            this._g = g;
-            this._b = b;
-        }
-
-        public int R{
-            get { return this._r; }
-            set { this._r = value; }
-        }
-
-        public int G{
-            get { return this._g; }
-            set { this._g = value; }
-        }
-
-        public int B{
-            get { return this._b; }
-            set { this._b = value; }
-        }
-
-        public bool Equals(RGB rgb){
-            return (this.R == rgb.R) && (this.G == rgb.G) && (this.B == rgb.B);
-        }
+    private void ManagePoints(){
+        // on verra
     }
 
-    public static string RGBToHexadecimal(RGB rgb){
-        string rs = DecimalToHexadecimal(rgb.R);
-        string gs = DecimalToHexadecimal(rgb.G);
-        string bs = DecimalToHexadecimal(rgb.B);
+    // public functions
+    public float GetTime(){return _timeLeft;}
 
-        return rs + gs + bs;
-    }
+    public float GetTimeOfADay(){return _timeOfADay;}
 
-    private static string DecimalToHexadecimal(int dec){
-        if (dec <= 0)
-            return "00";
+    public int GetDay(){return _day;}
 
-        int hex = dec;
-        string hexStr = string.Empty;
+    public Gradient GetTimerGradient(){return _sliderGradient;}
 
-        while (dec > 0)
-        {
-            hex = dec % 16;
+    public bool GetCanChangeArtist(){return _canChangeArtist;}
 
-            if (hex < 10)
-                hexStr = hexStr.Insert(0, System.Convert.ToChar(hex + 48).ToString());
-            else
-                hexStr = hexStr.Insert(0, System.Convert.ToChar(hex + 55).ToString());
+    // recommence une journée
+    public void RestartDay(){
+        _timeLeft = _timeOfADay;
 
-            dec /= 16;
+        _resultImage.gameObject.SetActive(false);
+
+        for(int i = 0; i < _listHalls.Count; i++){
+            _listHalls[i].ChangeArtist();
         }
 
-        return hexStr;
+        _commandGenerator.CreateCommands();
+        _musicManager.SetAudioClip();
     }
+
+    // pour ajouter ou enlever des points
+    public void UpdatePoints(float amount){
+        _playerPoints += amount;
+    }
+
 }

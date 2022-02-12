@@ -1,94 +1,94 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ArtistsAttributes : MonoBehaviour{
 
-    public string artistName;
-    public Text artistNameToChange;
-    public Text musicStyle;
-    public Text constraintText;
+    [Header("Basics")]
+    [SerializeField]
+    [Tooltip("Nom de l'artiste")]
+    private string _name; // https://www.lestrans.com/trans-2021/
 
-    public string preferencesName;
-    public RawImage preferences;
+    [SerializeField]
+    [Tooltip("Style de musique de l'artiste")]
+    private string _style; // https://www.lestrans.com/trans-2021/
 
-    public AudioSource musicToPlay;
+    [SerializeField]
+    [Tooltip("Musique que l'artiste joue")]
+    private AudioClip _music;
 
-    public GameManager gameManager;
-    private int randomPositionMusicStyle;
+    [Tooltip("Si l'artiste a déjà fait un concert")]
+    private bool _alreadyPerform;
 
-    public string constraint;
-    public float rewardPoints;
-    public float pointMultiplier;
-    public bool validConstraint = false;
+    [SerializeField]
+    [Tooltip("Référence au GameManager")]
+    private GameManager _gameManager;
+
+    [SerializeField]
+    [Tooltip("Liste de besoins des artistes (items)")]
+    private List<string> _listNeeds;
+
+    [Header("Commands")]
+    [SerializeField]
+    [Tooltip("Parent qui contient toutes les commandes")]
+    private Transform _commandsContainer;
+
+    [Space(10)]
+
+    [Header("Affichage texte")]
+    [SerializeField]
+    [Tooltip("Affichage de son nom au dessus de son modèle")]
+    private TextMesh _textName;
 
     private void Start(){
-        this.FixNameReferences();
-        randomPositionMusicStyle = gameManager.musicStyles.IndexOf(preferencesName);
-        gameManager.changePrefrenceColor(preferences, randomPositionMusicStyle);
+        this.BillboardText();
     }
 
-    private void FixNameReferences(){
-        this.name = artistName;
-        musicStyle.text = preferencesName;
-        artistNameToChange.text = artistName;
-        this.changeConstraintText();
+    // permet au texte d'être toujours face à la camera
+    // probablement à changer
+    private void BillboardText(){
+        _textName.text = _name;
+        _textName.transform.rotation = Quaternion.LookRotation(_textName.transform.position - Camera.main.transform.position);
     }
 
-    private void changeConstraintText(){
-        if(constraint == "LikePlayNearTechno"){
-            constraintText.text = "Like to play next to a Techno group";
-        } else if(constraint == "DislikePlayNearTechno"){
-            constraintText.text = "Doesn't like to play next to a Techno group";
+    private void CheckItem(DragNDrop item){
+        for(int i = 0; i < _commandsContainer.childCount; i++){
+            if(this == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtisteWhoNeedIt()){
+                if(item.GetComponent<ItemAttributes>().GetItemName() == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
+                    // victoire
+                    StartCoroutine(_commandsContainer.GetChild(i).GetComponent<CommandAttributes>().Succeed());
+                    _gameManager.UpdatePoints(10);
+                    return;
+                } else if(item.GetComponent<ItemAttributes>().GetItemName() != _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
+                    // echec
+                    _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().Failure();
+                }
+            }
         }
 
-        else if(constraint == "LikePlayNearHouse"){
-            constraintText.text = "Like to play next to a House group";
-        } else if(constraint == "DislikePlayNearHouse"){
-            constraintText.text = "Doesn't like to play next to a House group";
-        }
+        _gameManager.UpdatePoints(-10);
+    }
 
-        else if(constraint == "LikePlayNearElectro"){
-            constraintText.text = "Like to play next to a Electro group";
-        } else if(constraint == "DislikePlayNearElectro"){
-            constraintText.text = "Doesn't like to play next to a Electro group";
-        }
+    // public functions
+    public string GetName(){return _name;}
 
-        // famille de musique 2
-        else if(constraint == "LikePlayNearFunk"){
-            constraintText.text = "Like to play next to a Funk group";
-        } else if(constraint == "DislikePlayNearFunk"){
-            constraintText.text = "Doesn't like to play next to a Funk group";
-        }
+    public AudioClip GetMusic(){return _music;}
 
-        else if(constraint == "LikePlayNearRap"){
-            constraintText.text = "Like to play next to a Rap group";
-        } else if(constraint == "DislikePlayNearRap"){
-            constraintText.text = "Doesn't like to play next to a Rap group";
-        }
+    public bool GetStatus(){return _alreadyPerform;}
 
-        else if(constraint == "LikePlayNearJazz"){
-            constraintText.text = "Like to play next to a Jazz group";
-        } else if(constraint == "DislikePlayNearJazz"){
-            constraintText.text = "Doesn't like to play next to a Jazz group";
-        }
+    public List<string> GetListNeeds(){return _listNeeds;}
 
-        // famille de musique 3
-        else if(constraint == "LikePlayNearRock"){
-            constraintText.text = "Like to play next to a Rock group";
-        } else if(constraint == "DislikePlayNearRock"){
-            constraintText.text = "Doesn't like to play next to a Rock group";
-        }
+    public void SetStatus(bool boolean){_alreadyPerform = boolean;}
 
-        else if(constraint == "LikePlayNearPunk"){
-            constraintText.text = "Like to play next to a Punk group";
-        } else if(constraint == "DislikePlayNearPunk"){
-            constraintText.text = "Doesn't like to play next to a Punk group";
-        }
+    // place l'item sur l'artiste et permet le snap
+    public void PiecePlaced(DragNDrop piece){
+        if(this.gameObject.activeInHierarchy){
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
 
-        else if(constraint == "LikePlayNearMetal"){
-            constraintText.text = "Like to play next to a Metal group";
-        } else if(constraint == "DislikePlayNearMetal"){
-            constraintText.text = "Doesn't like to play next to a Metal group";
+            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 50f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 50f && this.transform.eulerAngles.y ==0){
+                this.CheckItem(piece);
+
+                Destroy(piece.gameObject);
+            }
         }
     }
 }
