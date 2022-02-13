@@ -24,6 +24,10 @@ public class ArtistsAttributes : MonoBehaviour{
     private GameManager _gameManager;
 
     [SerializeField]
+    [Tooltip("Référence au Music Manager")]
+    private MusicManager _musicManager;
+
+    [SerializeField]
     [Tooltip("Liste de besoins des artistes (items)")]
     private List<string> _listNeeds;
 
@@ -50,17 +54,22 @@ public class ArtistsAttributes : MonoBehaviour{
         _textName.transform.rotation = Quaternion.LookRotation(_textName.transform.position - Camera.main.transform.position);
     }
 
+    // check si l'item drag n dropé est bon
+    // possède l'erreur "has been destroyed but you are still trying to access it" // pas trop grave normalement
     private void CheckItem(DragNDrop item){
         for(int i = 0; i < _commandsContainer.childCount; i++){
             if(this == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtisteWhoNeedIt()){
                 if(item.GetComponent<ItemAttributes>().GetItemName() == _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
                     // victoire
                     StartCoroutine(_commandsContainer.GetChild(i).GetComponent<CommandAttributes>().Succeed());
-                    _gameManager.UpdatePoints(10);
+                    _gameManager.UpdatePoints(50);
                     return;
                 } else if(item.GetComponent<ItemAttributes>().GetItemName() != _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().GetArtistNeed()){
                     // echec
                     _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().Failure();
+                } else{
+                    // si l'artiste n'avait aucune commande et que un item a été déposé sur lui
+                    _musicManager.UpdateVolume(-0.01f);
                 }
             }
         }

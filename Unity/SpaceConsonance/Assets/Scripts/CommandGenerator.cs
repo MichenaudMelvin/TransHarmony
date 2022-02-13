@@ -14,9 +14,21 @@ public class CommandGenerator : MonoBehaviour{
     private GameManager _gameManager;
 
     [SerializeField]
+    [Tooltip("Référence au Music Manager")]
+    private MusicManager _musicManager;
+
+    [SerializeField]
+    [Range(1, 20)]
+    [Tooltip("Nombre de commande maximales au total")]
+    private int _maxCommandNumber;
+
+    [SerializeField]
     [Range(1, 4)]
-    [Tooltip("Nombre de commande maximales")]
+    [Tooltip("Nombre de commande maximales à l'écran")]
     private int _maxCommandNumberAtTime;
+
+    [Tooltip("Nombre de commande générés au total pendant une journée")]
+    private int _commandGeneratedNbr = 0;
 
     [SerializeField]
     [Range(1f, 5f)]
@@ -68,7 +80,7 @@ public class CommandGenerator : MonoBehaviour{
             }
         }
 
-        command.SetArtisteWhoNeedIt(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>());
+        command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _musicManager);
     }
 
     // temps d'attente entre deux commande
@@ -79,32 +91,32 @@ public class CommandGenerator : MonoBehaviour{
     }
 
     // public functions
-    public int GetMaxCommandNumber(){return _maxCommandNumberAtTime;}
+    public int GetMaxCommandNumber(){return _maxCommandNumber;}
 
     // créé les commandes
     public void CreateCommands(){
-        if(this.transform.childCount < _maxCommandNumberAtTime && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist()){
-            if(this.transform.childCount == 0){
+        float delay = Random.Range(0, _maxWaitingTime);;
+
+        if(_commandGeneratedNbr < _maxCommandNumber && this.transform.childCount < _maxCommandNumberAtTime && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist()){
+            if(_commandGeneratedNbr == 0){
                 StartCoroutine(this.UpdateArtistList(0.0001f));
             }
 
-            float delay;
             if(_listArtistesInHalls.Count == _nbrOfArtistePerDays){
 
                 // à faire en fonction du nombre d'artistes
 
                 CommandAttributes newCommand = Instantiate(_commandToGenerate, this.transform);
 
-                newCommand.SetGameManager(_gameManager);
                 this.CheckArtistAvailability(newCommand);
+                _commandGeneratedNbr += 1;
 
-                delay = Random.Range(0, _maxWaitingTime);
             } else{
                 delay = 0f;
             }
-
-            StartCoroutine(this.WaitingTimeBeforeNewCommand(delay));
         }
+
+        StartCoroutine(this.WaitingTimeBeforeNewCommand(delay));
     }
 
     // détruits les commandes
@@ -116,5 +128,6 @@ public class CommandGenerator : MonoBehaviour{
         }
 
         _listArtistesInHalls.Clear();
+        _commandGeneratedNbr = 0;
     }
 }

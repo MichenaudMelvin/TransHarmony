@@ -89,8 +89,15 @@ public class GameManager : MonoBehaviour{
     [Tooltip("GameObject qui créé les commandes")]
     private CommandGenerator _commandGenerator;
 
+    [Tooltip("Référence aux settings du jeu")]
+    private Settings _settings;
+
     private void Start(){
         _timeLeft = _timeOfADay;
+
+        // Settings
+        // _settings = FindObjectOfType<Settings>();
+        // AudioListener.volume = _settings.GetMasterVolume();
 
         // initialisation du timer
         _timerTextPrefix = _timerText.text;
@@ -181,6 +188,7 @@ public class GameManager : MonoBehaviour{
 
         _commandGenerator.CreateCommands();
         _musicManager.SetAudioClip();
+        StartCoroutine(_musicManager.DisplayMusicName());
     }
 
     // pour ajouter ou enlever des points

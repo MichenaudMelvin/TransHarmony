@@ -40,6 +40,9 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Couleur quand le joueur rate")]
     private Color _failureColor;
 
+    [Tooltip("Booléan pour pas que la fin de timer soit faite en meme temps qu'une réussite")]
+    private bool _hasSucced = false;
+
     [Space(10)]
 
     [Header("Appearance")]
@@ -73,6 +76,9 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
+    [Tooltip("Référence au Music Manager")]
+    private MusicManager _musicManager;
+
     private void Start(){
         _initialColor = _image.color;
     }
@@ -87,7 +93,7 @@ public class CommandAttributes : MonoBehaviour{
         _artistName.text = _artistWhoNeedIt.GetName();
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
-        _artistNeed = _artistWhoNeedIt.GetListNeeds()[Random.Range(0, _artistWhoNeedIt.GetListNeeds().Count-1)];
+        _artistNeed = _artistWhoNeedIt.GetListNeeds()[Random.Range(0, _artistWhoNeedIt.GetListNeeds().Count)];
         _visualNeed.text = _artistNeed;
 
         this.SetPosition();
@@ -96,17 +102,24 @@ public class CommandAttributes : MonoBehaviour{
 
     // detruit les commande à partir d'un temps donné
     private void ManageTimer(){
-        _availableTime -= Time.deltaTime;
+        if(!_hasSucced){
+            _availableTime -= Time.deltaTime;
 
-        _circleTimer.fillAmount = Mathf.InverseLerp(0, _availableTimeInitial, _availableTime);
+            _circleTimer.fillAmount = Mathf.InverseLerp(0, _availableTimeInitial, _availableTime);
 
-        _circleTimer.color = _gameManager.GetTimerGradient().Evaluate(_circleTimer.fillAmount);
-
-        if(_availableTime <= 0){
-            _gameManager.UpdatePoints(-50);
-            // faire une animation de fin de timer
-            Destroy(this.gameObject);
+            _circleTimer.color = _gameManager.GetTimerGradient().Evaluate(_circleTimer.fillAmount);
         }
+
+        if(_availableTime <= 0 && !_hasSucced){
+            this.trucTimer();
+        }
+    }
+
+    private void trucTimer(){
+        _gameManager.UpdatePoints(-50);
+        _musicManager.UpdateVolume(-0.01f);
+        // faire une animation de fin de timer
+        Destroy(this.gameObject);
     }
 
     // gère la position de la commande
@@ -130,6 +143,7 @@ public class CommandAttributes : MonoBehaviour{
         float normalizedValue;
 
         Vector3 startPosition = this.transform.position;
+        // this._finalPosition.y += Screen.height/10;
         this._finalPosition += startPosition;
 
         while(time <= _movementDuration){
@@ -183,16 +197,18 @@ public class CommandAttributes : MonoBehaviour{
 
     public string GetArtistNeed(){return _artistNeed;}
 
-    public void SetArtisteWhoNeedIt(ArtistsAttributes newArtiste){
+    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference){
         _artistWhoNeedIt = newArtiste;
+        _gameManager = gameManagerReference;
+        _musicManager = musicManagerReference;
         this.SetupCommand();
     }
-
-    public void SetGameManager(GameManager gameManagerReference){_gameManager = gameManagerReference;}
 
     // quand le joueur réussi a bien drag n dropé son item
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
+        _musicManager.UpdateVolume(0.01f);
+        _hasSucced = true;
         // ajouter un son
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
@@ -201,6 +217,7 @@ public class CommandAttributes : MonoBehaviour{
     // quand le joueur rate
     public void Failure(){
         StartCoroutine(this.ChangeColor(_failureColor));
+        _musicManager.UpdateVolume(-0.01f);
         // ajouter un son
         _finalPosition = this.transform.position;
         StartCoroutine(this.FailureMovement());

@@ -1,23 +1,18 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour{
 
     [SerializeField]
+    [Tooltip("Référence aux settings du jeu")]
+    private Settings _settings;
+
     [Tooltip("La scène qui va être lancé")]
     private string _sceneName;
 
-    [SerializeField]
-    [Tooltip("Bouton qui démarre la scène")]
-    private Button _btn;
-
-    private void Start(){
-        _btn.onClick.AddListener(ChangeScene);
-    }
-
-    private void ChangeScene(){
+    public void ChangeScene(){
         SceneManager.LoadScene(_sceneName);
+        DontDestroyOnLoad(_settings);
     }
 
 }

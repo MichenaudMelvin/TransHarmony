@@ -1,4 +1,6 @@
+using System.Collections.Specialized;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,18 +14,30 @@ public class MusicManager : MonoBehaviour{
     private AudioSource _audioSource;
 
     [Tooltip("Volume de la musique joué")]
-    private float _volume;
+    private float _volume = -0.0001f;
 
     [Space(10)]
 
     [Header("Display music")]
     [SerializeField]
     [Tooltip("Nom de la musique")]
-    private Text _musicName;
+    private TextMeshProUGUI _musicName;
 
     [SerializeField]
     [Tooltip("Nom de l'artiste")]
     private Text _artistName;
+
+    [Tooltip("Vitesse à laquel va défiler le nom de la musique si le texte est trop grand")]
+    private float _musicNameScrollSpeed = 5;
+
+    private TextMeshProUGUI _cloneTextObject;
+
+    [SerializeField]
+    [Tooltip("Rect transform du nom de la music")]
+    private RectTransform _musicNameRectTransform;
+
+    private string _sourceText;
+    private string _tempText;
 
     [Space(10)]
 
@@ -56,25 +70,42 @@ public class MusicManager : MonoBehaviour{
 
     private void Update(){
         this.ManageVolume();
-        // this.DisplayMusicName();
     }
 
     // gère le volume de la musique en fonciton des actions du joueur
     private void ManageVolume(){
         if(_gameManager.GetTime() > 0){
-            _volume = Mathf.InverseLerp(0, _gameManager.GetTimeOfADay(), _gameManager.GetTime()) - 0.5f;
+            // ptet pas la meilleur méthode
+            // marche pas avec un Lerp car impossible d'augmenter ou diminuer du volume
+            _audioSource.volume += _volume;
+        } else if(_gameManager.GetTime() <= 0){
+            _audioSource.volume = 1;
         }
-
-        // float time = _gameManager.GetTime();
-        // time = Mathf.Lerp()
-
-        _audioSource.volume = _volume;
     }
 
-    private void DisplayMusicName(){
-        // if(){
-        //     scroll du texte si trop long : https://youtu.be/AuZNU7JTeWQ
-        // }
+    private IEnumerator DisplayMusicName(){
+        // scroll du texte si trop long : https://youtu.be/AuZNU7JTeWQ
+        // also : https://youtu.be/ToVL_f9G9Yk
+
+        // pas parfait
+
+        _cloneTextObject = Instantiate(_musicName) as TextMeshProUGUI;
+        RectTransform cloneRectTransform = _cloneTextObject.GetComponent<RectTransform>();
+        cloneRectTransform.SetParent(_musicNameRectTransform);
+        cloneRectTransform.anchorMin = new Vector2(1, 0.5f);
+        cloneRectTransform.localScale = Vector3.one;
+
+        float width = _musicName.preferredWidth;
+        Vector3 startPosition = _musicNameRectTransform.position;
+
+        float scrollPosition = 0;
+        while(true){
+            _musicNameRectTransform.position = new Vector3 (-scrollPosition % width, startPosition.y, startPosition.z);
+
+            scrollPosition += _musicNameScrollSpeed * 20 * Time.deltaTime;
+
+            yield return null;
+        }
     }
 
     // affiche le nom de la musique et de l'artiste
@@ -110,6 +141,10 @@ public class MusicManager : MonoBehaviour{
         _actualArtist = actualArtist;
 
         this.SetMusicName();
+        StartCoroutine(this.DisplayMusicName());
         _audioSource.Play();
     }
+
+    // pour augmenter ou diminuer le volume de la musique
+    public void UpdateVolume(float value){_audioSource.volume += value;}
 }
