@@ -1,70 +1,46 @@
 using UnityEngine;
+using System.Collections;
 
-public class EffetFoule : MonoBehaviour
-{
-    // Game Object
-    private AudioSource _audioSource; //Auto
+[RequireComponent(typeof(MeshRenderer))]
+public class EffetFoule : MonoBehaviour{
+
     [SerializeField]
-    private GameObject _gameobject;
+    [Tooltip("Audio source du jeu")]
+    private AudioSource _audioSource;
+
+    [SerializeField]
+    [Tooltip("Référence au GameManager")]
+    private GameManager _gameManager;
 
     [Space(5)]
-    // Update timing
-    [SerializeField]
-    private float _UpdateStep = 0.01f;
-    private float _currentUpdateTime = 0f;
 
-    // Data Lenght
-    private float _clipLoudness;
-    private float[] _clipSampleData;
+    [Tooltip("Hauteur originale de l'objet")]
+    private float _originalHeight;
 
-    [SerializeField]
-    private int _sampleDataLenght = 220;
-
-    [Header("--- Size ---")]
-    // Size Multiplicateur
-    [SerializeField]
-    private float _minSizeFactor = 2.5f;
-    [SerializeField]
-    private float _maxSizeFactor = 3.5f;
-    private float _sizeFactor;
-
-    [Space(5)]
-    // Size Max/Min
-
-
-    [SerializeField]
-    private float _minsize = 0.9f;
-    [SerializeField]
-    private float _maxsize = 3f;
-   
-
-    private void Start()
-    {
-        _audioSource = FindObjectOfType<AudioSource>(); // à éviter, mieux vaut faire une référence
-        _clipSampleData = new float[_sampleDataLenght];
-        _sizeFactor = Random.Range(_minSizeFactor, _maxSizeFactor);
+    private IEnumerator Start(){
+        _originalHeight = this.transform.localScale.y;
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(this.FouleMovement());
     }
 
-    private void Update()
-    {
-        _currentUpdateTime += Time.deltaTime;
-        if (_currentUpdateTime >= _UpdateStep)
-        {
-            _currentUpdateTime = 0f;
-            _audioSource.clip.GetData(_clipSampleData, _audioSource.timeSamples);
-            _clipLoudness = 0f;
-            foreach (var sample in _clipSampleData)
-            {
-                _clipLoudness += Mathf.Abs(sample);
-            }
-   
-            _clipLoudness /= _sampleDataLenght;
+    // public functions
+    // fait bouger le publique en fonction des actions du joueurs
+    public IEnumerator FouleMovement(){
+        while(_gameManager.GetTime() > 0){
 
-            _clipLoudness *= _sizeFactor;
-            _clipLoudness = Mathf.Clamp(_clipLoudness, _minsize, _maxsize);
-            _gameobject.transform.localScale = new Vector3(_minsize, _clipLoudness, _minsize);
+            float ecart = _audioSource.volume/5;
+            float newHeightScale = Random.Range(_originalHeight-ecart, _originalHeight+ecart);
+            transform.localScale = new Vector3(this.transform.localScale.x, newHeightScale, this.transform.localScale.z);
 
-             _sizeFactor = Random.Range(_minSizeFactor, _maxSizeFactor);
+            yield return new WaitForSeconds(0.03f);
         }
+
+        yield return null;
+
+    }
+
+    // reset la hauteur de la foule
+    public void ResetFoule(){
+        this.transform.localScale = new Vector3(this.transform.localScale.x, _originalHeight, this.transform.localScale.z);
     }
 }

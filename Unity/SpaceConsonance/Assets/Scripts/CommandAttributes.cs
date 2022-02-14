@@ -117,7 +117,7 @@ public class CommandAttributes : MonoBehaviour{
 
     private void trucTimer(){
         _gameManager.UpdatePoints(-50);
-        _musicManager.UpdateVolume(-0.01f);
+        _musicManager.UpdateVolume(-0.05f);
         // faire une animation de fin de timer
         Destroy(this.gameObject);
     }
@@ -138,6 +138,8 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     // fait monter la commande quand elle apparait
+    // pas parfait car différent en fonction de la taille de l'écran
+    // à voir avec les anchoredPosition car plus modulable
     private IEnumerator UpMovement(){
         float time = 0f;
         float normalizedValue;
@@ -207,7 +209,7 @@ public class CommandAttributes : MonoBehaviour{
     // quand le joueur réussi a bien drag n dropé son item
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
-        _musicManager.UpdateVolume(0.01f);
+        _musicManager.UpdateVolume(0.05f);
         _hasSucced = true;
         // ajouter un son
         yield return new WaitForSeconds(0.5f);
@@ -217,7 +219,7 @@ public class CommandAttributes : MonoBehaviour{
     // quand le joueur rate
     public void Failure(){
         StartCoroutine(this.ChangeColor(_failureColor));
-        _musicManager.UpdateVolume(-0.01f);
+        _musicManager.UpdateVolume(-0.05f);
         // ajouter un son
         _finalPosition = this.transform.position;
         StartCoroutine(this.FailureMovement());

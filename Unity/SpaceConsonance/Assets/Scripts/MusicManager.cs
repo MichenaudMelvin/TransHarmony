@@ -1,4 +1,3 @@
-using System.Collections.Specialized;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -27,17 +26,16 @@ public class MusicManager : MonoBehaviour{
     [Tooltip("Nom de l'artiste")]
     private Text _artistName;
 
+    [SerializeField]
+    [Range(0.01f, 0.05f)]
     [Tooltip("Vitesse à laquel va défiler le nom de la musique si le texte est trop grand")]
-    private float _musicNameScrollSpeed = 5;
+    private float _musicNameScrollSpeed;
 
     private TextMeshProUGUI _cloneTextObject;
 
     [SerializeField]
-    [Tooltip("Rect transform du nom de la music")]
+    [Tooltip("Rect transform du nom de la musique")]
     private RectTransform _musicNameRectTransform;
-
-    private string _sourceText;
-    private string _tempText;
 
     [Space(10)]
 
@@ -84,25 +82,33 @@ public class MusicManager : MonoBehaviour{
     }
 
     private IEnumerator DisplayMusicName(){
-        // scroll du texte si trop long : https://youtu.be/AuZNU7JTeWQ
         // also : https://youtu.be/ToVL_f9G9Yk
 
-        // pas parfait
+        if(_musicName.transform.childCount > 0){
+            Destroy(_musicName.transform.GetChild(0).gameObject);
+        }
+
+        _musicNameRectTransform.anchoredPosition = new Vector2(0, 0);
 
         _cloneTextObject = Instantiate(_musicName) as TextMeshProUGUI;
         RectTransform cloneRectTransform = _cloneTextObject.GetComponent<RectTransform>();
         cloneRectTransform.SetParent(_musicNameRectTransform);
-        cloneRectTransform.anchorMin = new Vector2(1, 0.5f);
+        cloneRectTransform.anchoredPosition = new Vector2(_musicNameRectTransform.sizeDelta.x, 0);
         cloneRectTransform.localScale = Vector3.one;
 
-        float width = _musicName.preferredWidth;
-        Vector3 startPosition = _musicNameRectTransform.position;
+        bool canScroll = true;
 
-        float scrollPosition = 0;
-        while(true){
-            _musicNameRectTransform.position = new Vector3 (-scrollPosition % width, startPosition.y, startPosition.z);
+        float scrollSpeed = _musicNameScrollSpeed;
 
-            scrollPosition += _musicNameScrollSpeed * 20 * Time.deltaTime;
+        // fait encore des trucs chelou mais à peu pres bon
+        while(canScroll){
+            _musicName.transform.Translate(new Vector3(-1, 0, 0) * scrollSpeed);
+            if(_musicNameRectTransform.anchoredPosition.x <= -_musicNameRectTransform.sizeDelta.x){
+                _musicNameRectTransform.anchoredPosition = Vector2.zero;
+                if(_gameManager.GetTime() <= 0){
+                    canScroll = false;
+                }
+            }
 
             yield return null;
         }
@@ -136,9 +142,13 @@ public class MusicManager : MonoBehaviour{
             }
         }
 
+        // while(_actualArtist.HasPlayMusic()){
         ArtistsAttributes actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
         _audioSource.clip = actualArtist.GetMusic();
         _actualArtist = actualArtist;
+        // }
+
+        _actualArtist.SetHasPlayMusic(true);
 
         this.SetMusicName();
         StartCoroutine(this.DisplayMusicName());

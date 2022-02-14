@@ -92,6 +92,10 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Référence aux settings du jeu")]
     private Settings _settings;
 
+    [SerializeField]
+    [Tooltip("Parent qui contient le public")]
+    private Transform _publicContainers;
+
     private void Start(){
         _timeLeft = _timeOfADay;
 
@@ -146,6 +150,10 @@ public class GameManager : MonoBehaviour{
         // préparation pour le prochain jours (destructions des commandes restantes, check les artistes encore disponibles)
         _canChangeArtist = this.CheckArtistStatus();
         _commandGenerator.DestroyCommands();
+
+        for(int i = 0; i < _publicContainers.transform.childCount; i++){
+            _publicContainers.GetChild(i).GetComponent<EffetFoule>().ResetFoule();
+        }
     }
 
     // regarde parmis tous les artistes si certains non pas encore fait un concert
@@ -188,7 +196,11 @@ public class GameManager : MonoBehaviour{
 
         _commandGenerator.CreateCommands();
         _musicManager.SetAudioClip();
-        StartCoroutine(_musicManager.DisplayMusicName());
+
+        for(int i = 0; i < _publicContainers.transform.childCount; i++){
+            StartCoroutine(_publicContainers.GetChild(i).GetComponent<EffetFoule>().FouleMovement());
+        }
+
     }
 
     // pour ajouter ou enlever des points

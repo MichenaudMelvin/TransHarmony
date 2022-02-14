@@ -16,8 +16,11 @@ public class ArtistsAttributes : MonoBehaviour{
     [Tooltip("Musique que l'artiste joue")]
     private AudioClip _music;
 
-    [Tooltip("Si l'artiste a déjà fait un concert")]
+    [Tooltip("Si l'artiste a déjà fait un concert (présent dans un hall)")]
     private bool _alreadyPerform;
+
+    [Tooltip("Si l'artiste a déjà joué sa musique")]
+    private bool _hasPlayMusic = false;
 
     [SerializeField]
     [Tooltip("Référence au GameManager")]
@@ -69,13 +72,16 @@ public class ArtistsAttributes : MonoBehaviour{
                     _commandsContainer.GetChild(i).GetComponent<CommandAttributes>().Failure();
                 } else{
                     // si l'artiste n'avait aucune commande et que un item a été déposé sur lui
-                    _musicManager.UpdateVolume(-0.01f);
+                    _musicManager.UpdateVolume(-0.05f);
                 }
             }
         }
 
         _gameManager.UpdatePoints(-10);
     }
+
+    // quand l'artiste est allé dans un halls puis reparti
+    private void OnDisable(){_hasPlayMusic = false;}
 
     // public functions
     public string GetName(){return _name;}
@@ -100,4 +106,8 @@ public class ArtistsAttributes : MonoBehaviour{
             }
         }
     }
+
+    public bool HasPlayMusic(){return _hasPlayMusic;}
+
+    public void SetHasPlayMusic(bool boolean){_hasPlayMusic = boolean;}
 }
