@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff4258c3be1e143ba17c2abaec3ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeOfADay: 20
+  _timeOfADay: 30
   _timerText: {fileID: 0}
   _dayText: {fileID: 0}
   _sliderTimer: {fileID: 0}
@@ -77,6 +77,9 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   _resultImage: {fileID: 0}
+  _resultText: {fileID: 0}
   _hallsContainer: {fileID: 0}
   _artistContainers: {fileID: 0}
   _musicManager: {fileID: 0}
+  _commandGenerator: {fileID: 0}
+  _publicContainers: {fileID: 0}

@@ -150,6 +150,7 @@ public class GameManager : MonoBehaviour{
         // préparation pour le prochain jours (destructions des commandes restantes, check les artistes encore disponibles)
         _canChangeArtist = this.CheckArtistStatus();
         _commandGenerator.DestroyCommands();
+        StartCoroutine(_musicManager.EndDay());
 
         for(int i = 0; i < _publicContainers.transform.childCount; i++){
             _publicContainers.GetChild(i).GetComponent<EffetFoule>().ResetFoule();
@@ -185,6 +186,7 @@ public class GameManager : MonoBehaviour{
     public bool GetCanChangeArtist(){return _canChangeArtist;}
 
     // recommence une journée
+    // call pas le bouton
     public void RestartDay(){
         _timeLeft = _timeOfADay;
 
