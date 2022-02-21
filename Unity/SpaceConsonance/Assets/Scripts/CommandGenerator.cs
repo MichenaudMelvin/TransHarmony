@@ -18,6 +18,10 @@ public class CommandGenerator : MonoBehaviour{
     private MusicManager _musicManager;
 
     [SerializeField]
+    [Tooltip("GameObject qui contient le générateur d'items")]
+    private ItemGenerator _itemGenerator;
+
+    [SerializeField]
     [Range(1, 20)]
     [Tooltip("Nombre de commande maximales au total")]
     private int _maxCommandNumber;
@@ -80,7 +84,7 @@ public class CommandGenerator : MonoBehaviour{
             }
         }
 
-        command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _musicManager);
+        command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _musicManager, _itemGenerator.GetListNeeds());
     }
 
     // temps d'attente entre deux commande

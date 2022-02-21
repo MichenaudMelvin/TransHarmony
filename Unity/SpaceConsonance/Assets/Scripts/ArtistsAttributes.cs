@@ -30,10 +30,6 @@ public class ArtistsAttributes : MonoBehaviour{
     [Tooltip("Référence au Music Manager")]
     private MusicManager _musicManager;
 
-    [SerializeField]
-    [Tooltip("Liste de besoins des artistes (items)")]
-    private List<string> _listNeeds;
-
     [Header("Commands")]
     [SerializeField]
     [Tooltip("Parent qui contient toutes les commandes")]
@@ -90,8 +86,6 @@ public class ArtistsAttributes : MonoBehaviour{
 
     public bool GetStatus(){return _alreadyPerform;}
 
-    public List<string> GetListNeeds(){return _listNeeds;}
-
     public void SetStatus(bool boolean){_alreadyPerform = boolean;}
 
     // place l'item sur l'artiste et permet le snap
@@ -99,10 +93,10 @@ public class ArtistsAttributes : MonoBehaviour{
         if(this.gameObject.activeInHierarchy){
             Vector3 screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
 
-            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 50f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 50f && this.transform.eulerAngles.y ==0){
+            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 150f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 150f && this.transform.eulerAngles.y == 0){
                 this.CheckItem(piece);
 
-                Destroy(piece.gameObject);
+                piece.GetComponent<ItemAttributes>().RestartPosition();
             }
         }
     }

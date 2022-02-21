@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CommandAttributes : MonoBehaviour{
 
@@ -55,6 +56,13 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Position finale (après un lerp)")]
     private Vector3 _finalPosition;
 
+    [Tooltip("Scale initial")]
+    private Vector3 _initialScale;
+
+    [SerializeField]
+    [Tooltip("Scale quand annimaiton d'aggrandisement")]
+    private Vector3 _upperScale;
+
     [Space(10)]
 
     [Header("Timer")]
@@ -79,21 +87,26 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Référence au Music Manager")]
     private MusicManager _musicManager;
 
+    [Tooltip("Booléen qui permet de savoir si le joueur passe son curseur/item dessus la commande")]
+    private bool _isItemOnIt = false;
+
     private void Start(){
         _initialColor = _image.color;
+        _initialScale = this.transform.localScale;
     }
 
     private void Update(){
         this.ManageTimer();
+        this.ScaleAnimation();
     }
 
-    private void SetupCommand(){
+    private void SetupCommand(List<string> listNeed){
         _availableTimeInitial = _availableTime;
 
         _artistName.text = _artistWhoNeedIt.GetName();
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
-        _artistNeed = _artistWhoNeedIt.GetListNeeds()[Random.Range(0, _artistWhoNeedIt.GetListNeeds().Count)];
+        _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
         _visualNeed.text = _artistNeed;
 
         this.SetPosition();
@@ -111,11 +124,11 @@ public class CommandAttributes : MonoBehaviour{
         }
 
         if(_availableTime <= 0 && !_hasSucced){
-            this.trucTimer();
+            this.EndTimer();
         }
     }
 
-    private void trucTimer(){
+    private void EndTimer(){
         _gameManager.UpdatePoints(-50);
         _musicManager.UpdateVolume(-0.05f);
         // faire une animation de fin de timer
@@ -194,16 +207,43 @@ public class CommandAttributes : MonoBehaviour{
         _image.color = _initialColor;
     }
 
+    // quand un item entre en collison avec une commande
+    private void OnTriggerEnter2D(Collider2D collider){
+        if(collider.tag == "Item"){
+            _isItemOnIt = true;
+        }
+    }
+
+    // quand un item sort de la collison avec la commande
+    private void OnTriggerExit2D(Collider2D collider){
+        if(collider.tag == "Item"){
+            _isItemOnIt = false;
+        }
+    }
+
+    // animation scale quand la souris passe dessus
+    private void ScaleAnimation(){
+        if(_isItemOnIt){
+            while(this.transform.localScale.x <= _upperScale.x && this.transform.localScale.y <= _upperScale.y){
+                this.transform.localScale += new Vector3(0.01f, 0.01f, 0f);
+            }
+        } else if(!_isItemOnIt){
+            while(this.transform.localScale.x >= _initialScale.x && this.transform.localScale.y >= _initialScale.y){
+                this.transform.localScale -= new Vector3(0.01f, 0.01f, 0f);
+            }
+        }
+    }
+
     // public functions
     public ArtistsAttributes GetArtisteWhoNeedIt(){return _artistWhoNeedIt;}
 
     public string GetArtistNeed(){return _artistNeed;}
 
-    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference){
+    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, List<string> listNeed){
         _artistWhoNeedIt = newArtiste;
         _gameManager = gameManagerReference;
         _musicManager = musicManagerReference;
-        this.SetupCommand();
+        this.SetupCommand(listNeed);
     }
 
     // quand le joueur réussi a bien drag n dropé son item
