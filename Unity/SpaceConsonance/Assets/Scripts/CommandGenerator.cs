@@ -50,9 +50,6 @@ public class CommandGenerator : MonoBehaviour{
     [Tooltip("Nombre d'artistes par jours")]
     private int _nbrOfArtistePerDays = 4; // à set manuellement, pas trouvé d'autres moyens
 
-    [Tooltip("Commande demandé")]
-    private List<string> _commandForHalls;
-
     private void Start(){
         if(_maxCommandNumberAtTime > _artistContainers.childCount){
             _maxCommandNumberAtTime = _artistContainers.childCount;
