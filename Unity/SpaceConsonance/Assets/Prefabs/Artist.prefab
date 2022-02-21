@@ -101,7 +101,6 @@ MonoBehaviour:
   _music: {fileID: 0}
   _gameManager: {fileID: 0}
   _musicManager: {fileID: 0}
-  _listNeeds: []
   _commandsContainer: {fileID: 0}
   _textName: {fileID: 176033888258457976}
 --- !u!1 &3392681038052164371

@@ -408,6 +408,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemToGenerate: {fileID: -6104204249089720828, guid: 626ca374c355d5f47be93547682d9d8c, type: 3}
+  _listNeeds:
+  - Micro
+  - Wire
+  - Speaker
+  - Mixing console
+  - Amplifier
   _itemsPositions: {fileID: 9168675492022189164}
   _spriteList: []
   _commandGenerator: {fileID: 6468679391573677167}
@@ -2060,6 +2066,7 @@ MonoBehaviour:
   _gameManager: {fileID: 0}
   _musicManager: {fileID: 0}
   _maxCommandNumber: 10
+  _itemGenerator: {fileID: 706802147356073737}
   _maxCommandNumberAtTime: 4
   _maxWaitingTime: 3.5
   _artistContainers: {fileID: 0}

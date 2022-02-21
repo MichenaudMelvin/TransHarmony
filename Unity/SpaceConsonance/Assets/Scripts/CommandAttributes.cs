@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CommandAttributes : MonoBehaviour{
 
@@ -87,13 +88,13 @@ public class CommandAttributes : MonoBehaviour{
         this.ManageTimer();
     }
 
-    private void SetupCommand(){
+    private void SetupCommand(List<string> listNeed){
         _availableTimeInitial = _availableTime;
 
         _artistName.text = _artistWhoNeedIt.GetName();
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
-        _artistNeed = _artistWhoNeedIt.GetListNeeds()[Random.Range(0, _artistWhoNeedIt.GetListNeeds().Count)];
+        _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
         _visualNeed.text = _artistNeed;
 
         this.SetPosition();
@@ -199,11 +200,11 @@ public class CommandAttributes : MonoBehaviour{
 
     public string GetArtistNeed(){return _artistNeed;}
 
-    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference){
+    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, List<string> listNeed){
         _artistWhoNeedIt = newArtiste;
         _gameManager = gameManagerReference;
         _musicManager = musicManagerReference;
-        this.SetupCommand();
+        this.SetupCommand(listNeed);
     }
 
     // quand le joueur réussi a bien drag n dropé son item
