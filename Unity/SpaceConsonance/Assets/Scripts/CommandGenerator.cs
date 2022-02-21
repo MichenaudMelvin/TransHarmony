@@ -35,7 +35,7 @@ public class CommandGenerator : MonoBehaviour{
     private int _commandGeneratedNbr = 0;
 
     [SerializeField]
-    [Range(1f, 5f)]
+    [Range(0.1f, 5f)]
     [Tooltip("Temps d'attente entre deux commandes")]
     private float _maxWaitingTime;
 
@@ -50,10 +50,17 @@ public class CommandGenerator : MonoBehaviour{
     [Tooltip("Nombre d'artistes par jours")]
     private int _nbrOfArtistePerDays = 4; // à set manuellement, pas trouvé d'autres moyens
 
+    [Tooltip("Nombre d'artistes restant a répondre aux commandes")]
+    private int artistsLeft;
+
+    [Tooltip("Commande demandé")]
+    private List<string> _commandForHalls;
+
     private void Start(){
         if(_maxCommandNumberAtTime > _artistContainers.childCount){
             _maxCommandNumberAtTime = _artistContainers.childCount;
         }
+        artistsLeft=_nbrOfArtistePerDays;
     }
 
     // ajoute à la liste les artistes présent dans les halls
@@ -79,9 +86,15 @@ public class CommandGenerator : MonoBehaviour{
                 this.CheckArtistAvailability(command);
                 return;
             }
+                //check if artist commands are over
+            if(_gameManager.conditionsLeftBeforeHallComplete[_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>().GetHallNumber()] <= 0)
+            {
+                this.CheckArtistAvailability(command);
+                return;
+            }
         }
 
-        command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _musicManager, _itemGenerator.GetListNeeds());
+        command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _musicManager, this, _itemGenerator.GetListNeeds());
     }
 
     // temps d'attente entre deux commande
@@ -96,8 +109,7 @@ public class CommandGenerator : MonoBehaviour{
 
     // créé les commandes
     public void CreateCommands(){
-        float delay = Random.Range(0, _maxWaitingTime);;
-
+        float delay = Random.Range(0, _maxWaitingTime);
         if(_commandGeneratedNbr < _maxCommandNumber && this.transform.childCount < _maxCommandNumberAtTime && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist()){
             if(_commandGeneratedNbr == 0){
                 StartCoroutine(this.UpdateArtistList(0.0001f));
@@ -131,4 +143,7 @@ public class CommandGenerator : MonoBehaviour{
         _listArtistesInHalls.Clear();
         _commandGeneratedNbr = 0;
     }
+
+    public void SetArtistLeft(int newValue){artistsLeft += newValue;}
+    public void SetMaxCommandAtATime(int newValue){_maxCommandNumberAtTime += newValue;}
 }

@@ -5,6 +5,12 @@ using System.Collections.Generic;
 
 public class CommandAttributes : MonoBehaviour{
 
+
+    [Header("Hall")]
+    [Tooltip("Savoir a quel hall appartient la commande")]
+    private int currentHall;
+
+
     [Header("Artists")]
     [Tooltip("Artiste qui a besoin de la commande")]
     private ArtistsAttributes _artistWhoNeedIt;
@@ -22,6 +28,7 @@ public class CommandAttributes : MonoBehaviour{
     [SerializeField]
     [Tooltip("Texte qui permet de connaitre quel artiste à besoin de cette commande")]
     private Text _artistName;
+
 
     [Space(10)]
 
@@ -89,6 +96,8 @@ public class CommandAttributes : MonoBehaviour{
 
     [Tooltip("Booléen qui permet de savoir si le joueur passe son curseur/item dessus la commande")]
     private bool _isItemOnIt = false;
+    [Tooltip("Référence au CommandGenerator")]
+    private CommandGenerator _commandGenerator;
 
     private void Start(){
         _initialColor = _image.color;
@@ -104,6 +113,8 @@ public class CommandAttributes : MonoBehaviour{
         _availableTimeInitial = _availableTime;
 
         _artistName.text = _artistWhoNeedIt.GetName();
+
+        currentHall = _artistWhoNeedIt.GetHallNumber();
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
         _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
@@ -239,10 +250,11 @@ public class CommandAttributes : MonoBehaviour{
 
     public string GetArtistNeed(){return _artistNeed;}
 
-    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, List<string> listNeed){
+    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, CommandGenerator commandGenerator, List<string> listNeed){
         _artistWhoNeedIt = newArtiste;
         _gameManager = gameManagerReference;
         _musicManager = musicManagerReference;
+        _commandGenerator = commandGenerator;
         this.SetupCommand(listNeed);
     }
 
@@ -255,6 +267,12 @@ public class CommandAttributes : MonoBehaviour{
         // ajouter un son
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
+        _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
+        if(_gameManager.conditionsLeftBeforeHallComplete[currentHall]<=0)
+        {
+            _commandGenerator.SetArtistLeft(-1);
+            _commandGenerator.SetMaxCommandAtATime(-1);
+        }
     }
 
     // quand le joueur rate

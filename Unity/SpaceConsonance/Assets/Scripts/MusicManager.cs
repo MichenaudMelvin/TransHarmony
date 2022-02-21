@@ -74,7 +74,10 @@ public class MusicManager : MonoBehaviour{
     }
 
     private void Update(){
-        this.ManageVolume();
+        if(_gameManager.currentPhase == 2)
+        {
+           // this.ManageVolume();
+        }
     }
 
     // gère le volume de la musique en fonciton des actions du joueur
@@ -160,7 +163,7 @@ public class MusicManager : MonoBehaviour{
     }
 
     // se délenche à la fin de chaque journée
-    public IEnumerator EndDay(){
+    public IEnumerator EndPhase1(){
         StopCoroutine(this.DisplayMusicName());
         _displayMusicNameCoroutineIsRunning = false;
 
