@@ -216,5 +216,4 @@ public class GameManager : MonoBehaviour{
     public void UpdatePoints(float amount){
         _playerPoints += amount;
     }
-
 }

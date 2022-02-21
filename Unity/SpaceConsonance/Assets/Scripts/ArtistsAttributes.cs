@@ -93,7 +93,7 @@ public class ArtistsAttributes : MonoBehaviour{
         if(this.gameObject.activeInHierarchy){
             Vector3 screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
 
-            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 50f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 150f && this.transform.eulerAngles.y ==0){
+            if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 150f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 150f && this.transform.eulerAngles.y == 0){
                 this.CheckItem(piece);
 
                 piece.GetComponent<ItemAttributes>().RestartPosition();
