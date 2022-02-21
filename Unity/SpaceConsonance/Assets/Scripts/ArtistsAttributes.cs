@@ -96,7 +96,7 @@ public class ArtistsAttributes : MonoBehaviour{
             if(Mathf.Abs(piece.transform.position.x - screenPos.x) <= 50f && Mathf.Abs(piece.transform.position.y - screenPos.y) <= 150f && this.transform.eulerAngles.y ==0){
                 this.CheckItem(piece);
 
-                Destroy(piece.gameObject);
+                piece.GetComponent<ItemAttributes>().RestartPosition();
             }
         }
     }

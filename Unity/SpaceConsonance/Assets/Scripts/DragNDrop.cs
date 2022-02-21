@@ -77,6 +77,8 @@ public class DragNDrop : MonoBehaviour{
         for(int i = 0; i < _objectsToSnap.Count; i++){
             _objectsToSnap[i].PiecePlaced(this);
         }
+
+        this.GetComponent<ItemAttributes>().RestartPosition();
     }
 
     // donne la référence GameManager quand l'élément est créé

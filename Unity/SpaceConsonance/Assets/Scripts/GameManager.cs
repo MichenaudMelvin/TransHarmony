@@ -89,6 +89,10 @@ public class GameManager : MonoBehaviour{
     [Tooltip("GameObject qui créé les commandes")]
     private CommandGenerator _commandGenerator;
 
+    [SerializeField]
+    [Tooltip("GameObject qui créé les items")]
+    private ItemGenerator _itemGenerator;
+
     [Tooltip("Référence aux settings du jeu")]
     private Settings _settings;
 
@@ -115,6 +119,7 @@ public class GameManager : MonoBehaviour{
         }
 
         _commandGenerator.CreateCommands();
+        StartCoroutine(_itemGenerator.CreateItems());
     }
 
     private void Update(){
@@ -147,9 +152,10 @@ public class GameManager : MonoBehaviour{
         _resultText.text = "Votre score : " + _playerPoints;
         _resultImage.gameObject.SetActive(true);
 
-        // préparation pour le prochain jours (destructions des commandes restantes, check les artistes encore disponibles)
+        // préparation pour le prochain jours (check les artistes encore disponibles, destructions des commandes et items restantes)
         _canChangeArtist = this.CheckArtistStatus();
         _commandGenerator.DestroyCommands();
+        _itemGenerator.DestroyItems();
         StartCoroutine(_musicManager.EndDay());
 
         for(int i = 0; i < _publicContainers.transform.childCount; i++){
@@ -186,7 +192,7 @@ public class GameManager : MonoBehaviour{
     public bool GetCanChangeArtist(){return _canChangeArtist;}
 
     // recommence une journée
-    // call pas le bouton
+    // call par le bouton
     public void RestartDay(){
         _timeLeft = _timeOfADay;
 
@@ -197,6 +203,7 @@ public class GameManager : MonoBehaviour{
         }
 
         _commandGenerator.CreateCommands();
+        StartCoroutine(_itemGenerator.CreateItems());
         _musicManager.SetAudioClip();
 
         for(int i = 0; i < _publicContainers.transform.childCount; i++){
