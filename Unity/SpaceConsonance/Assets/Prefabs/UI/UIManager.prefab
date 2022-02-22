@@ -1687,7 +1687,7 @@ MonoBehaviour:
   _itemGenerator: {fileID: 706802147356073737}
   _maxCommandNumber: 10
   _maxCommandNumberAtTime: 4
-  _maxWaitingTime: 3.5
+  _maxWaitingTime: 1.5
   _artistContainers: {fileID: 0}
 --- !u!1 &6845589449964632688
 GameObject:

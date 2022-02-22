@@ -23,11 +23,11 @@ public class GameManager : MonoBehaviour{
     private string _timerTextPrefix;
 
     [SerializeField]
-    [Tooltip("Nombre de jours écoulés (Visuel)")]
-    private Text _dayText;
+    [Tooltip("Phase Actuelle (Visuel)")]
+    private Text _currentPhaseText;
 
     [Tooltip("Préfix des jours restant (Visuel)")]
-    private string _dayTextPrefix;
+    private string _currentPhaseTextPrefix;
 
     [SerializeField]
     [Tooltip("Timer sous forme de slider")]
@@ -100,6 +100,21 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Parent qui contient le public")]
     private Transform _publicContainers;
 
+    
+    [Tooltip("Nombre de conditions a completer avant le débloquage du hall")]
+    public int[] conditionsLeftBeforeHallComplete = new int[] {4,4,4,4};
+
+    [Tooltip("La valeur de réussite de l'artiste en fonction des events")]  
+    [Range(0f, 1f)]
+    public float[] fouleMovementStrenght = new float[] {1f,1f,1f,1f};
+
+
+
+
+    [Tooltip("Phase Actuelle")]    
+    public int currentPhase = 1;
+
+
     private void Start(){
         _timeLeft = _timeOfADay;
 
@@ -109,8 +124,6 @@ public class GameManager : MonoBehaviour{
 
         // initialisation du timer
         _timerTextPrefix = _timerText.text;
-        _dayTextPrefix = _dayText.text;
-        _dayText.text = _dayTextPrefix + _day.ToString();
         _sliderTimer.maxValue = _timeOfADay;
         _sliderTimer.value = _sliderTimer.maxValue;
 
@@ -128,7 +141,7 @@ public class GameManager : MonoBehaviour{
 
     // gère de le timer du festival entre chaque journées
     private void ManageTimer(){
-        if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist){
+        if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist && _timeLeft > 0f){
             _timeLeft -= Time.deltaTime;
 
             // ajouter la fonction qui créer les commandes ici
@@ -137,30 +150,49 @@ public class GameManager : MonoBehaviour{
             _sliderTimer.transform.Find("Fill").GetComponent<Image>().color = _sliderGradient.Evaluate(_sliderTimer.normalizedValue);
 
             if(_timeLeft <= 0f){
-                this.EndDay();
+                _timeLeft = 30;
+                this.EndPhase1();
             }
         }
     }
 
-    // ce qu'il se passe à la fin de charque jours
-    private void EndDay(){
-        // augmente de compteur de jours
-        _day += 1;
-        _dayText.text = _dayTextPrefix + _day.ToString();
+    // ce qu'il se passe à la fin de chaque phases
+    private void EndPhase1(){
+        PhaseTransition();
+        currentPhase = 2;
+    }
 
-        // affichage des resultats
-        _resultText.text = "Votre score : " + _playerPoints;
-        _resultImage.gameObject.SetActive(true);
+    private void PhaseTransition()
+    {
+        // préparation pour le prochaine phase (destructions des commandes restantes, check les artistes encore disponibles)
 
-        // préparation pour le prochain jours (check les artistes encore disponibles, destructions des commandes et items restantes)
         _canChangeArtist = this.CheckArtistStatus();
         _commandGenerator.DestroyCommands();
         _itemGenerator.DestroyItems();
-        StartCoroutine(_musicManager.EndDay());
+        StartCoroutine(_musicManager.EndPhase1());
+        // for(int i = 0; i < _publicContainers.transform.childCount; i++){
+        //     _publicContainers.GetChild(i).GetComponent<EffetFoule>().ResetFoule();
+        // }
 
-        for(int i = 0; i < _publicContainers.transform.childCount; i++){
-            _publicContainers.GetChild(i).GetComponent<EffetFoule>().ResetFoule();
+        UnlockHalls();
+    }
+
+
+    private void UnlockHalls()
+    {
+        for(int i = 0; i<conditionsLeftBeforeHallComplete.Length; i++)
+        {
+            if(conditionsLeftBeforeHallComplete[i] <= 0)
+            {
+                _publicContainers.GetChild(i).gameObject.SetActive(true);
+            }
+            else
+            {
+                conditionsLeftBeforeHallComplete[i] = 100;
+                _commandGenerator.SetArtistsLeft(-1);
+            }
         }
+
     }
 
     // regarde parmis tous les artistes si certains non pas encore fait un concert
@@ -213,7 +245,9 @@ public class GameManager : MonoBehaviour{
     }
 
     // pour ajouter ou enlever des points
-    public void UpdatePoints(float amount){
+    public void UpdatePoints(float amount/*, int hallToChange*/){
         _playerPoints += amount;
     }
+
+    public int GetCurrentPhase(){return currentPhase;}
 }

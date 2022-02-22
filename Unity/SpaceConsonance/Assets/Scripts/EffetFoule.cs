@@ -12,21 +12,27 @@ public class EffetFoule : MonoBehaviour{
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
+    [SerializeField]
+    [Tooltip("A quel hall appartient la foule")]
+    private int currentHallFoule;
+
     [Space(5)]
 
     [Tooltip("Hauteur originale de l'objet")]
     private float _originalHeight;
 
+
+
     private IEnumerator Start(){
         _originalHeight = this.transform.localScale.y;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(2f);
         StartCoroutine(this.FouleMovement());
     }
 
     // public functions
     // fait bouger le publique en fonction des actions du joueurs
     public IEnumerator FouleMovement(){
-        while(_gameManager.GetTime() > 0){
+        while(_gameManager.currentPhase == 2){
 
             float ecart = _audioSource.volume/2.5f;
             float newHeightScale = Random.Range(_originalHeight-ecart, _originalHeight+ecart);

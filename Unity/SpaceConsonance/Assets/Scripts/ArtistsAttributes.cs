@@ -4,6 +4,10 @@ public class ArtistsAttributes : MonoBehaviour{
 
     [Header("Basics")]
     [SerializeField]
+    [Tooltip("Hall de l'artiste")]
+    public int currentHall;
+
+    [SerializeField]
     [Tooltip("Nom de l'artiste")]
     private string _name; // https://www.lestrans.com/trans-2021/
 
@@ -28,6 +32,13 @@ public class ArtistsAttributes : MonoBehaviour{
     [Tooltip("Affichage de son nom au dessus de son modèle")]
     private TextMesh _textName;
 
+    [Space(10)]
+
+    [Header("Commands")]
+    [SerializeField]
+    [Tooltip("Parent qui contient toutes les commandes")]
+    private Transform _eventsContainer;
+
     private void Start(){
         this.BillboardText();
     }
@@ -44,6 +55,8 @@ public class ArtistsAttributes : MonoBehaviour{
 
     // public functions
     public string GetName(){return _name;}
+
+    public int GetHallNumber(){return currentHall;}
 
     public AudioClip GetMusic(){return _music;}
 
