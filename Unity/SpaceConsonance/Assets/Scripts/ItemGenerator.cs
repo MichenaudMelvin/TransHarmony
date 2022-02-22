@@ -57,7 +57,7 @@ public class ItemGenerator : MonoBehaviour{
                 newItem.SetItem(_listNeeds[index]);
                 index += 1;
 
-                newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
+                newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchorMin, _itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchorMax, _itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().pivot, _itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
             }
 
             yield return null;

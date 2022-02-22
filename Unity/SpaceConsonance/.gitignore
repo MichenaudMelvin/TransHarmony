@@ -35,3 +35,7 @@ sysinfo.txt
 
 # Fichiers générés par visual studio
 .vsconfig
+
+# Fichiers logs
+debug.log
+test.log

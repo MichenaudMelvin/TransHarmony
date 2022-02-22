@@ -26,7 +26,7 @@ RectTransform:
   m_GameObject: {fileID: 9204870462326027592}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1.2999998, y: 1.2999996, z: 1.2999996}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,8 +70,8 @@ MonoBehaviour:
   attackDamp: 0.25
   decayDamp: 0.25
   useColorGradient: 1
-  colorMin: {r: 0, g: 0, b: 0, a: 1}
-  colorMax: {r: 0, g: 0, b: 0, a: 1}
+  colorMin: {r: 0.12941177, g: 0.6745098, b: 0.8352941, a: 1}
+  colorMax: {r: 0.99607843, g: 0.22745098, b: 0.24705882, a: 1}
   colorValueCurve:
     serializedVersion: 2
     m_Curve:

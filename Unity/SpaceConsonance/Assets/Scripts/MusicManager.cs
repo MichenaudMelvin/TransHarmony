@@ -74,7 +74,7 @@ public class MusicManager : MonoBehaviour{
     }
 
     private void Update(){
-        if(_gameManager.currentPhase == 2)
+        if(_gameManager.GetCurrentPhase() == 2)
         {
            // this.ManageVolume();
         }

@@ -240,6 +240,8 @@ MonoBehaviour:
   _movementDuration: 0.5
   _finalPosition: {x: 0, y: 75, z: 0}
   _upperScale: {x: 1.5, y: 1.5, z: 0}
+  _bulleCalmeSprite: {fileID: 21300000, guid: 7af9912d90abc0648bde0173ccc4cd84, type: 3}
+  _bulleActionSprite: {fileID: 21300000, guid: 17a142fdfaaf3ae4fb8bf1ee97923865, type: 3}
   _circleTimer: {fileID: 2175729296796674167}
   _availableTime: 10
 --- !u!1 &4042972598902118082

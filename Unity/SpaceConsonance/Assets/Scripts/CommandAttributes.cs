@@ -5,11 +5,9 @@ using System.Collections.Generic;
 
 public class CommandAttributes : MonoBehaviour{
 
-
     [Header("Hall")]
     [Tooltip("Savoir a quel hall appartient la commande")]
     private int currentHall;
-
 
     [Header("Artists")]
     [Tooltip("Artiste qui a besoin de la commande")]
@@ -28,7 +26,6 @@ public class CommandAttributes : MonoBehaviour{
     [SerializeField]
     [Tooltip("Texte qui permet de connaitre quel artiste à besoin de cette commande")]
     private Text _artistName;
-
 
     [Space(10)]
 
@@ -69,6 +66,14 @@ public class CommandAttributes : MonoBehaviour{
     [SerializeField]
     [Tooltip("Scale quand annimaiton d'aggrandisement")]
     private Vector3 _upperScale;
+
+    [SerializeField]
+    [Tooltip("Sprite de bulle calme")]
+    private Sprite _bulleCalmeSprite;
+
+    [SerializeField]
+    [Tooltip("Sprite de bulle action")]
+    private Sprite _bulleActionSprite;
 
     [Space(10)]
 
@@ -119,6 +124,12 @@ public class CommandAttributes : MonoBehaviour{
         // génère un besoin aléatoire parmis les besoins de l'artiste
         _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
         _visualNeed.text = _artistNeed;
+
+        if(_gameManager.GetCurrentPhase() == 1){
+            _image.sprite = _bulleCalmeSprite;
+        } else if(_gameManager.GetCurrentPhase() == 2){
+            _image.sprite = _bulleActionSprite;
+        }
 
         this.SetPosition();
     }
