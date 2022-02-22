@@ -58,7 +58,7 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - Flash_Color: {r: 42.1647, g: 229.8981, b: 383.49805, a: 0}
+    - Flash_Color: {r: 56.21961, g: 766.9961, b: 0, a: 0}
     - Spot1_Color: {r: 0.06666667, g: 0.7490196, b: 0.3529412, a: 0}
     - Spot2_Color: {r: 0.18018799, g: 0.09459869, b: 0.09459869, a: 0}
     - Spot3_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
