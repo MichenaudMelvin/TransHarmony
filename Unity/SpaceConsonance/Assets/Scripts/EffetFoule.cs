@@ -28,7 +28,7 @@ public class EffetFoule : MonoBehaviour{
     public IEnumerator FouleMovement(){
         while(_gameManager.GetTime() > 0){
 
-            float ecart = _audioSource.volume/5;
+            float ecart = _audioSource.volume/2.5f;
             float newHeightScale = Random.Range(_originalHeight-ecart, _originalHeight+ecart);
             transform.localScale = new Vector3(this.transform.localScale.x, newHeightScale, this.transform.localScale.z);
 
