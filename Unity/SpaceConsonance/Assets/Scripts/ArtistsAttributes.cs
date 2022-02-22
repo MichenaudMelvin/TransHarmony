@@ -25,31 +25,6 @@ public class ArtistsAttributes : MonoBehaviour{
     [Tooltip("Si l'artiste a déjà joué sa musique")]
     private bool _hasPlayMusic = false;
 
-    [Space(10)]
-
-    [Header("Affichage texte")]
-    [SerializeField]
-    [Tooltip("Affichage de son nom au dessus de son modèle")]
-    private TextMesh _textName;
-
-    [Space(10)]
-
-    [Header("Commands")]
-    [SerializeField]
-    [Tooltip("Parent qui contient toutes les commandes")]
-    private Transform _eventsContainer;
-
-    private void Start(){
-        this.BillboardText();
-    }
-
-    // permet au texte d'être toujours face à la camera
-    // probablement à changer
-    private void BillboardText(){
-        _textName.text = _name;
-        _textName.transform.rotation = Quaternion.LookRotation(_textName.transform.position - Camera.main.transform.position);
-    }
-
     // quand l'artiste est allé dans un halls puis reparti
     private void OnDisable(){_hasPlayMusic = false;}
 
