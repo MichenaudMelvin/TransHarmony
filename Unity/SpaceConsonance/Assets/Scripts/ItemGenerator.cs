@@ -15,12 +15,30 @@ public class ItemGenerator : MonoBehaviour{
     private int _maxItemNumber;
 
     [SerializeField]
+    [Range(1, 17)]
+    [Tooltip("Nombre d'items events maximal")]
+    private int _maxItemEventsNumber;
+
+    [SerializeField]
     [Tooltip("Liste de besoins des artistes (items)")]
     private List<string> _listNeeds;
 
     [SerializeField]
-    [Tooltip("Parent qui contient tous les positions des items")]
+    [Tooltip("Parent qui contient tous les positions des items pour les commandes")]
     private Transform _itemsPositions;
+    
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les GameObjets des items commandes")]
+    private GameObject _itemsPositionsGO;
+
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les positions des items pour events")]
+    private Transform _eventItemsPosition;
+
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les GameObjets des items events")]
+    private GameObject _eventPositionGO;
+
 
     [SerializeField]
     [Tooltip("Liste contenant les sprites des items")]
@@ -55,18 +73,43 @@ public class ItemGenerator : MonoBehaviour{
     // public functions
     // créé les items
     public IEnumerator CreateItems(){
-        int index = 0;
-        while(this.transform.childCount < _maxItemNumber){
-            if(_listNeeds.Count > 0){
-                ItemAttributes newItem = Instantiate(_itemToGenerate, this.transform);
-                newItem.SetItem(_listNeeds[index]);
-                index += 1;
 
-                newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
+            int index = 0;
+        if(_gameManager.GetCurrentPhase() == 1)
+        {
+            Debug.Log("phase 1 item generator");   
+            while(this.transform.childCount < _maxItemNumber){
+                if(_listNeeds.Count > 0){
+                    ItemAttributes newItem = Instantiate(_itemToGenerate, this.transform);
+                    newItem.SetItem(_listNeeds[index]);
+                    index += 1;
+
+                    newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
+                }
+
+                yield return null;
             }
-
-            yield return null;
         }
+        else if(_gameManager.GetCurrentPhase() == 2)
+        {
+            
+            Debug.Log("phase 2 item generator");   
+            _itemsPositionsGO.SetActive(false);
+            _eventPositionGO.SetActive(true);
+            
+            while(this.transform.childCount < _maxItemEventsNumber){
+                if(_listEventItems.Count > 0){
+                    ItemAttributes newItem = Instantiate(_itemToGenerate, this.transform);
+                    newItem.SetItem(_listEventItems[index]);
+                    index += 1;
+
+                    newItem.SetPosition(_eventItemsPosition.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
+                }
+
+                yield return null;
+            }
+        }
+        yield return null;
     }
 
 

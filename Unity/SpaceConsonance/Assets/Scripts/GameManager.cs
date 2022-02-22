@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour{
             _sliderTimer.value = _timeLeft;
             _sliderTimer.transform.Find("Fill").GetComponent<Image>().color = _sliderGradient.Evaluate(_sliderTimer.normalizedValue);
 
-            if(_timeLeft <= 0f){
+            if(_timeLeft <= 0f && currentPhase==1){
                 _timeLeft = 30;
                 this.EndPhase1();
             }
@@ -158,8 +158,8 @@ public class GameManager : MonoBehaviour{
 
     // ce qu'il se passe à la fin de chaque phases
     private void EndPhase1(){
-        PhaseTransition();
         currentPhase = 2;
+        PhaseTransition();
     }
 
     private void PhaseTransition()
@@ -175,6 +175,7 @@ public class GameManager : MonoBehaviour{
         //     _publicContainers.GetChild(i).GetComponent<EffetFoule>().ResetFoule();
         // }
 
+        StartCoroutine(_itemGenerator.CreateItems());        
         UnlockHalls();
     }
 

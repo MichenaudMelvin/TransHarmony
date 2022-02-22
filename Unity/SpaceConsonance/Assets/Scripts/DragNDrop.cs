@@ -75,7 +75,9 @@ public class DragNDrop : MonoBehaviour{
         _moving = false;
 
         if(_onCommand){
-            if(this.GetComponent<ItemAttributes>().GetItemName() == _collideCommand.GetComponent<CommandAttributes>().GetArtistNeed()){StartCoroutine(_collideCommand.GetComponent<CommandAttributes>().Succeed());}
+            if(this.GetComponent<ItemAttributes>().GetItemName() == _collideCommand.GetComponent<CommandAttributes>().GetArtistNeed()){
+                StartCoroutine(_collideCommand.GetComponent<CommandAttributes>().Succeed());
+            }
             else{_collideCommand.GetComponent<CommandAttributes>().Failure();}
         }
 

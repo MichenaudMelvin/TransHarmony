@@ -105,7 +105,11 @@ public class CommandGenerator : MonoBehaviour{
         
         if(_gameManager.GetCurrentPhase()==2)
         {
-            Debug.Log("Phase 2");
+            if(_gameManager.conditionsLeftBeforeHallComplete[_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>().GetHallNumber()] >= 100)
+            {
+                this.CheckArtistAvailability(command);
+                return;
+            }
             command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _musicManager, this, _itemGenerator.GetListEventsItems());
         }
     }
@@ -131,7 +135,6 @@ public class CommandGenerator : MonoBehaviour{
                     if(_listArtistesInHalls.Count == _nbrOfArtistePerDays)
                     {
 
-                        Debug.Log("Phase 2 Event");
                         // à faire en fonction du nombre d'artistes
 
                         CommandAttributes newCommand = Instantiate(_commandToGenerate, this.transform);
