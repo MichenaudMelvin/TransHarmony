@@ -3175,7 +3175,7 @@ PrefabInstance:
       objectReference: {fileID: 1704667652}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: _timeOfADay
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: resultImage
@@ -3239,19 +3239,19 @@ PrefabInstance:
       objectReference: {fileID: 275217686}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: conditionsLeftBeforeHallComplete.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: conditionsLeftBeforeHallComplete.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: conditionsLeftBeforeHallComplete.Array.data[2]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2834901878274288864, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: conditionsLeftBeforeHallComplete.Array.data[3]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6790587469952929101, guid: d80f8c9e4a8e9f44884feed9f7619e3e, type: 3}
       propertyPath: m_RootOrder
@@ -19455,6 +19455,30 @@ PrefabInstance:
       propertyPath: _artistContainers
       value: 
       objectReference: {fileID: 1868080434}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _listEventItems.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _listEventItems.Array.data[0]
+      value: EVENT 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _listEventItems.Array.data[1]
+      value: EVENT 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _listEventItems.Array.data[2]
+      value: EVENT 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _listEventItems.Array.data[3]
+      value: EVENT 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 706802147356073737, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _listEventItems.Array.data[4]
+      value: EVENT 5
+      objectReference: {fileID: 0}
     - target: {fileID: 783238027579459315, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_Name
       value: Command

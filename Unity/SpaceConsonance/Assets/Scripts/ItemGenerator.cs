@@ -41,6 +41,11 @@ public class ItemGenerator : MonoBehaviour{
     [Tooltip("Parent qui contient tous les artistes")]
     private Transform _artistContainers;
 
+    [Space(10)]
+    [SerializeField]
+    [Tooltip("Liste de besoins des besoins pour les events")]
+    private List<string> _listEventItems;
+
     private void Start(){
         for(int i = 0; i < _itemsPositions.childCount; i++){
             _itemsPositions.GetChild(i).gameObject.SetActive(false);
@@ -78,4 +83,5 @@ public class ItemGenerator : MonoBehaviour{
     public List<Sprite> GetSpriteList(){return _spriteList;}
 
     public List<string> GetListNeeds(){return _listNeeds;}
+    public List<string> GetListEventsItems(){return _listEventItems;}
 }

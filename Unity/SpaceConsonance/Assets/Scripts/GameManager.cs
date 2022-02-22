@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour{
         for(int i = 0; i < _hallsContainer.childCount; i++){
             _listHalls.Add(_hallsContainer.GetChild(i).GetComponent<HallsAttributes>());
         }
-
+        
         _commandGenerator.CreateCommands();
         StartCoroutine(_itemGenerator.CreateItems());
     }
@@ -169,6 +169,7 @@ public class GameManager : MonoBehaviour{
         _canChangeArtist = this.CheckArtistStatus();
         _commandGenerator.DestroyCommands();
         _itemGenerator.DestroyItems();
+        _commandGenerator.CreateEvents();
         StartCoroutine(_musicManager.EndPhase1());
         // for(int i = 0; i < _publicContainers.transform.childCount; i++){
         //     _publicContainers.GetChild(i).GetComponent<EffetFoule>().ResetFoule();

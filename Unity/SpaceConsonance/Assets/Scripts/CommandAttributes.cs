@@ -122,6 +122,19 @@ public class CommandAttributes : MonoBehaviour{
 
         this.SetPosition();
     }
+    private void SetupEvent(List<string> eventNeed){
+        _availableTimeInitial = _availableTime;
+
+        _artistName.text = _artistWhoNeedIt.GetName();
+
+        currentHall = _artistWhoNeedIt.GetHallNumber();
+
+        // génère un besoin aléatoire parmis les besoins de l'artiste
+        _artistNeed = eventNeed[Random.Range(0, eventNeed.Count)];
+        _visualNeed.text = _artistNeed;
+
+        this.SetPosition();
+    }
 
 
     // detruit les commande à partir d'un temps donné
@@ -265,14 +278,15 @@ public class CommandAttributes : MonoBehaviour{
         _gameManager.UpdatePoints(50);
         _hasSucced = true;
         // ajouter un son
-        yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject);
+
         _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
         if(_gameManager.conditionsLeftBeforeHallComplete[currentHall]<=0)
         {
             _commandGenerator.SetArtistLeft(-1);
             _commandGenerator.SetMaxCommandAtATime(-1);
         }
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
 
     // quand le joueur rate

@@ -25,7 +25,7 @@ public class EffetFoule : MonoBehaviour{
 
     private IEnumerator Start(){
         _originalHeight = this.transform.localScale.y;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         StartCoroutine(this.FouleMovement());
     }
 
