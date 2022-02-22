@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c70ae11e7f61be04fb36109371c72add, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,9 +97,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
   _gameManager: {fileID: 0}
-  _updateStep: 0.01
-  _sampleDataLenght: 220
-  _minSizeFactor: 1.5
-  _maxSizeFactor: 4.5
-  _minSize: 0.05
-  _maxSize: 0.3
