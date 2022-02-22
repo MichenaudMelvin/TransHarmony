@@ -150,6 +150,7 @@ public class GameManager : MonoBehaviour{
             _sliderTimer.transform.Find("Fill").GetComponent<Image>().color = _sliderGradient.Evaluate(_sliderTimer.normalizedValue);
 
             if(_timeLeft <= 0f){
+                _timeLeft = 30;
                 this.EndPhase1();
             }
         }
@@ -183,12 +184,12 @@ public class GameManager : MonoBehaviour{
         {
             if(conditionsLeftBeforeHallComplete[i] <= 0)
             {
-               /* if(_publicContainers[i].GetChild(i) == 0)
-                {*/
-                   // for(int y = 0; y < _publicContainers.transform.childCount; y++){
-                        _publicContainers.GetChild(i).gameObject.SetActive(true);;
-                    //}
-               // }
+                _publicContainers.GetChild(i).gameObject.SetActive(true);
+            }
+            else
+            {
+                conditionsLeftBeforeHallComplete[i] = 100;
+                _commandGenerator.SetArtistsLeft(-1);
             }
         }
 
@@ -247,4 +248,6 @@ public class GameManager : MonoBehaviour{
     public void UpdatePoints(float amount/*, int hallToChange*/){
         _playerPoints += amount;
     }
+
+    public int GetCurrentPhase(){return currentPhase;}
 }

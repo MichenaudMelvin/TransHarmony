@@ -66,14 +66,17 @@ public class CommandGenerator : MonoBehaviour{
     // ajoute à la liste les artistes présent dans les halls
     // micro delay sinon marche pas
     private IEnumerator UpdateArtistList(float time){
-        yield return new WaitForSeconds(time);
+        if(_gameManager.GetCurrentPhase() == 1)
+        {
+            yield return new WaitForSeconds(time);
 
-        _listArtistesInHalls = new List<ArtistsAttributes>{};
+            _listArtistesInHalls = new List<ArtistsAttributes>{};
 
-        for(int i = 0; i < _artistContainers.childCount; i++){
-            if(_artistContainers.GetChild(i).gameObject.activeInHierarchy){
-                _listArtistesInHalls.Add(_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>());
-            }
+            for(int i = 0; i < _artistContainers.childCount; i++){
+                if(_artistContainers.GetChild(i).gameObject.activeInHierarchy){
+                    _listArtistesInHalls.Add(_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>());
+                }
+            }  
         }
     }
 
@@ -87,7 +90,7 @@ public class CommandGenerator : MonoBehaviour{
                 return;
             }
                 //check if artist commands are over
-            if(_gameManager.conditionsLeftBeforeHallComplete[_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>().GetHallNumber()] <= 0)
+            if(_gameManager.conditionsLeftBeforeHallComplete[_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>().GetHallNumber()] <= 0 && _gameManager.conditionsLeftBeforeHallComplete[_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>().GetHallNumber()] <= 0 || _gameManager.conditionsLeftBeforeHallComplete[_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>().GetHallNumber()] >= 100)
             {
                 this.CheckArtistAvailability(command);
                 return;
@@ -146,4 +149,5 @@ public class CommandGenerator : MonoBehaviour{
 
     public void SetArtistLeft(int newValue){artistsLeft += newValue;}
     public void SetMaxCommandAtATime(int newValue){_maxCommandNumberAtTime += newValue;}
+    public void SetArtistsLeft(int newValue){artistsLeft += newValue;}
 }

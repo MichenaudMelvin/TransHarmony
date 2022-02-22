@@ -32,6 +32,13 @@ public class ArtistsAttributes : MonoBehaviour{
     [Tooltip("Affichage de son nom au dessus de son modèle")]
     private TextMesh _textName;
 
+    [Space(10)]
+
+    [Header("Commands")]
+    [SerializeField]
+    [Tooltip("Parent qui contient toutes les commandes")]
+    private Transform _eventsContainer;
+
     private void Start(){
         this.BillboardText();
     }
