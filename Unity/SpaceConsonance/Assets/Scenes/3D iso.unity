@@ -16103,9 +16103,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera3DIso
       objectReference: {fileID: 0}
-    - target: {fileID: 3629670176184919013, guid: 197af923d8ff81748b7faafbf6cae3a8, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 197af923d8ff81748b7faafbf6cae3a8, type: 3}

@@ -103,12 +103,12 @@ GameObject:
   - component: {fileID: 2661734636452963545}
   - component: {fileID: 1769632811350895812}
   - component: {fileID: -7248471293782840662}
-  - component: {fileID: 6285085684001275044}
   - component: {fileID: 5407676120553932743}
   - component: {fileID: 4812645668185123888}
+  - component: {fileID: 6285085684001275044}
   m_Layer: 0
   m_Name: Command
-  m_TagString: Untagged
+  m_TagString: Command
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,28 +173,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6285085684001275044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2176440297926617908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0afe363004b9445b73c72148c614f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _visualNeed: {fileID: 5537316051754591265}
-  _artistName: {fileID: 8787569699681622673}
-  _image: {fileID: -7248471293782840662}
-  _succeedColor: {r: 0, g: 1, b: 0, a: 1}
-  _failureColor: {r: 1, g: 0, b: 0, a: 1}
-  _movementDuration: 0.5
-  _finalPosition: {x: 0, y: 75, z: 0}
-  _upperScale: {x: 1.5, y: 1.5, z: 0}
-  _circleTimer: {fileID: 2175729296796674167}
-  _availableTime: 10
 --- !u!50 &5407676120553932743
 Rigidbody2D:
   serializedVersion: 4
@@ -242,6 +220,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 150, y: 150}
   m_EdgeRadius: 0
+--- !u!114 &6285085684001275044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176440297926617908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0afe363004b9445b73c72148c614f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _visualNeed: {fileID: 5537316051754591265}
+  _artistName: {fileID: 8787569699681622673}
+  _image: {fileID: -7248471293782840662}
+  _succeedColor: {r: 0, g: 1, b: 0, a: 1}
+  _failureColor: {r: 1, g: 0, b: 0, a: 1}
+  _movementDuration: 0.5
+  _finalPosition: {x: 0, y: 75, z: 0}
+  _upperScale: {x: 1.5, y: 1.5, z: 0}
+  _circleTimer: {fileID: 2175729296796674167}
+  _availableTime: 10
 --- !u!1 &4042972598902118082
 GameObject:
   m_ObjectHideFlags: 0

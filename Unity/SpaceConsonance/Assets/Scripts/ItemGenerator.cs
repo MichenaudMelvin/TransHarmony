@@ -57,7 +57,6 @@ public class ItemGenerator : MonoBehaviour{
                 newItem.SetItem(_listNeeds[index]);
                 index += 1;
 
-                newItem.GetComponent<DragNDrop>().SetupVariables(_gameManager, _artistContainers);
                 newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
             }
 
@@ -74,8 +73,6 @@ public class ItemGenerator : MonoBehaviour{
                 Destroy(this.transform.GetChild(i).gameObject);
             }
         }
-
-            _listNeeds.Clear();
     }
 
     public List<Sprite> GetSpriteList(){return _spriteList;}

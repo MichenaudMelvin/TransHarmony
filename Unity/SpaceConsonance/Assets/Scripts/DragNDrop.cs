@@ -1,22 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using System.Collections.Generic;
 
 [RequireComponent(typeof(RectTransform), typeof(Button), typeof(EventTrigger))]
 public class DragNDrop : MonoBehaviour{
 
-    [Header("Artists")]
-    [Tooltip("Parent qui contient tous les artistes")]
-    private Transform _artistContainers;
+    [Header("Items")]
+    [Tooltip("Commande avec laquelle va collide l'item drag n dropé")]
+    private CommandAttributes _collideCommand;
 
-    [Tooltip("Liste d'elements auquels s'accrocher")]
-    private List<ArtistsAttributes> _objectsToSnap = new List<ArtistsAttributes> {};
+    [Tooltip("Si l'item est en collision avec un commande")]
+    private bool _onCommand = false;
 
     [Header("Others")]
-    [Tooltip("Référence au GameManager")]
-    private GameManager _gameManager;
-
     [Tooltip("Si l'élément est en train de bouger ou non")]
     private bool _moving = false;
 
@@ -24,7 +20,6 @@ public class DragNDrop : MonoBehaviour{
     private Vector3 _initialPos;
 
     private void Start(){
-        this.UpdateArtistList();
         _initialPos = this.transform.position;
     }
 
@@ -39,22 +34,27 @@ public class DragNDrop : MonoBehaviour{
 
     }
 
-    // met à jour la liste d'objet avec lequel l'item peux snap
-    // se fait à chaque instantiation d'items
-    // pas besoin de remettre la lise à zero car supprimé après chaque jour
-    private void UpdateArtistList(){
-        for(int i = 0; i < _artistContainers.childCount; i++){
-            if(_artistContainers.GetChild(i).gameObject.activeInHierarchy){
-                _objectsToSnap.Add(_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>());
-            }
-        }
-    }
-
     // pour pas que l'élément se retrouve en dehors de l'écran, marche pas vraiment // pas une priorité
     private void ResetMousePosition(Vector3 mousePositon){
         if(mousePositon.x <= 0 || mousePositon.y <= 0 || mousePositon.x >= Screen.width - 1 || mousePositon.y >= Screen.height - 1){
             this.transform.position = _initialPos;
             _moving = false;
+        }
+    }
+
+    // quand l'item drag n dropé rentre en collision avec une commande
+    private void OnTriggerEnter2D(Collider2D collider){
+        if(collider.tag == "Command"){
+            _onCommand = true;
+            _collideCommand = collider.GetComponent<CommandAttributes>();
+        }
+    }
+
+    // quand l'item drag n dropé sort de la collision avec une commande
+    private void OnTriggerExit2D(Collider2D collider){
+        if(collider.tag == "Command"){
+            _onCommand = false;
+            _collideCommand = null;
         }
     }
 
@@ -74,17 +74,12 @@ public class DragNDrop : MonoBehaviour{
     public void StopElement(){
         _moving = false;
 
-        for(int i = 0; i < _objectsToSnap.Count; i++){
-            _objectsToSnap[i].PiecePlaced(this);
+        if(_onCommand){
+            if(this.GetComponent<ItemAttributes>().GetItemName() == _collideCommand.GetComponent<CommandAttributes>().GetArtistNeed()){StartCoroutine(_collideCommand.GetComponent<CommandAttributes>().Succeed());}
+            else{_collideCommand.GetComponent<CommandAttributes>().Failure();}
         }
 
         this.GetComponent<ItemAttributes>().RestartPosition();
-    }
-
-    // donne la référence GameManager quand l'élément est créé
-    public void SetupVariables(GameManager gameManagerVariable, Transform artistContainersVariable){
-        _gameManager = gameManagerVariable;
-        _artistContainers = artistContainersVariable;
     }
 
     public bool GetIsMoving(){return _moving;}

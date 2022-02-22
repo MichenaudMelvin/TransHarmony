@@ -250,6 +250,7 @@ public class CommandAttributes : MonoBehaviour{
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
         _musicManager.UpdateVolume(0.05f);
+        _gameManager.UpdatePoints(50);
         _hasSucced = true;
         // ajouter un son
         yield return new WaitForSeconds(0.5f);
@@ -262,6 +263,7 @@ public class CommandAttributes : MonoBehaviour{
         _musicManager.UpdateVolume(-0.05f);
         // ajouter un son
         _finalPosition = this.transform.position;
+        _gameManager.UpdatePoints(-10);
         StartCoroutine(this.FailureMovement());
 
     }
