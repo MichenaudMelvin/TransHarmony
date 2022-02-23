@@ -8,6 +8,10 @@ public class HallsAttributes : MonoBehaviour{
 
     [Tooltip("Artiste actuellement dans le hall")]
     private ArtistsAttributes _artistInHall;
+    
+    [SerializeField]
+    [Tooltip("Numero de Hall")]
+    private int hallNumber;
 
     [Tooltip("Position où l'artiste va être placé dans le hall")]
     private Transform _artistPlacement;
@@ -45,6 +49,7 @@ public class HallsAttributes : MonoBehaviour{
 
     // Setup le nouvel artiste qui entre dans le hall
     private void SetupArtist(){
+        _artistInHall.currentHall = hallNumber;
         _artistInHall.gameObject.SetActive(true);
         _artistInHall.SetStatus(true);
         _artistInHall.transform.SetPositionAndRotation(_artistPlacement.position, new Quaternion());

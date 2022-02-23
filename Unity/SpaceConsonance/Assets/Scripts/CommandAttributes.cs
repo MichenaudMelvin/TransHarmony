@@ -5,6 +5,10 @@ using System.Collections.Generic;
 
 public class CommandAttributes : MonoBehaviour{
 
+    [Header("Hall")]
+    [Tooltip("Savoir a quel hall appartient la commande")]
+    private int currentHall;
+
     [Header("Artists")]
     [Tooltip("Artiste qui a besoin de la commande")]
     private ArtistsAttributes _artistWhoNeedIt;
@@ -15,10 +19,6 @@ public class CommandAttributes : MonoBehaviour{
     [Space(10)]
 
     [Header("Visual")]
-    [SerializeField]
-    [Tooltip("Texte qui permet de connnaitre le besoin de l'artiste")]
-    private Text _visualNeed;
-
     [SerializeField]
     [Tooltip("Texte qui permet de connaitre quel artiste à besoin de cette commande")]
     private Text _artistName;
@@ -63,6 +63,14 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Scale quand annimaiton d'aggrandisement")]
     private Vector3 _upperScale;
 
+    [SerializeField]
+    [Tooltip("Sprite de bulle calme")]
+    private Sprite _bulleCalmeSprite;
+
+    [SerializeField]
+    [Tooltip("Sprite de bulle action")]
+    private Sprite _bulleActionSprite;
+
     [Space(10)]
 
     [Header("Timer")]
@@ -89,6 +97,8 @@ public class CommandAttributes : MonoBehaviour{
 
     [Tooltip("Booléen qui permet de savoir si le joueur passe son curseur/item dessus la commande")]
     private bool _isItemOnIt = false;
+    [Tooltip("Référence au CommandGenerator")]
+    private CommandGenerator _commandGenerator;
 
     private void Start(){
         _initialColor = _image.color;
@@ -105,9 +115,16 @@ public class CommandAttributes : MonoBehaviour{
 
         _artistName.text = _artistWhoNeedIt.GetName();
 
+        currentHall = _artistWhoNeedIt.GetHallNumber();
+
         // génère un besoin aléatoire parmis les besoins de l'artiste
         _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
-        _visualNeed.text = _artistNeed;
+
+        if(_gameManager.GetCurrentPhase() == 1){
+            _image.sprite = _bulleCalmeSprite;
+        } else if(_gameManager.GetCurrentPhase() == 2){
+            _image.sprite = _bulleActionSprite;
+        }
 
         this.SetPosition();
     }
@@ -146,7 +163,11 @@ public class CommandAttributes : MonoBehaviour{
     // fait apparaitre la commande en fade in
     private void Appearance(){
         this.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
-        this.GetComponent<Image>().CrossFadeAlpha(1f, _movementDuration, false);
+
+        if(!_gameManager.GetIsGamePause()){
+            this.GetComponent<Image>().CrossFadeAlpha(1f, _movementDuration, false);
+        }
+
         StartCoroutine(this.UpMovement());
     }
 
@@ -239,10 +260,11 @@ public class CommandAttributes : MonoBehaviour{
 
     public string GetArtistNeed(){return _artistNeed;}
 
-    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, List<string> listNeed){
+    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, CommandGenerator commandGenerator, List<string> listNeed){
         _artistWhoNeedIt = newArtiste;
         _gameManager = gameManagerReference;
         _musicManager = musicManagerReference;
+        _commandGenerator = commandGenerator;
         this.SetupCommand(listNeed);
     }
 
@@ -250,10 +272,17 @@ public class CommandAttributes : MonoBehaviour{
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
         _musicManager.UpdateVolume(0.05f);
+        _gameManager.UpdatePoints(50);
         _hasSucced = true;
         // ajouter un son
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
+        _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
+        if(_gameManager.conditionsLeftBeforeHallComplete[currentHall]<=0)
+        {
+            _commandGenerator.SetArtistLeft(-1);
+            _commandGenerator.SetMaxCommandAtATime(-1);
+        }
     }
 
     // quand le joueur rate
@@ -262,6 +291,7 @@ public class CommandAttributes : MonoBehaviour{
         _musicManager.UpdateVolume(-0.05f);
         // ajouter un son
         _finalPosition = this.transform.position;
+        _gameManager.UpdatePoints(-10);
         StartCoroutine(this.FailureMovement());
 
     }

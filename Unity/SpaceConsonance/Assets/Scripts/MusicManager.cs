@@ -74,7 +74,10 @@ public class MusicManager : MonoBehaviour{
     }
 
     private void Update(){
-        this.ManageVolume();
+        if(_gameManager.GetCurrentPhase() == 2)
+        {
+           // this.ManageVolume();
+        }
     }
 
     // gère le volume de la musique en fonciton des actions du joueur
@@ -146,11 +149,13 @@ public class MusicManager : MonoBehaviour{
             }
         }
 
-        // while(_actualArtist.HasPlayMusic()){
-        ArtistsAttributes actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
-        _audioSource.clip = actualArtist.GetMusic();
-        _actualArtist = actualArtist;
-        // }
+        ArtistsAttributes actualArtist = null;
+
+        while(actualArtist == null || (actualArtist.GetMusic() != null && actualArtist.HasPlayMusic())){
+            actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
+            _audioSource.clip = actualArtist.GetMusic();
+            _actualArtist = actualArtist;
+        }
 
         _actualArtist.SetHasPlayMusic(true);
 
@@ -160,7 +165,7 @@ public class MusicManager : MonoBehaviour{
     }
 
     // se délenche à la fin de chaque journée
-    public IEnumerator EndDay(){
+    public IEnumerator EndPhase1(){
         StopCoroutine(this.DisplayMusicName());
         _displayMusicNameCoroutineIsRunning = false;
 
