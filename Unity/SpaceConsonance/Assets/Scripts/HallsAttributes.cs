@@ -41,11 +41,15 @@ public class HallsAttributes : MonoBehaviour{
     private IEnumerator SpawnArtist(){
         yield return new WaitForSeconds(_exePosition);
 
-        ArtistsAttributes newArtist = Instantiate(_artistsPrefab, _artistPlacement.position, new Quaternion(), _artistContainers);
+        _artistInHall = Instantiate(_artistsPrefab, _artistPlacement.position, new Quaternion(), _artistContainers);
 
-        newArtist.SetArtistAsset(_gameManager.GetArtistAssetsList()[Random.Range(0, _gameManager.GetArtistAssetsList().Count)]);
+        _artistInHall.SetArtistAsset(_gameManager.GetArtistAssetsList()[Random.Range(0, _gameManager.GetArtistAssetsList().Count)]);
 
-        _artistInHall = newArtist;
+        while(_artistInHall.GetStatus()){
+            _artistInHall.SetArtistAsset(_gameManager.GetArtistAssetsList()[Random.Range(0, _gameManager.GetArtistAssetsList().Count)]);
+        }
+
+        _artistInHall.SetStatus(true);
 
         this.SetupArtist();
     }

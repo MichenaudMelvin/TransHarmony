@@ -48,6 +48,10 @@ public class CommandGenerator : MonoBehaviour{
     [Tooltip("Parent qui contient tous les artistes")]
     private Transform _artistContainers;
 
+    [SerializeField]
+    [Tooltip("Parent qui contient tous les halls")]
+    private Transform _hallContainers;
+
     [Tooltip("Liste contenant les artistes présents dans les halls")]
     private List<ArtistsAttributes> _listArtistesInHalls = new List<ArtistsAttributes>{};
 
@@ -61,8 +65,8 @@ public class CommandGenerator : MonoBehaviour{
     private List<string> _commandForHalls;
 
     private void Start(){
-        if(_maxCommandNumberAtTime > _artistContainers.childCount){
-            _maxCommandNumberAtTime = _artistContainers.childCount;
+        if(_maxCommandNumberAtTime > _hallContainers.childCount){
+            _maxCommandNumberAtTime = _hallContainers.childCount;
         }
         artistsLeft=_nbrOfArtistePerDays;
     }

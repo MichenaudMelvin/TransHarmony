@@ -13504,6 +13504,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1419044333}
     - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _hallContainers
+      value: 
+      objectReference: {fileID: 130802654}
+    - target: {fileID: 6468679391573677167, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: _hallsContainer
       value: 
       objectReference: {fileID: 130802654}
