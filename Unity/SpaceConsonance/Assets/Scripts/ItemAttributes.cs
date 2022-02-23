@@ -33,7 +33,10 @@ public class ItemAttributes : MonoBehaviour{
     }
 
     // set de la position, va être considéré comme la position initiale
-    public void SetPosition(Vector2 newPosition){
+    public void SetPosition(Vector2 newAnchorMin, Vector2 newAnchorMax, Vector2 newPivot, Vector2 newPosition){
+        this.GetComponent<RectTransform>().anchorMin = newAnchorMin;
+        this.GetComponent<RectTransform>().anchorMax = newAnchorMax;
+        this.GetComponent<RectTransform>().pivot = newPivot;
         this.GetComponent<RectTransform>().anchoredPosition = newPosition;
         _initialPosition = this.transform.position;
     }

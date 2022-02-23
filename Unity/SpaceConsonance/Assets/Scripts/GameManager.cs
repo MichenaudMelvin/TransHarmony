@@ -100,20 +100,15 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Parent qui contient le public")]
     private Transform _publicContainers;
 
-    
     [Tooltip("Nombre de conditions a completer avant le débloquage du hall")]
     public int[] conditionsLeftBeforeHallComplete = new int[] {4,4,4,4};
 
-    [Tooltip("La valeur de réussite de l'artiste en fonction des events")]  
+    [Tooltip("La valeur de réussite de l'artiste en fonction des events")]
     [Range(0f, 1f)]
     public float[] fouleMovementStrenght = new float[] {1f,1f,1f,1f};
 
-
-
-
-    [Tooltip("Phase Actuelle")]    
-    public int currentPhase = 1;
-
+    [Tooltip("Phase Actuelle")]
+    private int _currentPhase = 1;
 
     private void Start(){
         _timeLeft = _timeOfADay;
@@ -159,7 +154,7 @@ public class GameManager : MonoBehaviour{
     // ce qu'il se passe à la fin de chaque phases
     private void EndPhase1(){
         PhaseTransition();
-        currentPhase = 2;
+        _currentPhase = 2;
     }
 
     private void PhaseTransition()
@@ -249,5 +244,13 @@ public class GameManager : MonoBehaviour{
         _playerPoints += amount;
     }
 
-    public int GetCurrentPhase(){return currentPhase;}
+    public int GetCurrentPhase(){return _currentPhase;}
+
+    public void PauseGame(){
+
+    }
+
+    public void UnPauseGame(){
+
+    }
 }
