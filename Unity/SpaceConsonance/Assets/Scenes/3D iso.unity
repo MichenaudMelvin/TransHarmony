@@ -2160,6 +2160,10 @@ PrefabInstance:
       value: 'BATIDA apresenta : IKOQWE'
       objectReference: {fileID: 0}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: a19153552d799784da2db407ffdc2fda, type: 3}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Hip hop afro-electro
       objectReference: {fileID: 0}
@@ -5337,6 +5341,10 @@ PrefabInstance:
       propertyPath: _name
       value: MASMA DREAM WORLD
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: f32ffab08fb25144badfabb631387f20, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: "Rituel de gu\xE9rison"
@@ -11450,6 +11458,10 @@ PrefabInstance:
       propertyPath: _name
       value: NURI
       objectReference: {fileID: 0}
+    - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 132a8bebc7e15204b9dee1d0ba2be4bd, type: 3}
     - target: {fileID: 3278245472568555899, guid: 6283ea16c7b4d114aa97825c4bb8d6c5, type: 3}
       propertyPath: _style
       value: Afro-electro / percussions
@@ -18659,6 +18671,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4908250460651111115, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 453508979}
     - target: {fileID: 5169429730989514469, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_IsActive
       value: 0

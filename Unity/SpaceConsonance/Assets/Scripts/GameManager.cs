@@ -110,6 +110,13 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Phase Actuelle")]
     private int _currentPhase = 1;
 
+    [Header("Game pause")]
+    [Tooltip("Si le jeu est en pause ou non")]
+    private bool _isGamePause = false;
+
+    [Tooltip("Sauvegarde du timer pour la pause")]
+    private float _savedTime;
+
     private void Start(){
         _timeLeft = _timeOfADay;
 
@@ -136,7 +143,7 @@ public class GameManager : MonoBehaviour{
 
     // gère de le timer du festival entre chaque journées
     private void ManageTimer(){
-        if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist && _timeLeft > 0f){
+        if(!_resultImage.gameObject.activeInHierarchy && _canChangeArtist && _timeLeft > 0f && !_isGamePause){
             _timeLeft -= Time.deltaTime;
 
             // ajouter la fonction qui créer les commandes ici
@@ -246,11 +253,20 @@ public class GameManager : MonoBehaviour{
 
     public int GetCurrentPhase(){return _currentPhase;}
 
-    public void PauseGame(){
+    public bool GetIsGamePause(){return _isGamePause;}
 
-    }
+    // pause du jeu
+    public void PauseGame(bool pauseOrUnPause){
+        _isGamePause = pauseOrUnPause;
 
-    public void UnPauseGame(){
+        // pour mouvement up si la commande l'a pas fait
+        // if(!_isGamePause){
+        //     for(int i = 0; i < _commandGenerator.transform.childCount; i++){
+        //         _commandGenerator.transform.GetChild(i).gameObject.SetActive(!pauseOrUnPause);
+        //     }
+        // }
 
+        _commandGenerator.gameObject.SetActive(!pauseOrUnPause);
+        _itemGenerator.gameObject.SetActive(!pauseOrUnPause);
     }
 }

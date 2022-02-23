@@ -20,10 +20,6 @@ public class CommandAttributes : MonoBehaviour{
 
     [Header("Visual")]
     [SerializeField]
-    [Tooltip("Texte qui permet de connnaitre le besoin de l'artiste")]
-    private Text _visualNeed;
-
-    [SerializeField]
     [Tooltip("Texte qui permet de connaitre quel artiste à besoin de cette commande")]
     private Text _artistName;
 
@@ -123,7 +119,6 @@ public class CommandAttributes : MonoBehaviour{
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
         _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
-        _visualNeed.text = _artistNeed;
 
         if(_gameManager.GetCurrentPhase() == 1){
             _image.sprite = _bulleCalmeSprite;
@@ -168,7 +163,11 @@ public class CommandAttributes : MonoBehaviour{
     // fait apparaitre la commande en fade in
     private void Appearance(){
         this.GetComponent<Image>().canvasRenderer.SetAlpha(0f);
-        this.GetComponent<Image>().CrossFadeAlpha(1f, _movementDuration, false);
+
+        if(!_gameManager.GetIsGamePause()){
+            this.GetComponent<Image>().CrossFadeAlpha(1f, _movementDuration, false);
+        }
+
         StartCoroutine(this.UpMovement());
     }
 
