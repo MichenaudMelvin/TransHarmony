@@ -9,10 +9,6 @@ public class ItemAttributes : MonoBehaviour{
     private string _name;
 
     [SerializeField]
-    [Tooltip("Nom de l'item (visuel)")]
-    private Text _textName;
-
-    [SerializeField]
     [Tooltip("Sprite de l'item")]
     private Image _sprite;
 
@@ -23,7 +19,6 @@ public class ItemAttributes : MonoBehaviour{
     public void SetItem(string itemType){
         // set et affiche le nom de l'item
         _name = itemType;
-        _textName.text = _name;
         // set le sprite de l'item
         for(int i = 0; i < this.GetComponentInParent<ItemGenerator>().GetSpriteList().Count; i++){
             if(this.GetComponentInParent<ItemGenerator>().GetSpriteList()[i].name == _name){

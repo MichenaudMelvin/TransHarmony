@@ -937,6 +937,7 @@ MonoBehaviour:
   _scrollingMenu: {fileID: 3555840191884524921}
   _fadeOutImage: {fileID: 3320214156443943710}
   _scrolledPosition: {x: 0, y: 100}
+  _gameManager: {fileID: 0}
 --- !u!1 &1969882296530125554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,7 +3221,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10

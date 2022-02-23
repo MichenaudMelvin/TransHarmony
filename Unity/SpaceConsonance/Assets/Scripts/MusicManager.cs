@@ -149,11 +149,13 @@ public class MusicManager : MonoBehaviour{
             }
         }
 
-        // while(_actualArtist.HasPlayMusic()){
-        ArtistsAttributes actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
-        _audioSource.clip = actualArtist.GetMusic();
-        _actualArtist = actualArtist;
-        // }
+        ArtistsAttributes actualArtist = null;
+
+        while(actualArtist == null || (actualArtist.GetMusic() != null && actualArtist.HasPlayMusic())){
+            actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
+            _audioSource.clip = actualArtist.GetMusic();
+            _actualArtist = actualArtist;
+        }
 
         _actualArtist.SetHasPlayMusic(true);
 

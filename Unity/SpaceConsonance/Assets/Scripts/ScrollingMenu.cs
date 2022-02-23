@@ -30,6 +30,10 @@ public class ScrollingMenu : MonoBehaviour{
     [Tooltip("Pour savoir si la coroutine est lancé")]
     private bool _hasScrollCoroutineStart = false;
 
+    [SerializeField]
+    [Tooltip("Référence au GameManager")]
+    private GameManager _gameManager;
+
     private void Start(){
         _scrollButton.onClick.AddListener(TaskOnClickScrollButton);
         _initialPosition = _scrollButton.GetComponent<RectTransform>().anchoredPosition;
@@ -57,10 +61,12 @@ public class ScrollingMenu : MonoBehaviour{
             positionToGo = _scrolledPosition;
             _fadeOutImage.gameObject.SetActive(true);
             tempColor = _fadeOutImage.color;
+            _gameManager.PauseGame(true);
         } else{
             sens = -1;
             positionToGo = _initialPosition;
             tempColor = _fadeOutImage.color;
+            _gameManager.PauseGame(false);
         }
 
         while(_scrollButton.GetComponent<RectTransform>().anchoredPosition != positionToGo){

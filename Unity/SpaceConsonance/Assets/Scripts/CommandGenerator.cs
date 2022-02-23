@@ -113,7 +113,7 @@ public class CommandGenerator : MonoBehaviour{
     // créé les commandes
     public void CreateCommands(){
         float delay = Random.Range(0, _maxWaitingTime);
-        if(_commandGeneratedNbr < _maxCommandNumber && this.transform.childCount < _maxCommandNumberAtTime && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist()){
+        if(_commandGeneratedNbr < _maxCommandNumber && this.transform.childCount < _maxCommandNumberAtTime && _gameManager.GetTime() > 0 && _gameManager.GetCanChangeArtist() && !_gameManager.GetIsGamePause()){
             if(_commandGeneratedNbr == 0){
                 StartCoroutine(this.UpdateArtistList(0.0001f));
             }
