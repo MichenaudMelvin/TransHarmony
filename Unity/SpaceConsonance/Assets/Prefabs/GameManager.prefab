@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff4258c3be1e143ba17c2abaec3ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeOfADay: 30
+  _timePhase1: 60
+  _timePhase2: 120
+  _days: 5
   _timerText: {fileID: 0}
   _currentPhaseText: {fileID: 0}
   _sliderTimer: {fileID: 0}
@@ -76,20 +78,14 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  _resultImage: {fileID: 0}
-  _resultText: {fileID: 0}
+  _transitionImage: {fileID: 0}
+  _transitionText: {fileID: 0}
   _hallsContainer: {fileID: 0}
   _artistContainers: {fileID: 0}
   _musicManager: {fileID: 0}
   _commandGenerator: {fileID: 0}
   _itemGenerator: {fileID: 0}
   _publicContainers: {fileID: 0}
-  conditionsLeftBeforeHallComplete: 04000000040000000400000004000000
-  fouleMovementStrenght:
-  - 1
-  - 1
-  - 1
-  - 1
   _artistAssetsList:
   - {fileID: 11400000, guid: 1cfb370de5359c74eba5ea9907cd2911, type: 2}
   - {fileID: 11400000, guid: 6769c9720ed457f43aec3dc3363ff86d, type: 2}
@@ -162,3 +158,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1283706ca3a5dbb43924e8885b8d001f, type: 2}
   - {fileID: 11400000, guid: d2db240ec566aff4db4cf91008030f4e, type: 2}
   - {fileID: 11400000, guid: ea3ebe57a131c90499cc3526604b9732, type: 2}
+  conditionsLeftBeforeHallComplete: 04000000040000000400000004000000
+  fouleMovementStrenght:
+  - 1
+  - 1
+  - 1
+  - 1
+  _endingScreen: {fileID: 0}
+  _externalUI: {fileID: 0}
