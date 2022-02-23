@@ -505,6 +505,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6079424124546945223, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6079424123299167587}
+    - target: {fileID: 6079424124546945223, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079424124546945223, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadScene, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6079424124546945226, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
       propertyPath: _settings
       value: 
@@ -529,10 +541,30 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6079424124546945226, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
 --- !u!4 &6079424123299167585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6079424123669315535, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
   m_PrefabInstance: {fileID: 6079424123299167584}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6079424123299167586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6079424124546945221, guid: 9a595927a214d1240b62ca252546ed0b, type: 3}
+  m_PrefabInstance: {fileID: 6079424123299167584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6079424123299167587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079424123299167586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3913065e13f743c4a9950dca805bd8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settings: {fileID: 0}
+  _sceneName: 3D iso

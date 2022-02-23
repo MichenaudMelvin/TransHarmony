@@ -23,6 +23,10 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Texte qui permet de connaitre quel artiste à besoin de cette commande")]
     private Text _artistName;
 
+    [SerializeField]
+    [Tooltip("Sprite de la commande")]
+    private Image _spriteNeed;
+
     [Space(10)]
 
     [Header("Feedback")]
@@ -119,6 +123,14 @@ public class CommandAttributes : MonoBehaviour{
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
         _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
+
+        // set le sprite de la commande
+        for(int i = 0; i < _commandGenerator.GetCommandGenerator().GetSpriteList().Count; i++){
+            if(_commandGenerator.GetCommandGenerator().GetSpriteList()[i].name == _artistNeed){
+                _spriteNeed.sprite = _commandGenerator.GetCommandGenerator().GetSpriteList()[i];
+                _spriteNeed.SetNativeSize();
+            }
+        }
 
         if(_gameManager.GetCurrentPhase() == 1){
             _image.sprite = _bulleCalmeSprite;

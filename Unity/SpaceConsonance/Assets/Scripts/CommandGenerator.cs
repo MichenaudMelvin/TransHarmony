@@ -150,4 +150,6 @@ public class CommandGenerator : MonoBehaviour{
     public void SetArtistLeft(int newValue){artistsLeft += newValue;}
     public void SetMaxCommandAtATime(int newValue){_maxCommandNumberAtTime += newValue;}
     public void SetArtistsLeft(int newValue){artistsLeft += newValue;}
+
+    public ItemGenerator GetCommandGenerator(){return _itemGenerator;}
 }
