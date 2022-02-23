@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9d62521d651d74ebcb172e0ff9cb48, type: 3}
   m_Name: W!ZARD
   m_EditorClassIdentifier: 
+  currentHall: 0
   _name: W!ZARD
-  _music: {fileID: 8300000, guid: 7d8240190fd084d408c46a43ddfda706, type: 3}
+  _music: {fileID: 8300000, guid: 57ea17cc8c132854ab970cdfebaf810d, type: 3}
+  _alreadyPerform: 0
+  _hasPlayMusic: 0

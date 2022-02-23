@@ -111,6 +111,10 @@ public class CommandAttributes : MonoBehaviour{
     [SerializeField] public ParticleSystem _paticulesTrue;
     [SerializeField] public ParticleSystem _paticulesFalse;
 
+    [SerializeField]
+    [Tooltip("Points gagnés quand la commande est réussie")]
+    private float _succesPoints;
+
     [Space(10)]
 
     [Header("Sounds")]
@@ -180,8 +184,6 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     private void EndTimer(){
-        _gameManager.UpdatePoints(-50);
-        _musicManager.UpdateVolume(-0.05f);
         // faire une animation de fin de timer
         Destroy(this.gameObject);
     }
@@ -306,8 +308,6 @@ public class CommandAttributes : MonoBehaviour{
     // quand le joueur réussi a bien drag n dropé son item
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
-        _musicManager.UpdateVolume(0.05f);
-        _gameManager.UpdatePoints(50);
         _hasSucced = true;
         _paticulesTrue.Play();
 
@@ -317,19 +317,23 @@ public class CommandAttributes : MonoBehaviour{
         }
 
         yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject);
-        _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
-        if(_gameManager.conditionsLeftBeforeHallComplete[currentHall]<=0)
-        {
-            _commandGenerator.SetArtistLeft(-1);
-            _commandGenerator.SetMaxCommandAtATime(-1);
+
+        if(_gameManager.GetCurrentPhase() == 1){
+            _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
+            if(_gameManager.conditionsLeftBeforeHallComplete[currentHall] <= 0){
+                _commandGenerator.SetHallsLeft(-1);
+                _commandGenerator.SetMaxCommandAtATime(-1);
+            }
+        } else if(_gameManager.GetCurrentPhase() == 1){
+            _gameManager.UpdatePoints(_succesPoints);
         }
+
+        Destroy(this.gameObject);
     }
 
     // quand le joueur rate
     public void Failure(){
         StartCoroutine(this.ChangeColor(_failureColor));
-        _musicManager.UpdateVolume(-0.05f);
 
         if(_settings.GetIsSoundEnable()){
             _audioSource.clip = _failRequest;
@@ -337,10 +341,7 @@ public class CommandAttributes : MonoBehaviour{
         }
 
         _finalPosition = this.transform.position;
-        _gameManager.UpdatePoints(-10);
         _paticulesFalse.Play();
         StartCoroutine(this.FailureMovement());
-        
-
     }
 }

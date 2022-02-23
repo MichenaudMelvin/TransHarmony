@@ -15,9 +15,13 @@ public class EffetFoule : MonoBehaviour{
     [Tooltip("Hauteur originale de l'objet")]
     private float _originalHeight;
 
-    private IEnumerator Start(){
+    [SerializeField]
+    [Tooltip("Hall dans lequel est placé la foule")]
+    private HallsAttributes _currentHall;
+
+    private void Start(){
         _originalHeight = this.transform.localScale.y;
-        yield return new WaitForSeconds(2f);
+        // yield return new WaitForSeconds(2f);
         StartCoroutine(this.FouleMovement());
     }
 
@@ -28,8 +32,8 @@ public class EffetFoule : MonoBehaviour{
 
         while(_gameManager.GetCurrentPhase() == 2){
 
-            if(!hasChangeScale && _audioSource.volume != 0){
-                float ecart = _audioSource.volume/2.5f;
+            if(!hasChangeScale && _currentHall.GetPoints() > 0){
+                float ecart = Mathf.Abs(_currentHall.GetPoints()/200);
                 float newHeightScale = Random.Range(_originalHeight-ecart, _originalHeight+ecart);
                 this.transform.localScale = new Vector3(this.transform.localScale.x, newHeightScale, this.transform.localScale.z);
                 hasChangeScale = true;

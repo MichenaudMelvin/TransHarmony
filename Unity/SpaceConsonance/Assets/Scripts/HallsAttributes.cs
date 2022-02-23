@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class HallsAttributes : MonoBehaviour{
 
@@ -32,6 +31,9 @@ public class HallsAttributes : MonoBehaviour{
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
+    [Tooltip("Points générés par le hall")]
+    private float _points;
+
     private void Start(){
         _artistPlacement = this.transform.Find("ArtistPlacement");
 
@@ -58,14 +60,9 @@ public class HallsAttributes : MonoBehaviour{
     public void ChangeArtist(){
         Destroy(_artistInHall);
 
-        if(_gameManager.GetCanChangeArtist()){
-            while(_artistInHall.GetStatus()){
-                StartCoroutine(this.SpawnArtist());
-            }
-        } else if(!_gameManager.GetCanChangeArtist()){
-            // this.EndFestival();
-            print("fin du festival");
-        }
+        // à voir pour éviter d'avoir 2 fois de suite le meme artiste dans un hall
+
+        StartCoroutine(this.SpawnArtist());
     }
 
     // Setup le nouvel artiste qui entre dans le hall
@@ -75,5 +72,7 @@ public class HallsAttributes : MonoBehaviour{
         _artistInHall.SetStatus(true);
         _artistInHall.transform.SetPositionAndRotation(_artistPlacement.position, new Quaternion());
     }
+
+    public float GetPoints(){return _points;}
 
 }

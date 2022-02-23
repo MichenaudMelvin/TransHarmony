@@ -165,7 +165,7 @@ public class MusicManager : MonoBehaviour{
     }
 
     // se délenche à la fin de chaque journée
-    public IEnumerator EndPhase1(){
+    public IEnumerator EndPhase(){
         StopCoroutine(this.DisplayMusicName());
         _displayMusicNameCoroutineIsRunning = false;
 
