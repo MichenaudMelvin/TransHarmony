@@ -16,6 +16,9 @@ public class ItemAttributes : MonoBehaviour{
     [Tooltip("Sprite de l'item")]
     private Image _sprite;
 
+    [Tooltip("Position initiale de l'item")]
+    private Vector3 _initialPosition;
+
     // public functions
     public void SetItem(string itemType){
         // set et affiche le nom de l'item
@@ -29,7 +32,16 @@ public class ItemAttributes : MonoBehaviour{
         }
     }
 
-    public void SetPosition(Vector2 newPosition){this.GetComponent<RectTransform>().anchoredPosition = newPosition;}
+    // set de la position, va être considéré comme la position initiale
+    public void SetPosition(Vector2 newAnchorMin, Vector2 newAnchorMax, Vector2 newPivot, Vector2 newPosition){
+        this.GetComponent<RectTransform>().anchorMin = newAnchorMin;
+        this.GetComponent<RectTransform>().anchorMax = newAnchorMax;
+        this.GetComponent<RectTransform>().pivot = newPivot;
+        this.GetComponent<RectTransform>().anchoredPosition = newPosition;
+        _initialPosition = this.transform.position;
+    }
 
     public string GetItemName(){return _name;}
+
+    public void RestartPosition(){this.transform.position = _initialPosition;}
 }

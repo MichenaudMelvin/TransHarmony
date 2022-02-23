@@ -15,12 +15,21 @@ public class MusicManager : MonoBehaviour{
     [Tooltip("Volume de la musique joué")]
     private float _volume = -0.0001f;
 
+    [SerializeField]
+    [Tooltip("Vitesse à laquelle la musique se fade out (à la fin de chaque journée)")]
+    [Range(0.01f, 0.1f)]
+    private float _fadeOutSpeed;
+
     [Space(10)]
 
     [Header("Display music")]
     [SerializeField]
     [Tooltip("Nom de la musique")]
     private TextMeshProUGUI _musicName;
+
+    [SerializeField]
+    [Tooltip("Enfant de \"_musicName\" qui permet de faire défiller le texte")]
+    private TextMeshProUGUI _childMusicName;
 
     [SerializeField]
     [Tooltip("Nom de l'artiste")]
@@ -30,12 +39,6 @@ public class MusicManager : MonoBehaviour{
     [Range(0.01f, 0.05f)]
     [Tooltip("Vitesse à laquel va défiler le nom de la musique si le texte est trop grand")]
     private float _musicNameScrollSpeed;
-
-    private TextMeshProUGUI _cloneTextObject;
-
-    [SerializeField]
-    [Tooltip("Rect transform du nom de la musique")]
-    private RectTransform _musicNameRectTransform;
 
     [Space(10)]
 
@@ -55,6 +58,10 @@ public class MusicManager : MonoBehaviour{
     [Tooltip("Parent qui contient tous les halls")]
     private Transform _hallsContainer;
 
+    [SerializeField]
+    [Tooltip("Sécurité pour pas que la couroutine fonctionne plusieurs fois en meme temps")]
+    private bool _displayMusicNameCoroutineIsRunning = false;
+
     private void Start(){
         // pour laisser le temps à Unity d'instancier les artistes // sinon marche pas
         StartCoroutine(this.LateStart(0.001f));
@@ -67,50 +74,49 @@ public class MusicManager : MonoBehaviour{
     }
 
     private void Update(){
-        this.ManageVolume();
+        if(_gameManager.GetCurrentPhase() == 2)
+        {
+           // this.ManageVolume();
+        }
     }
 
     // gère le volume de la musique en fonciton des actions du joueur
     private void ManageVolume(){
         if(_gameManager.GetTime() > 0){
+            // changement de musique si la musique actuelle est finie
+            if(_audioSource.time == 0){
+                StopCoroutine(this.DisplayMusicName());
+                this.SetAudioClip();
+            }
+
             // ptet pas la meilleur méthode
             // marche pas avec un Lerp car impossible d'augmenter ou diminuer du volume
             _audioSource.volume += _volume;
-        } else if(_gameManager.GetTime() <= 0){
-            _audioSource.volume = 1;
         }
     }
 
+
     private IEnumerator DisplayMusicName(){
-        // also : https://youtu.be/ToVL_f9G9Yk
+        if(!_displayMusicNameCoroutineIsRunning){
+            _displayMusicNameCoroutineIsRunning = true;
 
-        if(_musicName.transform.childCount > 0){
-            Destroy(_musicName.transform.GetChild(0).gameObject);
-        }
+            // à voir si en fonction de la taille du texte
+            // faudrait pas changer la largeur de TextMeshPro component
 
-        _musicNameRectTransform.anchoredPosition = new Vector2(0, 0);
+            bool canScroll = true;
 
-        _cloneTextObject = Instantiate(_musicName) as TextMeshProUGUI;
-        RectTransform cloneRectTransform = _cloneTextObject.GetComponent<RectTransform>();
-        cloneRectTransform.SetParent(_musicNameRectTransform);
-        cloneRectTransform.anchoredPosition = new Vector2(_musicNameRectTransform.sizeDelta.x, 0);
-        cloneRectTransform.localScale = Vector3.one;
-
-        bool canScroll = true;
-
-        float scrollSpeed = _musicNameScrollSpeed;
-
-        // fait encore des trucs chelou mais à peu pres bon
-        while(canScroll){
-            _musicName.transform.Translate(new Vector3(-1, 0, 0) * scrollSpeed);
-            if(_musicNameRectTransform.anchoredPosition.x <= -_musicNameRectTransform.sizeDelta.x){
-                _musicNameRectTransform.anchoredPosition = Vector2.zero;
-                if(_gameManager.GetTime() <= 0){
-                    canScroll = false;
+            // fait encore des trucs chelou mais à peu pres bon
+            while(canScroll){
+                _musicName.transform.Translate(new Vector3(-1, 0, 0) * _musicNameScrollSpeed);
+                if(_musicName.GetComponent<RectTransform>().anchoredPosition.x <= -_musicName.GetComponent<RectTransform>().sizeDelta.x){
+                    _musicName.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                    if(_gameManager.GetTime() <= 0){
+                        canScroll = false;
+                    }
                 }
-            }
 
-            yield return null;
+                yield return null;
+            }
         }
     }
 
@@ -126,6 +132,7 @@ public class MusicManager : MonoBehaviour{
         }
 
         _musicName.text = result;
+        _childMusicName.text = _musicName.text;
         _artistName.text = _actualArtist.GetName();
     }
 
@@ -153,6 +160,17 @@ public class MusicManager : MonoBehaviour{
         this.SetMusicName();
         StartCoroutine(this.DisplayMusicName());
         _audioSource.Play();
+    }
+
+    // se délenche à la fin de chaque journée
+    public IEnumerator EndPhase1(){
+        StopCoroutine(this.DisplayMusicName());
+        _displayMusicNameCoroutineIsRunning = false;
+
+        while(_audioSource.volume > 0){
+            _audioSource.volume -= _fadeOutSpeed;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     // pour augmenter ou diminuer le volume de la musique

@@ -9,14 +9,14 @@ public class ItemGenerator : MonoBehaviour{
     [Tooltip("Prefab de l'item")]
     private ItemAttributes _itemToGenerate;
 
+    [SerializeField]
+    [Range(1, 10)]
     [Tooltip("Nombre d'items maximal")]
     private int _maxItemNumber;
 
+    [SerializeField]
     [Tooltip("Liste de besoins des artistes (items)")]
-    private List<string> _listNeeds = new List<string> {};
-
-    [Tooltip("Booléen pour savoir si le nombre d'items demmandé à été créé")]
-    private bool _hasFinishedCreateItems = false;
+    private List<string> _listNeeds;
 
     [SerializeField]
     [Tooltip("Parent qui contient tous les positions des items")]
@@ -42,85 +42,40 @@ public class ItemGenerator : MonoBehaviour{
     private Transform _artistContainers;
 
     private void Start(){
-        // génère 1.5 fois plus d'items que de commande
-        _maxItemNumber = (int)(_commandGenerator.GetMaxCommandNumber()*1.5);
-
         for(int i = 0; i < _itemsPositions.childCount; i++){
             _itemsPositions.GetChild(i).gameObject.SetActive(false);
         }
     }
 
-    private void Update(){
-        this.CreateItems();
-        this.DestroyItems();
-    }
-
+    // public functions
     // créé les items
-    // ptet à mettre ne public comme pour CommandGenerator pour éviter une Update();
-    private void CreateItems(){
-        if(this.transform.childCount < _maxItemNumber && !_hasFinishedCreateItems && _gameManager.GetTime() > 0){
-            if(this.transform.childCount == 0){
-                StartCoroutine(this.UpdateListNeeds(0.0001f));
-            }
-
+    public IEnumerator CreateItems(){
+        int index = 0;
+        while(this.transform.childCount < _maxItemNumber){
             if(_listNeeds.Count > 0){
                 ItemAttributes newItem = Instantiate(_itemToGenerate, this.transform);
-                newItem.SetItem(_listNeeds[Random.Range(0, _listNeeds.Count)]);
-                newItem.GetComponent<DragNDrop>().SetupVariables(_gameManager, _artistContainers);
-                newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
-            }
-        }
+                newItem.SetItem(_listNeeds[index]);
+                index += 1;
 
-        if(this.transform.childCount >= _maxItemNumber){
-            _hasFinishedCreateItems = true;
+                newItem.SetPosition(_itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchorMin, _itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchorMax, _itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().pivot, _itemsPositions.GetChild(this.transform.childCount-1).GetComponent<RectTransform>().anchoredPosition);
+            }
+
+            yield return null;
         }
     }
 
+
     // détruits les items (à la fin de chaque journée)
-    // ptet à mettre ne public comme pour CommandGenerator pour éviter une Update();
-    private void DestroyItems(){
+    public void DestroyItems(){
         // détruits tous les items encore restants
-        if(this.transform.childCount > 0 && _gameManager.GetTime() <= 0){
+        if(this.transform.childCount > 0){
             for(int i = 0; i < this.transform.childCount; i++){
                 Destroy(this.transform.GetChild(i).gameObject);
             }
         }
-
-        // reset pour recréer des items
-        if(_gameManager.GetTime() <= 0){
-            _hasFinishedCreateItems = false;
-            _listNeeds.Clear();
-        }
     }
 
-    // met a jour la liste des besoins des artistes en fonctions des artistes présent en concerts
-    private IEnumerator UpdateListNeeds(float time){
-        yield return new WaitForSeconds(time);
-
-        _listNeeds = new List<string>{""};
-
-        for(int i = 0; i < _artistContainers.childCount; i++){
-            if(_artistContainers.GetChild(i).gameObject.activeInHierarchy){
-                for(int j = 0; j < _artistContainers.GetChild(i).GetComponent<ArtistsAttributes>().GetListNeeds().Count; j++){
-                    this.CheckNeed(_artistContainers.GetChild(i).GetComponent<ArtistsAttributes>(), j);
-                }
-            }
-        }
-
-        _listNeeds.RemoveAt(0);
-    }
-
-    // check si le besoin de l'artiste n'est pas deja dans la liste
-    private void CheckNeed(ArtistsAttributes artist, int indexNeed){
-        for(int k = 0; k < _listNeeds.Count; k++){
-            if(artist.GetListNeeds()[indexNeed] == _listNeeds[k]){
-                return;
-            }
-        }
-
-        _listNeeds.Add(artist.GetListNeeds()[indexNeed]);
-    }
-
-    // public functions
     public List<Sprite> GetSpriteList(){return _spriteList;}
+
+    public List<string> GetListNeeds(){return _listNeeds;}
 }
