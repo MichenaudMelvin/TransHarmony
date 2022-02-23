@@ -39,3 +39,7 @@ sysinfo.txt
 # Fichiers logs
 debug.log
 test.log
+
+# Unity merges files
+*.orig
+*.orig.meta
