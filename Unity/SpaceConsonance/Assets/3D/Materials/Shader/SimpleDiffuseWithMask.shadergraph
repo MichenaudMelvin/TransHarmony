@@ -244,6 +244,8 @@
         "m_GuidSerialized": "ecd77ca6-c539-49dd-9847-8f9577ddcc1b"
     },
     "m_Name": "Mask Map",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_041ae342e83042f8bac2a655b7634cac",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
@@ -1217,6 +1219,8 @@
         "m_GuidSerialized": "f900680a-842e-48c5-b736-2022200145cb"
     },
     "m_Name": "Alpha Clip Thresold",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_c23eaab6abbf44e69ee37c74cdaea297",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
@@ -1381,6 +1385,8 @@
         "m_GuidSerialized": "8447a5d3-c4ff-4d83-a4b7-eb572a48903e"
     },
     "m_Name": "Diffuse Map",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_deb2c864d18e43e3a4653cecad7285d4",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
