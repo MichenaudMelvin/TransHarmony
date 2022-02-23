@@ -14,6 +14,10 @@ public class CommandGenerator : MonoBehaviour{
     private GameManager _gameManager;
 
     [SerializeField]
+    [Tooltip("Référence au Settings")]
+    private Settings _settings;
+
+    [SerializeField]
     [Tooltip("Référence au Music Manager")]
     private MusicManager _musicManager;
 
@@ -97,7 +101,7 @@ public class CommandGenerator : MonoBehaviour{
             }
         }
 
-        command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _musicManager, this, _itemGenerator.GetListNeeds());
+        command.SetVariablesCommand(_listArtistesInHalls[artistIndex].GetComponent<ArtistsAttributes>(), _gameManager, _settings, _musicManager, this, _itemGenerator.GetListNeeds());
     }
 
     // temps d'attente entre deux commande

@@ -1,6 +1,13 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class HallsAttributes : MonoBehaviour{
+
+    [Header("Artists")]
+    [SerializeField]
+    [Tooltip("Préfab de l'artiste")]
+    private ArtistsAttributes _artistsPrefab;
 
     [SerializeField]
     [Tooltip("Parent qui contient tous les artistes")]
@@ -8,11 +15,16 @@ public class HallsAttributes : MonoBehaviour{
 
     [Tooltip("Artiste actuellement dans le hall")]
     private ArtistsAttributes _artistInHall;
-    
+
+    [SerializeField]
+    [Tooltip("Pour pas que tous les hall instantie un artiste au meme moment")]
+    private float _exePosition;
+
     [SerializeField]
     [Tooltip("Numero de Hall")]
     private int hallNumber;
 
+    [SerializeField]
     [Tooltip("Position où l'artiste va être placé dans le hall")]
     private Transform _artistPlacement;
 
@@ -23,24 +35,29 @@ public class HallsAttributes : MonoBehaviour{
     private void Start(){
         _artistPlacement = this.transform.Find("ArtistPlacement");
 
-        Transform newArtist = _artistContainers.GetChild(Random.Range(1, _artistContainers.childCount));
-        _artistInHall = newArtist.GetComponent<ArtistsAttributes>();
+        StartCoroutine(this.SpawnArtist());
+    }
+
+    private IEnumerator SpawnArtist(){
+        yield return new WaitForSeconds(_exePosition);
+
+        ArtistsAttributes newArtist = Instantiate(_artistsPrefab, _artistPlacement.position, new Quaternion(), _artistContainers);
+
+        newArtist.SetArtistAsset(_gameManager.GetArtistAssetsList()[Random.Range(0, _gameManager.GetArtistAssetsList().Count)]);
+
+        _artistInHall = newArtist;
+
         this.SetupArtist();
     }
 
     // permet le changement d'artiste après une journée passé dans le festival
     public void ChangeArtist(){
-        _artistInHall.gameObject.SetActive(false);
-        _artistInHall.transform.SetPositionAndRotation(new Vector3(), new Quaternion());
+        Destroy(_artistInHall);
 
         if(_gameManager.GetCanChangeArtist()){
             while(_artistInHall.GetStatus()){
-                Transform newArtist = _artistContainers.GetChild(Random.Range(1, _artistContainers.childCount));
-                _artistInHall = newArtist.GetComponent<ArtistsAttributes>();
+                StartCoroutine(this.SpawnArtist());
             }
-
-            this.SetupArtist();
-
         } else if(!_gameManager.GetCanChangeArtist()){
             // this.EndFestival();
             print("fin du festival");
@@ -49,7 +66,7 @@ public class HallsAttributes : MonoBehaviour{
 
     // Setup le nouvel artiste qui entre dans le hall
     private void SetupArtist(){
-        _artistInHall.currentHall = hallNumber;
+        _artistInHall.SetCurrentHall(hallNumber);
         _artistInHall.gameObject.SetActive(true);
         _artistInHall.SetStatus(true);
         _artistInHall.transform.SetPositionAndRotation(_artistPlacement.position, new Quaternion());
