@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour{
@@ -136,6 +137,12 @@ public class GameManager : MonoBehaviour{
         for(int i = 0; i < _hallsContainer.childCount; i++){
             _listHalls.Add(_hallsContainer.GetChild(i).GetComponent<HallsAttributes>());
         }
+
+        StartCoroutine(this.LateStart());
+    }
+
+    private IEnumerator LateStart(){
+        yield return new WaitForSeconds(1f);
 
         _commandGenerator.CreateCommands();
         StartCoroutine(_itemGenerator.CreateItems());
