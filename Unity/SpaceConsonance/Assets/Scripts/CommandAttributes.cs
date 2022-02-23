@@ -96,13 +96,32 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
+    [Tooltip("Référence au Settings")]
+    private Settings _settings;
+
     [Tooltip("Référence au Music Manager")]
     private MusicManager _musicManager;
 
     [Tooltip("Booléen qui permet de savoir si le joueur passe son curseur/item dessus la commande")]
     private bool _isItemOnIt = false;
+
     [Tooltip("Référence au CommandGenerator")]
     private CommandGenerator _commandGenerator;
+
+    [Space(10)]
+
+    [Header("Sounds")]
+    [SerializeField]
+    [Tooltip("Audio source de la commande")]
+    private AudioSource _audioSource;
+
+    [SerializeField]
+    [Tooltip("Son quand valide une commande")]
+    private AudioClip _validRequest;
+
+    [SerializeField]
+    [Tooltip("Son quand fail une commande")]
+    private AudioClip _failRequest;
 
     private void Start(){
         _initialColor = _image.color;
@@ -272,11 +291,12 @@ public class CommandAttributes : MonoBehaviour{
 
     public string GetArtistNeed(){return _artistNeed;}
 
-    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, CommandGenerator commandGenerator, List<string> listNeed){
+    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, Settings settingsReference, MusicManager musicManagerReference, CommandGenerator commandGenerator, List<string> listNeed){
         _artistWhoNeedIt = newArtiste;
         _gameManager = gameManagerReference;
         _musicManager = musicManagerReference;
         _commandGenerator = commandGenerator;
+        _settings = settingsReference;
         this.SetupCommand(listNeed);
     }
 
@@ -286,7 +306,12 @@ public class CommandAttributes : MonoBehaviour{
         _musicManager.UpdateVolume(0.05f);
         _gameManager.UpdatePoints(50);
         _hasSucced = true;
-        // ajouter un son
+
+        if(_settings.GetIsSoundEnable()){
+            _audioSource.clip = _validRequest;
+            _audioSource.Play();
+        }
+
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
         _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
@@ -301,7 +326,12 @@ public class CommandAttributes : MonoBehaviour{
     public void Failure(){
         StartCoroutine(this.ChangeColor(_failureColor));
         _musicManager.UpdateVolume(-0.05f);
-        // ajouter un son
+
+        if(_settings.GetIsSoundEnable()){
+            _audioSource.clip = _failRequest;
+            _audioSource.Play();
+        }
+
         _finalPosition = this.transform.position;
         _gameManager.UpdatePoints(-10);
         StartCoroutine(this.FailureMovement());

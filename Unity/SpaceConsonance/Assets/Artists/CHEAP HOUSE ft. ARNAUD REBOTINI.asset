@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9d62521d651d74ebcb172e0ff9cb48, type: 3}
+  m_Name: CHEAP HOUSE ft. ARNAUD REBOTINI
+  m_EditorClassIdentifier: 
+  _name: CHEAP HOUSE ft. ARNAUD REBOTINI
+  _music: {fileID: 8300000, guid: b9e34ac8ac0636448a33732e6a11e473, type: 3}

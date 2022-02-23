@@ -117,6 +117,10 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Sauvegarde du timer pour la pause")]
     private float _savedTime;
 
+    [SerializeField]
+    [Tooltip("List des variables des artistes")]
+    private List<ArtistAsset> _artistAssetsList;
+
     private void Start(){
         _timeLeft = _timeOfADay;
 
@@ -269,4 +273,6 @@ public class GameManager : MonoBehaviour{
         _commandGenerator.gameObject.SetActive(!pauseOrUnPause);
         _itemGenerator.gameObject.SetActive(!pauseOrUnPause);
     }
+
+    public List<ArtistAsset> GetArtistAssetsList(){return _artistAssetsList;}
 }
