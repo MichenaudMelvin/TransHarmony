@@ -58,7 +58,10 @@ public class HallsAttributes : MonoBehaviour{
 
     // permet le changement d'artiste après une journée passé dans le festival
     public void ChangeArtist(){
-        Destroy(_artistInHall);
+        _gameManager.UpdatePoints(_points);
+        _points = 0;
+
+        Destroy(_artistInHall.gameObject);
 
         // à voir pour éviter d'avoir 2 fois de suite le meme artiste dans un hall
 
@@ -67,12 +70,22 @@ public class HallsAttributes : MonoBehaviour{
 
     // Setup le nouvel artiste qui entre dans le hall
     private void SetupArtist(){
+        // pour opti merge ces deux méthodes en une
         _artistInHall.SetCurrentHall(hallNumber);
+        _artistInHall.SetHall(this);
+
         _artistInHall.gameObject.SetActive(true);
         _artistInHall.SetStatus(true);
         _artistInHall.transform.SetPositionAndRotation(_artistPlacement.position, new Quaternion());
     }
 
+    public void Disable(){
+        Destroy(_artistInHall.gameObject);
+        // disable les light ici
+    }
+
     public float GetPoints(){return _points;}
+
+    public void UpdatePoints(float amount){_points += amount;}
 
 }

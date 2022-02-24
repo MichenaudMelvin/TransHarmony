@@ -67,7 +67,6 @@ public class CommandGenerator : MonoBehaviour{
     // micro delay sinon marche pas
     private IEnumerator UpdateArtistList(float time){
         yield return new WaitForSeconds(time);
-        // fonctionne pas ici
 
         _listArtistesInHalls = new List<ArtistsAttributes>{};
 
@@ -143,7 +142,6 @@ public class CommandGenerator : MonoBehaviour{
         }
 
         _listArtistesInHalls.Clear();
-        print(_listArtistesInHalls.Count);
         _commandGeneratedNbr = 0;
         _maxCommandNumberAtTime = _hallContainers.childCount;
     }

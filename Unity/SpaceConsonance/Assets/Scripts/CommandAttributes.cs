@@ -78,9 +78,9 @@ public class CommandAttributes : MonoBehaviour{
     [Space(10)]
 
     [Header("Timer")]
-    [SerializeField]
-    [Tooltip("Timer visuel de la commande")]
-    private Image _circleTimer;
+    // [SerializeField]
+    // [Tooltip("Timer visuel de la commande")]
+    // private Image _circleTimer;
 
     [SerializeField]
     [Range(10f, 25f)]
@@ -136,7 +136,7 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     private void Update(){
-        this.ManageTimer();
+        if(_gameManager.GetCurrentPhase() == 2){this.ManageTimer();}
         this.ScaleAnimation();
     }
 
@@ -173,9 +173,9 @@ public class CommandAttributes : MonoBehaviour{
         if(!_hasSucced){
             _availableTime -= Time.deltaTime;
 
-            _circleTimer.fillAmount = Mathf.InverseLerp(0, _availableTimeInitial, _availableTime);
+            // _circleTimer.fillAmount = Mathf.InverseLerp(0, _availableTimeInitial, _availableTime);
 
-            _circleTimer.color = _gameManager.GetTimerGradient().Evaluate(_circleTimer.fillAmount);
+            // _circleTimer.color = _gameManager.GetTimerGradient().Evaluate(_circleTimer.fillAmount);
         }
 
         if(_availableTime <= 0 && !_hasSucced){
@@ -324,8 +324,8 @@ public class CommandAttributes : MonoBehaviour{
                 _commandGenerator.SetHallsLeft(-1);
                 _commandGenerator.SetMaxCommandAtATime(-1);
             }
-        } else if(_gameManager.GetCurrentPhase() == 1){
-            _gameManager.UpdatePoints(_succesPoints);
+        } else if(_gameManager.GetCurrentPhase() == 2){
+            _artistWhoNeedIt.GetHall().UpdatePoints(_succesPoints);
         }
 
         Destroy(this.gameObject);
