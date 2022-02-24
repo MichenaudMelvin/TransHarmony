@@ -85,7 +85,11 @@ MonoBehaviour:
   _musicManager: {fileID: 0}
   _commandGenerator: {fileID: 0}
   _itemGenerator: {fileID: 0}
-  _publicContainers: {fileID: 0}
+  _publicContainersList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _artistAssetsList:
   - {fileID: 11400000, guid: 1cfb370de5359c74eba5ea9907cd2911, type: 2}
   - {fileID: 11400000, guid: 6769c9720ed457f43aec3dc3363ff86d, type: 2}
@@ -158,7 +162,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1283706ca3a5dbb43924e8885b8d001f, type: 2}
   - {fileID: 11400000, guid: d2db240ec566aff4db4cf91008030f4e, type: 2}
   - {fileID: 11400000, guid: ea3ebe57a131c90499cc3526604b9732, type: 2}
-  conditionsLeftBeforeHallComplete: 04000000040000000400000004000000
+  conditionsLeftBeforeHallComplete: 02000000020000000200000002000000
   fouleMovementStrenght:
   - 1
   - 1

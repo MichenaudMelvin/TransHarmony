@@ -305,7 +305,7 @@ public class CommandAttributes : MonoBehaviour{
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
         _hasSucced = true;
-        _paticulesTrue.Play();
+        // _paticulesTrue.Play();
 
         if(_settings.GetIsSoundEnable()){
             _audioSource.clip = _validRequest;
@@ -337,7 +337,7 @@ public class CommandAttributes : MonoBehaviour{
         }
 
         _finalPosition = this.transform.position;
-        _paticulesFalse.Play();
+        // _paticulesFalse.Play();
         StartCoroutine(this.FailureMovement());
     }
 }
