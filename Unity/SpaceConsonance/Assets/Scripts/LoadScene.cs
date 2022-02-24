@@ -12,7 +12,7 @@ public class LoadScene : MonoBehaviour{
     private string _sceneName;
 
     private void Start(){
-        DontDestroyOnLoad(_settings);
+        // DontDestroyOnLoad(_settings);
     }
 
     public void ChangeScene(){

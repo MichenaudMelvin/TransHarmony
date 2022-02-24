@@ -15,7 +15,7 @@ public class Settings : MonoBehaviour{
     private float _masterVolume = 1;
 
     [Tooltip("Effets sonores activés ou désactivés")]
-    private bool _isSoundEnable;
+    private bool _isSoundEnable = true;
 
     private void Start(){
         _masterVolumeSlider.value = _masterVolume;
