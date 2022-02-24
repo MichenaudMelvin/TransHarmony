@@ -11,9 +11,9 @@ public class LoadScene : MonoBehaviour{
     [Tooltip("La scène qui va être lancé")]
     private string _sceneName;
 
-    private void Start(){
-        // DontDestroyOnLoad(_settings);
-    }
+    // private void Start(){
+    //     DontDestroyOnLoad(_settings);
+    // }
 
     public void ChangeScene(){
         // DontDestroyOnLoad(_settings);

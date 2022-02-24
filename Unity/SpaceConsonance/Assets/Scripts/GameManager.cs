@@ -34,12 +34,12 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Préfix du temps restant (Visuel)")]
     private string _timerTextPrefix;
 
-    [SerializeField]
-    [Tooltip("Phase Actuelle (Visuel)")]
-    private Text _currentPhaseText;
+    // [SerializeField]
+    // [Tooltip("Phase Actuelle (Visuel)")]
+    // private Text _currentPhaseText;
 
-    [Tooltip("Préfix des jours restant (Visuel)")]
-    private string _currentPhaseTextPrefix;
+    // [Tooltip("Préfix des jours restant (Visuel)")]
+    // private string _currentPhaseTextPrefix;
 
     [SerializeField]
     [Tooltip("Timer sous forme de slider")]
@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour{
     [Header("Lights")]
     [SerializeField]
     [Tooltip("Liste des spots lights")]
-    private List<Light> _lightList;
+    private List<Transform> _lightListContainer;
 
     private void Start(){
         _timeLeft = _timePhase1;
@@ -261,6 +261,8 @@ public class GameManager : MonoBehaviour{
             if(conditionsLeftBeforeHallComplete[i] <= 0){
                 // voir ici pour set si le hall est actif ou non
                 _publicContainersList[i].gameObject.SetActive(true);
+                _lightListContainer[i].gameObject.SetActive(true);
+                _listHalls[i].SetActivity(true);
                 _activeHalls += 1;
             } else{
                 _hallsContainer.GetChild(i).GetComponent<HallsAttributes>().Disable();
@@ -296,10 +298,6 @@ public class GameManager : MonoBehaviour{
                     }
                 }
 
-                for(int i = 0; i < _lightList.Count; i++){
-                    _lightList[i].enabled = true;
-                }
-
                 // faire deux timers du coups
                 // un pour le temps du jour
                 // un autre pour le temps restant du festival
@@ -307,9 +305,9 @@ public class GameManager : MonoBehaviour{
 
             if(_daysRemaining != _days - 1){
                 for(int i = 0; i < _listHalls.Count; i++){
-                    // if(_listHalls[i].GetIsActive()){
+                    if(_listHalls[i].GetActivity()){
                         _listHalls[i].ChangeArtist();
-                    // }
+                    }
                 }
             }
 
@@ -348,9 +346,10 @@ public class GameManager : MonoBehaviour{
         _commandGenerator.gameObject.SetActive(!pauseOrUnPause);
         _itemGenerator.gameObject.SetActive(!pauseOrUnPause);
 
-        // crée un bug
-        _commandGenerator.CreateCommands();
+        if(!pauseOrUnPause){_commandGenerator.CreateCommands();}
     }
 
     public List<ArtistAsset> GetArtistAssetsList(){return _artistAssetsList;}
+
+    public int GetActiveHalls(){return _activeHalls;}
 }

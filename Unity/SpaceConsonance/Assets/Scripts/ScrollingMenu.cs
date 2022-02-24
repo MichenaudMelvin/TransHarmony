@@ -94,7 +94,7 @@ public class ScrollingMenu : MonoBehaviour{
                 yield break;
             }
 
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.0001f);
         }
     }
 
@@ -103,13 +103,13 @@ public class ScrollingMenu : MonoBehaviour{
             while(_fadeOutImage.color.a < 0.5f){
                 tempColor.a += sens * 0.01f;
                 _fadeOutImage.color = tempColor;
-                yield return new WaitForSeconds(0.005f);
+                yield return new WaitForSeconds(0.0005f);
             }
         } else if(sens == -1){
             while(_fadeOutImage.color.a > 0f){
                 tempColor.a += sens * 0.01f;
                 _fadeOutImage.color = tempColor;
-                yield return new WaitForSeconds(0.005f);
+                yield return new WaitForSeconds(0.0005f);
             }
         }
     }

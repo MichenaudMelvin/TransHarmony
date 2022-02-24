@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Settings : MonoBehaviour{
 
@@ -18,7 +19,10 @@ public class Settings : MonoBehaviour{
     private bool _isSoundEnable = true;
 
     private void Start(){
-        _masterVolumeSlider.value = _masterVolume;
+        // hard codé pour éviter une erreure
+        if(SceneManager.GetActiveScene().name != "StartScene"){
+            _masterVolumeSlider.value = _masterVolume;
+        }
     }
 
     // public functions

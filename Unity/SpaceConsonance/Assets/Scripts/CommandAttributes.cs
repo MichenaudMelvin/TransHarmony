@@ -129,6 +129,7 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     private void Update(){
+        if(_gameManager == null){Destroy(this.gameObject);}
         if(_gameManager.GetCurrentPhase() == 2){this.ManageTimer();}
         this.ScaleAnimation();
     }

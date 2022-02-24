@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff4258c3be1e143ba17c2abaec3ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timePhase1: 60
+  _timePhase1: 30
   _timePhase2: 120
   _days: 5
   _timerText: {fileID: 0}
@@ -170,3 +170,8 @@ MonoBehaviour:
   - 1
   _endingScreen: {fileID: 0}
   _externalUI: {fileID: 0}
+  _lightListContainer:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

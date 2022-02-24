@@ -45,6 +45,9 @@ public class HallsAttributes : MonoBehaviour{
     [Tooltip("Si la commande est raté")]
     private ParticleSystem _paticulesFalse;
 
+    [Tooltip("Si il est actif ou non")]
+    private bool _canGetArtist = false;
+
     private void Start(){
         _artistPlacement = this.transform.Find("ArtistPlacement");
 
@@ -103,4 +106,13 @@ public class HallsAttributes : MonoBehaviour{
 
     public ParticleSystem GetBadParticule(){return _paticulesFalse;}
 
+    public bool GetActivity(){return _canGetArtist;}
+
+    public void SetActivity(bool value){_canGetArtist = value;}
+
+    public void DestroyArtist(){
+        if(_artistInHall != null){
+            Destroy(_artistInHall.gameObject);
+        }
+    }
 }

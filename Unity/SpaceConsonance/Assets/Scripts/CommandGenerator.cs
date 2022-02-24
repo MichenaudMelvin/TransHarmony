@@ -116,17 +116,18 @@ public class CommandGenerator : MonoBehaviour{
                 StartCoroutine(this.UpdateArtistList(0.0001f));
             }
 
-            if(_listArtistesInHalls.Count == _nbrOfArtistePerDays){
+            if(_listArtistesInHalls.Count > 0){
+                if(_gameManager.GetCurrentPhase() == 1 || (_gameManager.GetCurrentPhase() == 2 && _listArtistesInHalls.Count == _gameManager.GetActiveHalls())){
+                    // à faire en fonction du nombre d'artistes
 
-                // à faire en fonction du nombre d'artistes
+                    CommandAttributes newCommand = Instantiate(_commandToGenerate, this.transform);
 
-                CommandAttributes newCommand = Instantiate(_commandToGenerate, this.transform);
+                    this.CheckArtistAvailability(newCommand);
+                    _commandGeneratedNbr += 1;
 
-                this.CheckArtistAvailability(newCommand);
-                _commandGeneratedNbr += 1;
+                    if(_gameManager.GetCurrentPhase() == 2){delay = Random.Range(6, 9);}
 
-                if(_gameManager.GetCurrentPhase() == 2){delay = Random.Range(6, 9);}
-
+                }
             } else{
                 delay = 0f;
             }
