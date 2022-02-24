@@ -56,9 +56,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - ColorSpeed: 20
     m_Colors:
-    - Flash_Color: {r: 826.3502, g: 822.04626, b: 0, a: 0}
+    - Flash_Color: {r: 0.5176471, g: 0, b: 1, a: 0}
     - Spot1_Color: {r: 0.06666667, g: 0.7490196, b: 0.3529412, a: 0}
     - Spot2_Color: {r: 0.18018799, g: 0.09459869, b: 0.09459869, a: 0}
     - Spot3_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
