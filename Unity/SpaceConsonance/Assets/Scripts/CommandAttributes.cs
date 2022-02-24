@@ -20,10 +20,6 @@ public class CommandAttributes : MonoBehaviour{
 
     [Header("Visual")]
     [SerializeField]
-    [Tooltip("Texte qui permet de connaitre quel artiste à besoin de cette commande")]
-    private Text _artistName;
-
-    [SerializeField]
     [Tooltip("Sprite de la commande")]
     private Image _spriteNeed;
 
@@ -143,8 +139,6 @@ public class CommandAttributes : MonoBehaviour{
     private void SetupCommand(List<string> listNeed){
         _availableTimeInitial = _availableTime;
 
-        _artistName.text = _artistWhoNeedIt.GetName();
-
         currentHall = _artistWhoNeedIt.GetHallNumber();
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
@@ -162,6 +156,8 @@ public class CommandAttributes : MonoBehaviour{
             _image.sprite = _bulleCalmeSprite;
         } else if(_gameManager.GetCurrentPhase() == 2){
             _image.sprite = _bulleActionSprite;
+            _image.SetNativeSize();
+            _image.GetComponent<RectTransform>().sizeDelta = new Vector2(_image.GetComponent<RectTransform>().sizeDelta.x/2, _image.GetComponent<RectTransform>().sizeDelta.y/2);
         }
 
         this.SetPosition();
