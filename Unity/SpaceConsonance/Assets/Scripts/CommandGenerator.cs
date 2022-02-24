@@ -125,6 +125,8 @@ public class CommandGenerator : MonoBehaviour{
                 this.CheckArtistAvailability(newCommand);
                 _commandGeneratedNbr += 1;
 
+                if(_gameManager.GetCurrentPhase() == 2){delay = Random.Range(6, 9);}
+
             } else{
                 delay = 0f;
             }
