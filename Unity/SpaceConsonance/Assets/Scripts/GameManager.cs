@@ -146,6 +146,13 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Sauvegarde du timer pour la pause")]
     private float _savedTime;
 
+    [Space(10)]
+
+    [Header("Lights")]
+    [SerializeField]
+    [Tooltip("Liste des spots lights")]
+    private List<Light> _lightList;
+
     private void Start(){
         _timeLeft = _timePhase1;
         _daysRemaining = _days;
@@ -283,11 +290,15 @@ public class GameManager : MonoBehaviour{
                 _timeLeft = _timePhase2/_days;
                 _sliderTimer.maxValue = _timeLeft;
 
-                    for(int i = 0; i < _publicContainersList.Count; i++){
-                        for(int j = 0; j < _publicContainersList[i].childCount; j++){
-                            StartCoroutine(_publicContainersList[i].GetChild(j).GetComponent<EffetFoule>().FouleMovement());
-                        }
+                for(int i = 0; i < _publicContainersList.Count; i++){
+                    for(int j = 0; j < _publicContainersList[i].childCount; j++){
+                        StartCoroutine(_publicContainersList[i].GetChild(j).GetComponent<EffetFoule>().FouleMovement());
                     }
+                }
+
+                for(int i = 0; i < _lightList.Count; i++){
+                    _lightList[i].enabled = true;
+                }
 
                 // faire deux timers du coups
                 // un pour le temps du jour

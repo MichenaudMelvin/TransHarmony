@@ -104,9 +104,6 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Référence au CommandGenerator")]
     private CommandGenerator _commandGenerator;
 
-    [SerializeField] public ParticleSystem _paticulesTrue;
-    [SerializeField] public ParticleSystem _paticulesFalse;
-
     [SerializeField]
     [Tooltip("Points gagnés quand la commande est réussie")]
     private float _succesPoints;
@@ -305,7 +302,7 @@ public class CommandAttributes : MonoBehaviour{
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
         _hasSucced = true;
-        // _paticulesTrue.Play();
+        _artistWhoNeedIt.GetHall().GetGoodParticule().Play();
 
         if(_settings.GetIsSoundEnable()){
             _audioSource.clip = _validRequest;
@@ -337,7 +334,9 @@ public class CommandAttributes : MonoBehaviour{
         }
 
         _finalPosition = this.transform.position;
-        // _paticulesFalse.Play();
+
+        _artistWhoNeedIt.GetHall().GetBadParticule().Play();
+
         StartCoroutine(this.FailureMovement());
     }
 }

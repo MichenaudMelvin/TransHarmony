@@ -34,6 +34,17 @@ public class HallsAttributes : MonoBehaviour{
     [Tooltip("Points générés par le hall")]
     private float _points;
 
+    [Space(10)]
+
+    [Header("Particules")]
+    [SerializeField]
+    [Tooltip("Si la commande est réussie")]
+    private ParticleSystem _paticulesTrue;
+
+    [SerializeField]
+    [Tooltip("Si la commande est raté")]
+    private ParticleSystem _paticulesFalse;
+
     private void Start(){
         _artistPlacement = this.transform.Find("ArtistPlacement");
 
@@ -87,5 +98,9 @@ public class HallsAttributes : MonoBehaviour{
     public float GetPoints(){return _points;}
 
     public void UpdatePoints(float amount){_points += amount;}
+
+    public ParticleSystem GetGoodParticule(){return _paticulesTrue;}
+
+    public ParticleSystem GetBadParticule(){return _paticulesFalse;}
 
 }
