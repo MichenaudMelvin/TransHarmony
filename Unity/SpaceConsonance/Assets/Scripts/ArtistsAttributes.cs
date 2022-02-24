@@ -1,45 +1,52 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ArtistsAttributes : MonoBehaviour{
 
-    [Header("Basics")]
     [SerializeField]
-    [Tooltip("Hall de l'artiste")]
-    public int currentHall;
-
-    [SerializeField]
-    [Tooltip("Nom de l'artiste")]
-    private string _name; // https://www.lestrans.com/trans-2021/
+    [Tooltip("Liste des mesh dispo")]
+    private List<Mesh> _meshList;
 
     [SerializeField]
-    [Tooltip("Style de musique de l'artiste")]
-    private string _style; // https://www.lestrans.com/trans-2021/
+    [Tooltip("Model du perso")]
+    private MeshFilter _model;
 
     [SerializeField]
-    [Tooltip("Musique que l'artiste joue")]
-    private AudioClip _music;
+    [Tooltip("Scriptable object de l'artiste")]
+    private ArtistAsset _artistAsset;
 
-    [Tooltip("Si l'artiste a déjà fait un concert (présent dans un hall)")]
-    private bool _alreadyPerform;
+    private void Start(){
+        _model.mesh = _meshList[Random.Range(0, _meshList.Count)];
+    }
 
-    [Tooltip("Si l'artiste a déjà joué sa musique")]
-    private bool _hasPlayMusic = false;
-
-    // quand l'artiste est allé dans un halls puis reparti
-    private void OnDisable(){_hasPlayMusic = false;}
+    // quand l'artiste quitte un hall
+    // pas sur que ce soit utile
+    private void OnDestroy(){_artistAsset._hasPlayMusic = false;}
 
     // public functions
-    public string GetName(){return _name;}
+    // quand l'artiste est instantié
+    public void SetArtistAsset(ArtistAsset newArtistAsset){_artistAsset = newArtistAsset;}
 
-    public int GetHallNumber(){return currentHall;}
+    public string GetName(){return _artistAsset._name;}
 
-    public AudioClip GetMusic(){return _music;}
+    public int GetHallNumber(){return _artistAsset.currentHall;}
 
-    public bool GetStatus(){return _alreadyPerform;}
+    public void SetCurrentHall(int value){_artistAsset.currentHall = value;}
 
-    public void SetStatus(bool boolean){_alreadyPerform = boolean;}
+    public AudioClip GetMusic(){return _artistAsset._music;}
 
-    public bool HasPlayMusic(){return _hasPlayMusic;}
+    public bool GetStatus(){return _artistAsset._alreadyPerform;}
 
-    public void SetHasPlayMusic(bool boolean){_hasPlayMusic = boolean;}
+    public void SetStatus(bool boolean){_artistAsset._alreadyPerform = boolean;}
+
+    public bool HasPlayMusic(){return _artistAsset._hasPlayMusic;}
+
+    public void SetHasPlayMusic(bool boolean){_artistAsset._hasPlayMusic = boolean;}
+
+    // retourne le hall dans lequel l'artiste est placé
+    public HallsAttributes GetHall(){return _artistAsset._hall;}
+
+    public void SetHall(HallsAttributes newHall){_artistAsset._hall = newHall;}
+
+
 }

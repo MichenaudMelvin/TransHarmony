@@ -20,8 +20,8 @@ public class CommandAttributes : MonoBehaviour{
 
     [Header("Visual")]
     [SerializeField]
-    [Tooltip("Texte qui permet de connaitre quel artiste à besoin de cette commande")]
-    private Text _artistName;
+    [Tooltip("Sprite de la commande")]
+    private Image _spriteNeed;
 
     [Space(10)]
 
@@ -74,9 +74,9 @@ public class CommandAttributes : MonoBehaviour{
     [Space(10)]
 
     [Header("Timer")]
-    [SerializeField]
-    [Tooltip("Timer visuel de la commande")]
-    private Image _circleTimer;
+    // [SerializeField]
+    // [Tooltip("Timer visuel de la commande")]
+    // private Image _circleTimer;
 
     [SerializeField]
     [Range(10f, 25f)]
@@ -92,18 +92,36 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Référence au GameManager")]
     private GameManager _gameManager;
 
+    [Tooltip("Référence au Settings")]
+    private Settings _settings;
+
     [Tooltip("Référence au Music Manager")]
     private MusicManager _musicManager;
 
     [Tooltip("Booléen qui permet de savoir si le joueur passe son curseur/item dessus la commande")]
     private bool _isItemOnIt = false;
+
     [Tooltip("Référence au CommandGenerator")]
     private CommandGenerator _commandGenerator;
 
-    //Particules 
-    [SerializeField] public ParticleSystem _paticulesTrue ;
-    [SerializeField] public ParticleSystem _paticulesFalse ;
-    
+    [SerializeField]
+    [Tooltip("Points gagnés quand la commande est réussie")]
+    private float _succesPoints;
+
+    [Space(10)]
+
+    [Header("Sounds")]
+    [SerializeField]
+    [Tooltip("Audio source de la commande")]
+    private AudioSource _audioSource;
+
+    [SerializeField]
+    [Tooltip("Son quand valide une commande")]
+    private AudioClip _validRequest;
+
+    [SerializeField]
+    [Tooltip("Son quand fail une commande")]
+    private AudioClip _failRequest;
 
     private void Start(){
         _initialColor = _image.color;
@@ -111,24 +129,33 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     private void Update(){
-        this.ManageTimer();
+        if(_gameManager == null){Destroy(this.gameObject);}
+        if(_gameManager.GetCurrentPhase() == 2){this.ManageTimer();}
         this.ScaleAnimation();
     }
 
     private void SetupCommand(List<string> listNeed){
         _availableTimeInitial = _availableTime;
 
-        _artistName.text = _artistWhoNeedIt.GetName();
-
         currentHall = _artistWhoNeedIt.GetHallNumber();
 
         // génère un besoin aléatoire parmis les besoins de l'artiste
         _artistNeed = listNeed[Random.Range(0, listNeed.Count)];
 
+        // set le sprite de la commande
+        for(int i = 0; i < _commandGenerator.GetCommandGenerator().GetSpriteList().Count; i++){
+            if(_commandGenerator.GetCommandGenerator().GetSpriteList()[i].name == _artistNeed){
+                _spriteNeed.sprite = _commandGenerator.GetCommandGenerator().GetSpriteList()[i];
+                _spriteNeed.SetNativeSize();
+            }
+        }
+
         if(_gameManager.GetCurrentPhase() == 1){
             _image.sprite = _bulleCalmeSprite;
         } else if(_gameManager.GetCurrentPhase() == 2){
             _image.sprite = _bulleActionSprite;
+            _image.SetNativeSize();
+            _image.GetComponent<RectTransform>().sizeDelta = new Vector2(_image.GetComponent<RectTransform>().sizeDelta.x/2, _image.GetComponent<RectTransform>().sizeDelta.y/2);
         }
 
         this.SetPosition();
@@ -140,9 +167,9 @@ public class CommandAttributes : MonoBehaviour{
         if(!_hasSucced){
             _availableTime -= Time.deltaTime;
 
-            _circleTimer.fillAmount = Mathf.InverseLerp(0, _availableTimeInitial, _availableTime);
+            // _circleTimer.fillAmount = Mathf.InverseLerp(0, _availableTimeInitial, _availableTime);
 
-            _circleTimer.color = _gameManager.GetTimerGradient().Evaluate(_circleTimer.fillAmount);
+            // _circleTimer.color = _gameManager.GetTimerGradient().Evaluate(_circleTimer.fillAmount);
         }
 
         if(_availableTime <= 0 && !_hasSucced){
@@ -151,8 +178,6 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     private void EndTimer(){
-        _gameManager.UpdatePoints(-50);
-        _musicManager.UpdateVolume(-0.05f);
         // faire une animation de fin de timer
         Destroy(this.gameObject);
     }
@@ -265,42 +290,54 @@ public class CommandAttributes : MonoBehaviour{
 
     public string GetArtistNeed(){return _artistNeed;}
 
-    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, MusicManager musicManagerReference, CommandGenerator commandGenerator, List<string> listNeed){
+    public void SetVariablesCommand(ArtistsAttributes newArtiste, GameManager gameManagerReference, Settings settingsReference, MusicManager musicManagerReference, CommandGenerator commandGenerator, List<string> listNeed){
         _artistWhoNeedIt = newArtiste;
         _gameManager = gameManagerReference;
         _musicManager = musicManagerReference;
         _commandGenerator = commandGenerator;
+        _settings = settingsReference;
         this.SetupCommand(listNeed);
     }
 
     // quand le joueur réussi a bien drag n dropé son item
     public IEnumerator Succeed(){
         StartCoroutine(this.ChangeColor(_succeedColor));
-        _musicManager.UpdateVolume(0.05f);
-        _gameManager.UpdatePoints(50);
         _hasSucced = true;
-        _paticulesTrue.Play();
-        // ajouter un son
-        yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject);
-        _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
-        if(_gameManager.conditionsLeftBeforeHallComplete[currentHall]<=0)
-        {
-            _commandGenerator.SetArtistLeft(-1);
-            _commandGenerator.SetMaxCommandAtATime(-1);
+        _artistWhoNeedIt.GetHall().GetGoodParticule().Play();
+
+        if(_settings.GetIsSoundEnable()){
+            _audioSource.clip = _validRequest;
+            _audioSource.Play();
         }
+
+        yield return new WaitForSeconds(0.5f);
+
+        if(_gameManager.GetCurrentPhase() == 1){
+            _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
+            if(_gameManager.conditionsLeftBeforeHallComplete[currentHall] <= 0){
+                _commandGenerator.SetHallsLeft(-1);
+                _commandGenerator.SetMaxCommandAtATime(-1);
+            }
+        } else if(_gameManager.GetCurrentPhase() == 2){
+            _artistWhoNeedIt.GetHall().UpdatePoints(_succesPoints);
+        }
+
+        Destroy(this.gameObject);
     }
 
     // quand le joueur rate
     public void Failure(){
         StartCoroutine(this.ChangeColor(_failureColor));
-        _musicManager.UpdateVolume(-0.05f);
-        // ajouter un son
-        _finalPosition = this.transform.position;
-        _gameManager.UpdatePoints(-10);
-        _paticulesFalse.Play();
-        StartCoroutine(this.FailureMovement());
-        
 
+        if(_settings.GetIsSoundEnable()){
+            _audioSource.clip = _failRequest;
+            _audioSource.Play();
+        }
+
+        _finalPosition = this.transform.position;
+
+        _artistWhoNeedIt.GetHall().GetBadParticule().Play();
+
+        StartCoroutine(this.FailureMovement());
     }
 }

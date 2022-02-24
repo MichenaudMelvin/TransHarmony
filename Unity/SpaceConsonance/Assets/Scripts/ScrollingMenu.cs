@@ -20,7 +20,6 @@ public class ScrollingMenu : MonoBehaviour{
     [Tooltip("Fade out image")]
     private Image _fadeOutImage;
 
-    [SerializeField]
     [Tooltip("Position jusqu'à laquelle le menu va se déplacer")]
     private Vector2 _scrolledPosition;
 
@@ -35,6 +34,8 @@ public class ScrollingMenu : MonoBehaviour{
     private GameManager _gameManager;
 
     private void Start(){
+        _scrolledPosition.x = 0;
+        _scrolledPosition.y = _scrollButton.GetComponent<RectTransform>().sizeDelta.y;
         _scrollButton.onClick.AddListener(TaskOnClickScrollButton);
         _initialPosition = _scrollButton.GetComponent<RectTransform>().anchoredPosition;
     }
@@ -93,7 +94,7 @@ public class ScrollingMenu : MonoBehaviour{
                 yield break;
             }
 
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.0001f);
         }
     }
 
@@ -102,13 +103,13 @@ public class ScrollingMenu : MonoBehaviour{
             while(_fadeOutImage.color.a < 0.5f){
                 tempColor.a += sens * 0.01f;
                 _fadeOutImage.color = tempColor;
-                yield return new WaitForSeconds(0.005f);
+                yield return new WaitForSeconds(0.0005f);
             }
         } else if(sens == -1){
             while(_fadeOutImage.color.a > 0f){
                 tempColor.a += sens * 0.01f;
                 _fadeOutImage.color = tempColor;
-                yield return new WaitForSeconds(0.005f);
+                yield return new WaitForSeconds(0.0005f);
             }
         }
     }

@@ -12,9 +12,6 @@ public class MusicManager : MonoBehaviour{
     [Tooltip("Source audio (musique du festival)")]
     private AudioSource _audioSource;
 
-    [Tooltip("Volume de la musique joué")]
-    private float _volume = -0.0001f;
-
     [SerializeField]
     [Tooltip("Vitesse à laquelle la musique se fade out (à la fin de chaque journée)")]
     [Range(0.01f, 0.1f)]
@@ -71,27 +68,20 @@ public class MusicManager : MonoBehaviour{
         yield return new WaitForSeconds(time);
 
         this.SetAudioClip();
-    }
-
-    private void Update(){
-        if(_gameManager.GetCurrentPhase() == 2)
-        {
-           // this.ManageVolume();
-        }
+        StartCoroutine(this.ManageVolume());
     }
 
     // gère le volume de la musique en fonciton des actions du joueur
-    private void ManageVolume(){
-        if(_gameManager.GetTime() > 0){
+    private IEnumerator ManageVolume(){
+        while(_gameManager.GetTime() > 0){
+
             // changement de musique si la musique actuelle est finie
             if(_audioSource.time == 0){
                 StopCoroutine(this.DisplayMusicName());
                 this.SetAudioClip();
             }
 
-            // ptet pas la meilleur méthode
-            // marche pas avec un Lerp car impossible d'augmenter ou diminuer du volume
-            _audioSource.volume += _volume;
+            yield return null;
         }
     }
 
@@ -150,12 +140,15 @@ public class MusicManager : MonoBehaviour{
         }
 
         ArtistsAttributes actualArtist = null;
+        actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
+        _audioSource.clip = actualArtist.GetMusic();
+        _actualArtist = actualArtist;
 
-        while(actualArtist == null || (actualArtist.GetMusic() != null && actualArtist.HasPlayMusic())){
-            actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
-            _audioSource.clip = actualArtist.GetMusic();
-            _actualArtist = actualArtist;
-        }
+        // while(actualArtist.HasPlayMusic()){
+        //     actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
+        //     _audioSource.clip = actualArtist.GetMusic();
+        //     _actualArtist = actualArtist;
+        // }
 
         _actualArtist.SetHasPlayMusic(true);
 
@@ -165,7 +158,8 @@ public class MusicManager : MonoBehaviour{
     }
 
     // se délenche à la fin de chaque journée
-    public IEnumerator EndPhase1(){
+    // Unused
+    public IEnumerator EndPhase(){
         StopCoroutine(this.DisplayMusicName());
         _displayMusicNameCoroutineIsRunning = false;
 

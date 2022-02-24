@@ -43,9 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff4258c3be1e143ba17c2abaec3ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeOfADay: 30
+  _timePhase1: 30
+  _timePhase2: 120
+  _days: 5
   _timerText: {fileID: 0}
-  _dayText: {fileID: 0}
+  _currentPhaseText: {fileID: 0}
   _sliderTimer: {fileID: 0}
   _sliderGradient:
     serializedVersion: 2
@@ -76,10 +78,100 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
-  _resultImage: {fileID: 0}
-  _resultText: {fileID: 0}
+  _transitionImage: {fileID: 0}
+  _transitionText: {fileID: 0}
   _hallsContainer: {fileID: 0}
   _artistContainers: {fileID: 0}
   _musicManager: {fileID: 0}
   _commandGenerator: {fileID: 0}
-  _publicContainers: {fileID: 0}
+  _itemGenerator: {fileID: 0}
+  _publicContainersList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _artistAssetsList:
+  - {fileID: 11400000, guid: 1cfb370de5359c74eba5ea9907cd2911, type: 2}
+  - {fileID: 11400000, guid: 6769c9720ed457f43aec3dc3363ff86d, type: 2}
+  - {fileID: 11400000, guid: 73e16db165faa7c4a9fe5a8c26e25095, type: 2}
+  - {fileID: 11400000, guid: 46f165833b11f934c85c64156d9e6a7f, type: 2}
+  - {fileID: 11400000, guid: f14b78a5e67278b489ea98f382764581, type: 2}
+  - {fileID: 11400000, guid: d982ddd2d3738c242b2607cb59bba65a, type: 2}
+  - {fileID: 11400000, guid: eea819523a8ab564fa85ed92d821c426, type: 2}
+  - {fileID: 11400000, guid: 8f5a592a765ed7c46aecb77d6d24923f, type: 2}
+  - {fileID: 11400000, guid: 60a01cecfdb01dd41a1e05bc810422b6, type: 2}
+  - {fileID: 11400000, guid: 296d673be036a824bbd67b460c9f81cb, type: 2}
+  - {fileID: 11400000, guid: 3a681fa645883844c95e5f57f26a6384, type: 2}
+  - {fileID: 11400000, guid: 2b7c52ff0b45cfc45baf6974a3a71a89, type: 2}
+  - {fileID: 11400000, guid: a6674e420e2063140abc999cb6d99b90, type: 2}
+  - {fileID: 11400000, guid: 82e13c59873da914dac1998ff9fbd66d, type: 2}
+  - {fileID: 11400000, guid: 63d8fbda8f91d964fbc83e8f0a197398, type: 2}
+  - {fileID: 11400000, guid: 9a4370ee230e142468688911acab18ce, type: 2}
+  - {fileID: 11400000, guid: b1865989cd93b104bbc01c2a9c841119, type: 2}
+  - {fileID: 11400000, guid: ae2b285ddebeec94ab193452c460d999, type: 2}
+  - {fileID: 11400000, guid: d869cea6f789ef042a9872c34fbb4451, type: 2}
+  - {fileID: 11400000, guid: 08c61263ce5591244bc1ec6f8ed5ae32, type: 2}
+  - {fileID: 11400000, guid: d87a6426da227c648b0d387f5398a305, type: 2}
+  - {fileID: 11400000, guid: 2ee45d2ecf4f57047a4ac6cd1bf1dde9, type: 2}
+  - {fileID: 11400000, guid: a195bb0170748e34da3db6f2a0d5831d, type: 2}
+  - {fileID: 11400000, guid: bca77edbcd7ea5148b0377911005fb16, type: 2}
+  - {fileID: 11400000, guid: fff1a686733f8924286a056f7429febd, type: 2}
+  - {fileID: 11400000, guid: 1104fc413deac054da83f271f4929b4f, type: 2}
+  - {fileID: 11400000, guid: 93d29f5a9a178b9408c23bd8c4e86994, type: 2}
+  - {fileID: 11400000, guid: c631a362aa54b2a4297aae91e50ef1af, type: 2}
+  - {fileID: 11400000, guid: 6c760177295fba24e8642285c23c6367, type: 2}
+  - {fileID: 11400000, guid: a3af94c0d49b77b4482edbdedfef04d8, type: 2}
+  - {fileID: 11400000, guid: 5c07c5852263e5c458521d1c649c2faa, type: 2}
+  - {fileID: 11400000, guid: 8718557bdcb2b5a4386caee4bb8c6808, type: 2}
+  - {fileID: 11400000, guid: 99974df48e4fe5d46b3502640b8d5050, type: 2}
+  - {fileID: 11400000, guid: e3f23a922e666c44abb2a6e93c4ff5a2, type: 2}
+  - {fileID: 11400000, guid: 491634102b0c5ca43acdc4fecd14ce21, type: 2}
+  - {fileID: 11400000, guid: 71c454f0339ddc14faa42832543da365, type: 2}
+  - {fileID: 11400000, guid: 768ea64ded46b42408fc89f6557f67cf, type: 2}
+  - {fileID: 11400000, guid: 684ddea7adda24f4fa38aad38b6b780a, type: 2}
+  - {fileID: 11400000, guid: 8652eb0a1b33bbb45a157af48770696d, type: 2}
+  - {fileID: 11400000, guid: 2baade7116364e14689ae6756f07cd7a, type: 2}
+  - {fileID: 11400000, guid: 641c33dea5aa1a640b64057c410953f6, type: 2}
+  - {fileID: 11400000, guid: 00394c19d67d74b4e9e404c0a5586651, type: 2}
+  - {fileID: 11400000, guid: aa64820a9175f1d45a58009e69012271, type: 2}
+  - {fileID: 11400000, guid: 69ebd2ede6243c64d808a5106d49707d, type: 2}
+  - {fileID: 11400000, guid: 15c897907d7772a44b236e99a8ce0a60, type: 2}
+  - {fileID: 11400000, guid: 097c61b2e6499a44eb1e431b39c933e0, type: 2}
+  - {fileID: 11400000, guid: 9a9fa0958bddf1640bc00f28ed0eab68, type: 2}
+  - {fileID: 11400000, guid: 8487dd9d6d175ae47a8885d2fa3194c2, type: 2}
+  - {fileID: 11400000, guid: ffc86b70aa03184439a492eed678fb63, type: 2}
+  - {fileID: 11400000, guid: 93f96a38d16f485438700e741ec70e8a, type: 2}
+  - {fileID: 11400000, guid: 49a7500defe540e4fb9b758ef7ae14ee, type: 2}
+  - {fileID: 11400000, guid: fc179c0be464e9746adcfd6427772930, type: 2}
+  - {fileID: 11400000, guid: 42541fadae9a05e49a69fab1cc4bad7b, type: 2}
+  - {fileID: 11400000, guid: 3e7de10ca24020d4e994d8e1cacb2ae1, type: 2}
+  - {fileID: 11400000, guid: cef62d32772f3684bb3a7b6d5b4a4fee, type: 2}
+  - {fileID: 11400000, guid: 522c385f9598a7b42bbcdb34cedbef07, type: 2}
+  - {fileID: 11400000, guid: 73957754cb506a54c8878234a6a68491, type: 2}
+  - {fileID: 11400000, guid: 58bfb4b6aeb3d8944ade367282d0c8bb, type: 2}
+  - {fileID: 11400000, guid: c16afb72ebb58594384c821e35feea0e, type: 2}
+  - {fileID: 11400000, guid: 6a794bb728fdf4c4d8de9c824ce98e84, type: 2}
+  - {fileID: 11400000, guid: 7389d647e8eab334987e1d6a6f68e9cf, type: 2}
+  - {fileID: 11400000, guid: 29af13504676d604da27ab0c3ef456ac, type: 2}
+  - {fileID: 11400000, guid: 850f68ad2427ae84993952d234905a94, type: 2}
+  - {fileID: 11400000, guid: 8318b53afdcaed94d903bb4e57223295, type: 2}
+  - {fileID: 11400000, guid: 08a67c9268d1f624bb96ee70382831b3, type: 2}
+  - {fileID: 11400000, guid: fab094e8283c24047b03c107f2d61686, type: 2}
+  - {fileID: 11400000, guid: e9387f576f9ecfd4f985b1400fb985f7, type: 2}
+  - {fileID: 11400000, guid: 9c527ce9f98fbf14d8d9e0f3e55ba49c, type: 2}
+  - {fileID: 11400000, guid: 1283706ca3a5dbb43924e8885b8d001f, type: 2}
+  - {fileID: 11400000, guid: d2db240ec566aff4db4cf91008030f4e, type: 2}
+  - {fileID: 11400000, guid: ea3ebe57a131c90499cc3526604b9732, type: 2}
+  conditionsLeftBeforeHallComplete: 02000000020000000200000002000000
+  fouleMovementStrenght:
+  - 1
+  - 1
+  - 1
+  - 1
+  _endingScreen: {fileID: 0}
+  _externalUI: {fileID: 0}
+  _lightListContainer:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
