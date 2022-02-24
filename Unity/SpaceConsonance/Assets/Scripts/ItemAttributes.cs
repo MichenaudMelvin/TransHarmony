@@ -23,7 +23,8 @@ public class ItemAttributes : MonoBehaviour{
         for(int i = 0; i < this.GetComponentInParent<ItemGenerator>().GetSpriteList().Count; i++){
             if(this.GetComponentInParent<ItemGenerator>().GetSpriteList()[i].name == _name){
                 _sprite.sprite = this.GetComponentInParent<ItemGenerator>().GetSpriteList()[i];
-                _sprite.SetNativeSize();
+                if(_name == "Speaker"){_sprite.SetNativeSize();}
+                else{_sprite.GetComponent<RectTransform>().sizeDelta = new Vector2(100, 100);}
             }
         }
     }

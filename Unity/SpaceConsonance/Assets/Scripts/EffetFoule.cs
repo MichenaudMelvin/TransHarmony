@@ -19,21 +19,23 @@ public class EffetFoule : MonoBehaviour{
     [Tooltip("Hall dans lequel est placé la foule")]
     private HallsAttributes _currentHall;
 
+    [Tooltip("Pour savoir si il a reset ou non")]
+    private bool _hasReset = false;
+
     private void Start(){
         _originalHeight = this.transform.localScale.y;
-        // yield return new WaitForSeconds(2f);
-        StartCoroutine(this.FouleMovement());
     }
 
     // public functions
     // fait bouger le publique en fonction des actions du joueurs
     public IEnumerator FouleMovement(){
         bool hasChangeScale = false;
+        _hasReset = false;
 
-        while(_gameManager.GetCurrentPhase() == 2){
+        while(_gameManager.GetCurrentPhase() == 2 && !_hasReset){
 
             if(!hasChangeScale && _currentHall.GetPoints() > 0){
-                float ecart = Mathf.Abs(_currentHall.GetPoints()/200);
+                float ecart = Mathf.Abs(_currentHall.GetPoints()/(_currentHall.GetPoints()/2));
                 float newHeightScale = Random.Range(_originalHeight-ecart, _originalHeight+ecart);
                 this.transform.localScale = new Vector3(this.transform.localScale.x, newHeightScale, this.transform.localScale.z);
                 hasChangeScale = true;
@@ -74,6 +76,7 @@ public class EffetFoule : MonoBehaviour{
 
     // reset la hauteur de la foule
     public void ResetFoule(){
+        _hasReset = true;
         this.transform.localScale = new Vector3(this.transform.localScale.x, _originalHeight, this.transform.localScale.z);
     }
 }

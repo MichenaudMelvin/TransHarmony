@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour{
 
@@ -67,6 +68,9 @@ public class GameManager : MonoBehaviour{
     [Tooltip("Parent qui contient tous les halls")]
     private Transform _hallsContainer;
 
+    [Tooltip("Nombre de halls")]
+    private int _activeHalls = 0;
+
     [Tooltip("Liste contenant tous les halls")]
     private List<HallsAttributes> _listHalls = new List<HallsAttributes>{};
 
@@ -106,7 +110,7 @@ public class GameManager : MonoBehaviour{
 
     [SerializeField]
     [Tooltip("Parent qui contient le public")]
-    private Transform _publicContainers;
+    private List<Transform> _publicContainersList;
 
     [SerializeField]
     [Tooltip("List des variables des artistes")]
@@ -198,6 +202,15 @@ public class GameManager : MonoBehaviour{
     // ce qu'il se passe à la fin de chaque phases
     private void PhaseTransition(){
         if(_currentPhase == 1){
+            UnlockHalls();
+
+            if(_activeHalls > 0){
+                if(_activeHalls == 1){_transitionText.text = _activeHalls + " hall is ready\n The festival is about to begin !";}
+                else if(_activeHalls > 1){_transitionText.text = _activeHalls + " halls are ready\n The festival is about to begin !";}
+            } else if(_activeHalls == 0){
+                _transitionText.text = "No halls are ready\n Click to return to the menu";
+            }
+
             _transitionImage.gameObject.SetActive(true);
 
             // préparation pour la phase 2 (destructions des commandes restantes, check les artistes encore disponibles)
@@ -205,30 +218,32 @@ public class GameManager : MonoBehaviour{
             _commandGenerator.DestroyCommands();
             _itemGenerator.DestroyItems();
 
-            StartCoroutine(_musicManager.EndPhase());
-
-            // for(int i = 0; i < _publicContainers.transform.childCount; i++){
-            //     _publicContainers.GetChild(i).GetComponent<EffetFoule>().ResetFoule();
-            // }
-
-            UnlockHalls();
+            // StartCoroutine(_musicManager.EndPhase());
 
             _currentPhase += 1;
 
         } else if(_currentPhase == 2){
             if(_daysRemaining <= 0){
+                _commandGenerator.DestroyCommands();
+                _itemGenerator.DestroyItems();
                 _externalUI.SetActive(false);
                 _endingScreen.gameObject.SetActive(true);
             } else if(_daysRemaining > 0){
                 // ici passe à un jouer suplémentaire
-
+                int showDay = _days - _daysRemaining;
+                _transitionText.text = "Day " + showDay + " finished !\nDay " + (showDay + 1) + " is about to start.";
                 _transitionImage.gameObject.SetActive(true);
-                // penser à changer le texte pour ça
 
                 _commandGenerator.DestroyCommands();
                 _itemGenerator.DestroyItems();
 
-                StartCoroutine(_musicManager.EndPhase());
+                for(int i = 0; i < _publicContainersList.Count; i++){
+                    for(int j = 0; j < _publicContainersList[i].childCount; j++){
+                        _publicContainersList[i].GetChild(j).GetComponent<EffetFoule>().ResetFoule();
+                    }
+                }
+
+                // StartCoroutine(_musicManager.EndPhase());
             }
         }
     }
@@ -238,8 +253,10 @@ public class GameManager : MonoBehaviour{
         for(int i = 0; i < conditionsLeftBeforeHallComplete.Length; i++){
             if(conditionsLeftBeforeHallComplete[i] <= 0){
                 // voir ici pour set si le hall est actif ou non
-                _publicContainers.GetChild(i).gameObject.SetActive(true);
+                _publicContainersList[i].gameObject.SetActive(true);
+                _activeHalls += 1;
             } else{
+                _hallsContainer.GetChild(i).GetComponent<HallsAttributes>().Disable();
                 conditionsLeftBeforeHallComplete[i] = 100;
                 _commandGenerator.SetHallsLeft(-1);
             }
@@ -257,34 +274,44 @@ public class GameManager : MonoBehaviour{
     // recommence une journée
     // call par le bouton
     public void RestartDay(){
-        if(_currentPhase == 1){
-            _timeLeft = _timePhase1;
-            _sliderTimer.maxValue = _timePhase1;
-        } else if(_currentPhase == 2){
-            _daysRemaining -= 1;
-            _timeLeft = _timePhase2/_days;
-            _sliderTimer.maxValue = _timeLeft;
+        if(_activeHalls > 0){
+            if(_currentPhase == 1){
+                _timeLeft = _timePhase1;
+                _sliderTimer.maxValue = _timePhase1;
+            } else if(_currentPhase == 2){
+                _daysRemaining -= 1;
+                _timeLeft = _timePhase2/_days;
+                _sliderTimer.maxValue = _timeLeft;
 
-            // faire deux timers du coups
-            // un pour le temps du jour
-            // un autre pour le temps restant du festival
-        }
+                    for(int i = 0; i < _publicContainersList.Count; i++){
+                        for(int j = 0; j < _publicContainersList[i].childCount; j++){
+                            StartCoroutine(_publicContainersList[i].GetChild(j).GetComponent<EffetFoule>().FouleMovement());
+                        }
+                    }
 
-        if(_daysRemaining != _days-1){
-            for(int i = 0; i < _listHalls.Count; i++){
-                // if(_listHalls[i].GetIsActive()){
-                    _listHalls[i].ChangeArtist();
-                // }
+                // faire deux timers du coups
+                // un pour le temps du jour
+                // un autre pour le temps restant du festival
             }
+
+            if(_daysRemaining != _days - 1){
+                for(int i = 0; i < _listHalls.Count; i++){
+                    // if(_listHalls[i].GetIsActive()){
+                        _listHalls[i].ChangeArtist();
+                    // }
+                }
+            }
+
+            _sliderTimer.value = _sliderTimer.maxValue;
+
+            _transitionImage.gameObject.SetActive(false);
+
+            _commandGenerator.CreateCommands();
+            StartCoroutine(_itemGenerator.CreateItems());
+            _musicManager.SetAudioClip();
+        } else if(_activeHalls <= 0){
+            SceneManager.LoadScene("StartScene");
         }
-
-        _sliderTimer.value = _sliderTimer.maxValue;
-
-        _transitionImage.gameObject.SetActive(false);
-
-        _commandGenerator.CreateCommands();
-        StartCoroutine(_itemGenerator.CreateItems());
-        _musicManager.SetAudioClip();
     }
 
     // pour ajouter ou enlever des points
