@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Unity/SpaceConsonance/Assets/Sounds/ScoreReveal.mp3.meta
 guid: b26cbb73f530d1e4d87165aca27e0ff5
+=======
+guid: 867eb705ad9f1e74d9018ce4906a421e
+>>>>>>> 92f1bae6a3c603170c92e996fc91ee82970e0a2c:Unity/SpaceConsonance/Assets/Sounds/FailRequest.mp3.meta
+=======
+guid: b26cbb73f530d1e4d87165aca27e0ff5
+>>>>>>> 92f1bae6a3c603170c92e996fc91ee82970e0a2c
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
