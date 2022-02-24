@@ -22370,34 +22370,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5690738931567269906, guid: 83e5abe301435af40883ace0dee3470a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -28888,6 +28860,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1762946533}
     m_Modifications:
+    - target: {fileID: 363966557310346276, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 497711625940799105, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -28932,6 +28908,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2635289398678815749, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _settings
+      value: 
+      objectReference: {fileID: 1811187642}
     - target: {fileID: 3135511907327032056, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -28956,10 +28936,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3856922027412335664, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4167580922925145832, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -28972,6 +28948,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4348435754974870274, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _settings
+      value: 
+      objectReference: {fileID: 1811187642}
     - target: {fileID: 4545302602058936178, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -29040,6 +29020,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106425653280446480, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _settings
+      value: 
+      objectReference: {fileID: 1811187642}
+    - target: {fileID: 7106425653280446480, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _sceneName
+      value: '-'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414358613297663244, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
+      propertyPath: _settings
+      value: 
+      objectReference: {fileID: 1811187642}
     - target: {fileID: 9050823404697282089, guid: c53ae0e80ad2ced428c766db9bf94ec9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -205,10 +205,10 @@ public class GameManager : MonoBehaviour{
             UnlockHalls();
 
             if(_activeHalls > 0){
-                if(_activeHalls == 1){_transitionText.text = _activeHalls + " hall is ready\n The festival is about to begin !";}
-                else if(_activeHalls > 1){_transitionText.text = _activeHalls + " halls are ready\n The festival is about to begin !";}
+                if(_activeHalls == 1){_transitionText.text = _activeHalls + " hall is ready\nThe festival is about to begin !";}
+                else if(_activeHalls > 1){_transitionText.text = _activeHalls + " halls are ready\nThe festival is about to begin !";}
             } else if(_activeHalls == 0){
-                _transitionText.text = "No halls are ready\n Click to return to the menu";
+                _transitionText.text = "No halls are ready\nClick to return to the menu";
             }
 
             _transitionImage.gameObject.SetActive(true);
