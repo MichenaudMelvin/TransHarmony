@@ -242,6 +242,8 @@ MonoBehaviour:
   _bulleActionSprite: {fileID: 21300000, guid: 17a142fdfaaf3ae4fb8bf1ee97923865, type: 3}
   _circleTimer: {fileID: 2175729296796674167}
   _availableTime: 10
+  _paticulesTrue: {fileID: 7691936985003051001, guid: 8e246617150be0245b4bd5f97aa20ac5, type: 3}
+  _paticulesFalse: {fileID: 2804881017355138833, guid: 5100e8d72119d5345b24e1d07d0d2b08, type: 3}
 --- !u!1 &4042972598902118082
 GameObject:
   m_ObjectHideFlags: 0

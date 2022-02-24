@@ -100,6 +100,11 @@ public class CommandAttributes : MonoBehaviour{
     [Tooltip("Référence au CommandGenerator")]
     private CommandGenerator _commandGenerator;
 
+    //Particules 
+    [SerializeField] public ParticleSystem _paticulesTrue ;
+    [SerializeField] public ParticleSystem _paticulesFalse ;
+    
+
     private void Start(){
         _initialColor = _image.color;
         _initialScale = this.transform.localScale;
@@ -274,6 +279,7 @@ public class CommandAttributes : MonoBehaviour{
         _musicManager.UpdateVolume(0.05f);
         _gameManager.UpdatePoints(50);
         _hasSucced = true;
+        _paticulesTrue.Play();
         // ajouter un son
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
@@ -292,7 +298,9 @@ public class CommandAttributes : MonoBehaviour{
         // ajouter un son
         _finalPosition = this.transform.position;
         _gameManager.UpdatePoints(-10);
+        _paticulesFalse.Play();
         StartCoroutine(this.FailureMovement());
+        
 
     }
 }
