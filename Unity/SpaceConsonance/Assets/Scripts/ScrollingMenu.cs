@@ -20,7 +20,6 @@ public class ScrollingMenu : MonoBehaviour{
     [Tooltip("Fade out image")]
     private Image _fadeOutImage;
 
-    [SerializeField]
     [Tooltip("Position jusqu'à laquelle le menu va se déplacer")]
     private Vector2 _scrolledPosition;
 
@@ -35,6 +34,8 @@ public class ScrollingMenu : MonoBehaviour{
     private GameManager _gameManager;
 
     private void Start(){
+        _scrolledPosition.x = 0;
+        _scrolledPosition.y = _scrollButton.GetComponent<RectTransform>().sizeDelta.y;
         _scrollButton.onClick.AddListener(TaskOnClickScrollButton);
         _initialPosition = _scrollButton.GetComponent<RectTransform>().anchoredPosition;
     }
