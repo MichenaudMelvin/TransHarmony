@@ -347,6 +347,9 @@ public class GameManager : MonoBehaviour{
 
         _commandGenerator.gameObject.SetActive(!pauseOrUnPause);
         _itemGenerator.gameObject.SetActive(!pauseOrUnPause);
+
+        // crée un bug
+        _commandGenerator.CreateCommands();
     }
 
     public List<ArtistAsset> GetArtistAssetsList(){return _artistAssetsList;}
