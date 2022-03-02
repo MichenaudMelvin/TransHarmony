@@ -178,7 +178,7 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     private void EndTimer(){
-        // faire une animation de fin de timer
+        _artistWhoNeedIt.GetHall().GetBadParticule().Play();
         Destroy(this.gameObject);
     }
 
