@@ -18,7 +18,7 @@ public class ArtistAsset : ScriptableObject{
     [Tooltip("Si l'artiste a déjà fait un concert (présent dans un hall)")]
     public bool _alreadyPerform;
 
-    [HideInInspector]
+    // [HideInInspector]
     [Tooltip("Si l'artiste a déjà joué sa musique")]
     public bool _hasPlayMusic = false;
 

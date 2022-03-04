@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _settings: {fileID: 0}
-  _sceneName: 3D iso
+  _sceneName: LoadingScene
 --- !u!1 &6192666111131524292
 GameObject:
   m_ObjectHideFlags: 0

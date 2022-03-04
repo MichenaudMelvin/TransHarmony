@@ -43,11 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff4258c3be1e143ba17c2abaec3ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timePhase1: 30
+  _timePhase1: 60
   _timePhase2: 120
   _days: 5
   _timerText: {fileID: 0}
-  _currentPhaseText: {fileID: 0}
   _sliderTimer: {fileID: 0}
   _sliderGradient:
     serializedVersion: 2
