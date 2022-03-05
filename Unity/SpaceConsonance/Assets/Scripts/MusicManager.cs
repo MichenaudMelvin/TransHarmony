@@ -161,7 +161,6 @@ public class MusicManager : MonoBehaviour{
         }
 
         if(playCount >= artistInHalls){
-            print("je passe ici");
             for(int i = 0; i < listArtistInHalls.Count; i++){
                 listArtistInHalls[i].SetHasPlayMusic(false);
             }
