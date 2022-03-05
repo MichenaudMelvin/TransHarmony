@@ -146,10 +146,10 @@ public class CommandGenerator : MonoBehaviour{
 
         _listArtistesInHalls.Clear();
         _commandGeneratedNbr = 0;
-        _maxCommandNumberAtTime = _hallContainers.childCount;
+        _maxCommandNumberAtTime = _gameManager.GetActiveHalls();
     }
 
-    public void SetMaxCommandAtATime(int newValue){_maxCommandNumberAtTime += newValue;}
+    public void AddToMaxCommandAtATime(int newValue){_maxCommandNumberAtTime += newValue;}
 
     public int GetHallsLeft(){return _hallsLeft;}
 

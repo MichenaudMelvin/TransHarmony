@@ -64,6 +64,7 @@ public class ScrollingMenu : MonoBehaviour{
             sens = -1;
             positionToGo = _initialPosition;
             tempColor = _fadeOutImage.color;
+            _fadeOutImage.gameObject.SetActive(false);
             _gameManager.PauseGame(false);
         }
 
@@ -100,7 +101,7 @@ public class ScrollingMenu : MonoBehaviour{
 
         _hasScroll = !_hasScroll;
 
-        StartCoroutine(this.Fade(tempColor, sens));
+        // StartCoroutine(this.Fade(tempColor, sens));
 
         _scrollButton.GetComponent<RectTransform>().anchoredPosition = -sens * positionToGo;
         _scrollingMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(_scrollingMenu.GetComponent<RectTransform>().anchoredPosition.x, _scrollButton.GetComponent<RectTransform>().anchoredPosition.y + _scrollButton.GetComponent<RectTransform>().sizeDelta.y);
@@ -108,6 +109,7 @@ public class ScrollingMenu : MonoBehaviour{
         yield return null;
     }
 
+    // au final est bugé sur téléphone
     private IEnumerator Fade(Color tempColor, int sens){
         if(sens == 1){
             while(_fadeOutImage.color.a < 0.5f){
