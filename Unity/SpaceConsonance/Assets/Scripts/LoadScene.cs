@@ -5,18 +5,10 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour{
 
     [SerializeField]
-    [Tooltip("Référence aux settings du jeu")]
-    private Settings _settings;
-
-    [SerializeField]
     [Tooltip("La scène qui va être lancé")]
     private string _sceneName;
 
-
     private void Start(){
-
-        // DontDestroyOnLoad(_settings);
-
         if(SceneManager.GetActiveScene().name == "LoadingScene"){
             StartCoroutine(this.LoadMainScene());
         }
@@ -28,7 +20,6 @@ public class LoadScene : MonoBehaviour{
     }
 
     public void ChangeScene(){
-        // DontDestroyOnLoad(_settings);
         if(_sceneName == "self" || _sceneName == "this"){
             // reload current scene
             Scene currentScene = SceneManager.GetActiveScene();

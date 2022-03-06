@@ -96,7 +96,6 @@ public class HallsAttributes : MonoBehaviour{
 
     public void Disable(){
         Destroy(_artistInHall.gameObject);
-        // disable les light ici
     }
 
     public float GetPoints(){return _points;}
