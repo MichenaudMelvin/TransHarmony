@@ -240,14 +240,12 @@ MonoBehaviour:
   _succeedColor: {r: 0, g: 1, b: 0, a: 1}
   _failureColor: {r: 1, g: 0, b: 0, a: 1}
   _movementDuration: 0.5
-  _finalPosition: {x: 0, y: 75, z: 0}
+  _finalPosition: {x: 0, y: 125, z: 0}
   _upperScale: {x: 1.5, y: 1.5, z: 0}
   _bulleCalmeSprite: {fileID: 21300000, guid: 7af9912d90abc0648bde0173ccc4cd84, type: 3}
   _bulleActionSprite: {fileID: 21300000, guid: 17a142fdfaaf3ae4fb8bf1ee97923865, type: 3}
   _availableTime: 10
-  _paticulesTrue: {fileID: 0}
-  _paticulesFalse: {fileID: 0}
-  _succesPoints: 10
+  _succesPoints: 100
   _audioSource: {fileID: -7449091773371993378}
   _validRequest: {fileID: 8300000, guid: 62adaf1df0a73fa428c532f4c58d6e8e, type: 3}
   _failRequest: {fileID: 8300000, guid: 867eb705ad9f1e74d9018ce4906a421e, type: 3}

@@ -26,8 +26,8 @@ public class ScrollingMenu : MonoBehaviour{
     [Tooltip("Position initiale")]
     private Vector2 _initialPosition;
 
-    [Tooltip("Pour savoir si la coroutine est lancé")]
-    private bool _hasScrollCoroutineStart = false;
+    // [Tooltip("Pour savoir si la coroutine est lancé")]
+    // private bool _hasScrollCoroutineStart = false;
 
     [SerializeField]
     [Tooltip("Référence au GameManager")]
@@ -41,9 +41,9 @@ public class ScrollingMenu : MonoBehaviour{
     }
 
     private void TaskOnClickScrollButton(){
-        if(!_hasScrollCoroutineStart){
+        // if(!_hasScrollCoroutineStart){
             StartCoroutine(this.Scroll());
-        }
+        // }
     }
 
     // animation de scroll du menu
@@ -51,11 +51,8 @@ public class ScrollingMenu : MonoBehaviour{
         int sens = 1;
         Vector2 positionToGo;
         Color tempColor;
-        _hasScrollCoroutineStart = true;
-        bool hasFadeImage = false;
-
-        // need to set game pause
-        // also mask command et item
+        // _hasScrollCoroutineStart = true;
+        // bool hasFadeImage = false;
 
         if(!_hasScroll){
             sens = 1;
@@ -67,37 +64,52 @@ public class ScrollingMenu : MonoBehaviour{
             sens = -1;
             positionToGo = _initialPosition;
             tempColor = _fadeOutImage.color;
+            _fadeOutImage.gameObject.SetActive(false);
             _gameManager.PauseGame(false);
         }
 
-        while(_scrollButton.GetComponent<RectTransform>().anchoredPosition != positionToGo){
-            _scrollButton.GetComponent<RectTransform>().anchoredPosition += (sens * new Vector2(0, -1f));
-            _scrollingMenu.GetComponent<RectTransform>().anchoredPosition += (sens * new Vector2(0, -1f));
+        // fait scroller
+        // compliqué a cause des résolution d'écran
+        // while(_scrollButton.GetComponent<RectTransform>().anchoredPosition != positionToGo){
+        //     _scrollButton.GetComponent<RectTransform>().anchoredPosition += (sens * new Vector2(0, -1f));
+        //     _scrollingMenu.GetComponent<RectTransform>().anchoredPosition += (sens * new Vector2(0, -1f));
 
-            if(!hasFadeImage){
-                hasFadeImage = true;
-                StartCoroutine(this.Fade(tempColor, sens));
-            }
+        //     if(!hasFadeImage){
+        //         hasFadeImage = true;
+        //         StartCoroutine(this.Fade(tempColor, sens));
+        //     }
 
-            if(!_hasScroll && -_scrollButton.GetComponent<RectTransform>().anchoredPosition.y >= positionToGo.y){
-                _scrollButton.GetComponent<RectTransform>().anchoredPosition = -_scrolledPosition;
-                _scrollingMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(_scrollingMenu.GetComponent<RectTransform>().anchoredPosition.x, _scrollButton.GetComponent<RectTransform>().anchoredPosition.y + _scrollButton.GetComponent<RectTransform>().sizeDelta.y);
-                _hasScroll = true;
-                _hasScrollCoroutineStart = false;
-                yield break;
-            } else if(_hasScroll && _scrollButton.GetComponent<RectTransform>().anchoredPosition.y >= positionToGo.y){
-                _scrollButton.GetComponent<RectTransform>().anchoredPosition = _initialPosition;
-                _scrollingMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(_scrollingMenu.GetComponent<RectTransform>().anchoredPosition.x, _scrollButton.GetComponent<RectTransform>().anchoredPosition.y + _scrollButton.GetComponent<RectTransform>().sizeDelta.y);
-                _hasScroll = false;
-                _fadeOutImage.gameObject.SetActive(false);
-                _hasScrollCoroutineStart = false;
-                yield break;
-            }
+        //     if(!_hasScroll && -_scrollButton.GetComponent<RectTransform>().anchoredPosition.y >= positionToGo.y){
+        //         _scrollButton.GetComponent<RectTransform>().anchoredPosition = -_scrolledPosition;
+        //         _scrollingMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(_scrollingMenu.GetComponent<RectTransform>().anchoredPosition.x, _scrollButton.GetComponent<RectTransform>().anchoredPosition.y + _scrollButton.GetComponent<RectTransform>().sizeDelta.y);
+        //         _hasScroll = true;
+        //         _hasScrollCoroutineStart = false;
+        //         yield break;
+        //     } else if(_hasScroll && _scrollButton.GetComponent<RectTransform>().anchoredPosition.y >= positionToGo.y){
+        //         _scrollButton.GetComponent<RectTransform>().anchoredPosition = _initialPosition;
+        //         _scrollingMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(_scrollingMenu.GetComponent<RectTransform>().anchoredPosition.x, _scrollButton.GetComponent<RectTransform>().anchoredPosition.y + _scrollButton.GetComponent<RectTransform>().sizeDelta.y);
+        //         _hasScroll = false;
+        //         _fadeOutImage.gameObject.SetActive(false);
+        //         _hasScrollCoroutineStart = false;
+        //         yield break;
+        //     }
 
-            yield return new WaitForSeconds(0.0001f);
-        }
+        //     yield return new WaitForSeconds(0.0001f);
+        // }
+
+        // _scrollButton.GetComponent<RectTransform>().anchoredPosition = positionToGo;
+
+        _hasScroll = !_hasScroll;
+
+        // StartCoroutine(this.Fade(tempColor, sens));
+
+        _scrollButton.GetComponent<RectTransform>().anchoredPosition = -sens * positionToGo;
+        _scrollingMenu.GetComponent<RectTransform>().anchoredPosition = new Vector2(_scrollingMenu.GetComponent<RectTransform>().anchoredPosition.x, _scrollButton.GetComponent<RectTransform>().anchoredPosition.y + _scrollButton.GetComponent<RectTransform>().sizeDelta.y);
+
+        yield return null;
     }
 
+    // au final est bugé sur téléphone
     private IEnumerator Fade(Color tempColor, int sens){
         if(sens == 1){
             while(_fadeOutImage.color.a < 0.5f){

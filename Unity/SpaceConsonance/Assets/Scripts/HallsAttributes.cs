@@ -75,6 +75,7 @@ public class HallsAttributes : MonoBehaviour{
         _gameManager.UpdatePoints(_points);
         _points = 0;
 
+        _artistInHall.SetHasPlayMusic(false);
         Destroy(_artistInHall.gameObject);
 
         // à voir pour éviter d'avoir 2 fois de suite le meme artiste dans un hall
@@ -95,7 +96,6 @@ public class HallsAttributes : MonoBehaviour{
 
     public void Disable(){
         Destroy(_artistInHall.gameObject);
-        // disable les light ici
     }
 
     public float GetPoints(){return _points;}

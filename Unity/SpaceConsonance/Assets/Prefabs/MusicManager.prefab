@@ -143,9 +143,10 @@ MonoBehaviour:
   _audioSource: {fileID: 13754979786380608}
   _fadeOutSpeed: 0.025
   _musicName: {fileID: 0}
+  _childMusicName: {fileID: 0}
   _artistName: {fileID: 0}
-  _musicNameScrollSpeed: 0.05
-  _musicNameRectTransform: {fileID: 0}
+  _musicNameScrollSpeed: 0.1
   _gameManager: {fileID: 0}
   _artistContainers: {fileID: 0}
   _hallsContainer: {fileID: 0}
+  _displayMusicNameCoroutineIsRunning: 0

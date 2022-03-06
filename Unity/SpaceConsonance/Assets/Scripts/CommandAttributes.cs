@@ -178,7 +178,7 @@ public class CommandAttributes : MonoBehaviour{
     }
 
     private void EndTimer(){
-        // faire une animation de fin de timer
+        _artistWhoNeedIt.GetHall().GetBadParticule().Play();
         Destroy(this.gameObject);
     }
 
@@ -316,7 +316,7 @@ public class CommandAttributes : MonoBehaviour{
             _gameManager.conditionsLeftBeforeHallComplete[currentHall] -= 1;
             if(_gameManager.conditionsLeftBeforeHallComplete[currentHall] <= 0){
                 _commandGenerator.SetHallsLeft(-1);
-                _commandGenerator.SetMaxCommandAtATime(-1);
+                _commandGenerator.AddToMaxCommandAtATime(-1);
             }
         } else if(_gameManager.GetCurrentPhase() == 2){
             _artistWhoNeedIt.GetHall().UpdatePoints(_succesPoints);

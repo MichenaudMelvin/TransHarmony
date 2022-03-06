@@ -134,6 +134,10 @@ public class GameManager : MonoBehaviour{
     private RawImage _endingScreen;
 
     [SerializeField]
+    [Tooltip("Texte aui affiche le score")]
+    private Text _scoreText;
+
+    [SerializeField]
     [Tooltip("Autre UI")]
     private GameObject _externalUI;
 
@@ -156,10 +160,6 @@ public class GameManager : MonoBehaviour{
     private void Start(){
         _timeLeft = _timePhase1;
         _daysRemaining = _days;
-
-        // Settings
-        // _settings = FindObjectOfType<Settings>();
-        // AudioListener.volume = _settings.GetMasterVolume();
 
         // initialisation du timer
         _timerTextPrefix = _timerText.text;
@@ -235,6 +235,7 @@ public class GameManager : MonoBehaviour{
                 _itemGenerator.DestroyItems();
                 _externalUI.SetActive(false);
                 _endingScreen.gameObject.SetActive(true);
+                _scoreText.text = "Score : " + _playerPoints.ToString() + "pts";
             } else if(_daysRemaining > 0){
                 // ici passe à un jouer suplémentaire
                 int showDay = _days - _daysRemaining;
@@ -297,10 +298,6 @@ public class GameManager : MonoBehaviour{
                         StartCoroutine(_publicContainersList[i].GetChild(j).GetComponent<EffetFoule>().FouleMovement());
                     }
                 }
-
-                // faire deux timers du coups
-                // un pour le temps du jour
-                // un autre pour le temps restant du festival
             }
 
             if(_daysRemaining != _days - 1){
@@ -335,13 +332,6 @@ public class GameManager : MonoBehaviour{
     // pause du jeu
     public void PauseGame(bool pauseOrUnPause){
         _isGamePause = pauseOrUnPause;
-
-        // pour mouvement up si la commande l'a pas fait
-        // if(!_isGamePause){
-        //     for(int i = 0; i < _commandGenerator.transform.childCount; i++){
-        //         _commandGenerator.transform.GetChild(i).gameObject.SetActive(!pauseOrUnPause);
-        //     }
-        // }
 
         _commandGenerator.gameObject.SetActive(!pauseOrUnPause);
         _itemGenerator.gameObject.SetActive(!pauseOrUnPause);

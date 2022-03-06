@@ -33,7 +33,7 @@ public class MusicManager : MonoBehaviour{
     private Text _artistName;
 
     [SerializeField]
-    [Range(0.01f, 0.05f)]
+    [Range(0.01f, 1f)]
     [Tooltip("Vitesse à laquel va défiler le nom de la musique si le texte est trop grand")]
     private float _musicNameScrollSpeed;
 
@@ -59,6 +59,9 @@ public class MusicManager : MonoBehaviour{
     [Tooltip("Sécurité pour pas que la couroutine fonctionne plusieurs fois en meme temps")]
     private bool _displayMusicNameCoroutineIsRunning = false;
 
+    [Tooltip("Bool de merde qui sert juste pour pas call un fonction plusieurs fois")]
+    private bool _hasCallNewAudioClip = false;
+
     private void Start(){
         // pour laisser le temps à Unity d'instancier les artistes // sinon marche pas
         StartCoroutine(this.LateStart(0.001f));
@@ -68,6 +71,7 @@ public class MusicManager : MonoBehaviour{
         yield return new WaitForSeconds(time);
 
         this.SetAudioClip();
+        yield return new WaitForSeconds(0.5f);
         StartCoroutine(this.ManageVolume());
     }
 
@@ -76,9 +80,17 @@ public class MusicManager : MonoBehaviour{
         while(_gameManager.GetTime() > 0){
 
             // changement de musique si la musique actuelle est finie
-            if(_audioSource.time == 0){
-                StopCoroutine(this.DisplayMusicName());
-                this.SetAudioClip();
+            if(_audioSource.time == 0 && _hasCallNewAudioClip == false){
+                // rejoue la meme musique si le jeu est en pause
+                if(_gameManager.GetIsGamePause()){
+                    _audioSource.Play();
+                } else{
+                    _hasCallNewAudioClip = true;
+                    StopCoroutine(this.DisplayMusicName());
+                    this.SetAudioClip();
+                    yield return new WaitForSeconds(0.5f);
+                }
+
             }
 
             yield return null;
@@ -139,22 +151,38 @@ public class MusicManager : MonoBehaviour{
             }
         }
 
+        int playCount = 0;
+
+        // pour éviter un crash
+        for(int i = 0; i < listArtistInHalls.Count; i++){
+            if(listArtistInHalls[i].HasPlayMusic()){
+                playCount += 1;
+            }
+        }
+
+        if(playCount >= artistInHalls){
+            for(int i = 0; i < listArtistInHalls.Count; i++){
+                listArtistInHalls[i].SetHasPlayMusic(false);
+            }
+        }
+
         ArtistsAttributes actualArtist = null;
         actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
+
+        while(actualArtist.HasPlayMusic()){
+            actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
+        }
+
         _audioSource.clip = actualArtist.GetMusic();
         _actualArtist = actualArtist;
-
-        // while(actualArtist.HasPlayMusic()){
-        //     actualArtist = listArtistInHalls[Random.Range(0, listArtistInHalls.Count)];
-        //     _audioSource.clip = actualArtist.GetMusic();
-        //     _actualArtist = actualArtist;
-        // }
+        actualArtist = null;
 
         _actualArtist.SetHasPlayMusic(true);
 
         this.SetMusicName();
         StartCoroutine(this.DisplayMusicName());
         _audioSource.Play();
+        _hasCallNewAudioClip = false;
     }
 
     // se délenche à la fin de chaque journée
