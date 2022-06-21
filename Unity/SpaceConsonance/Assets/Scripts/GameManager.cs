@@ -177,7 +177,8 @@ public class GameManager : MonoBehaviour{
         yield return new WaitForSeconds(0.0005f);
 
         _commandGenerator.CreateCommands();
-        StartCoroutine(_itemGenerator.CreateItems());
+        // StartCoroutine(_itemGenerator.CreateItems());
+        _itemGenerator.ToggleVisibility(true);
     }
 
     private void Update(){
@@ -223,7 +224,7 @@ public class GameManager : MonoBehaviour{
             // préparation pour la phase 2 (destructions des commandes restantes, check les artistes encore disponibles)
             // va recréer les items et commandes
             _commandGenerator.DestroyCommands();
-            _itemGenerator.DestroyItems();
+            _itemGenerator.ToggleVisibility(false);
 
             // StartCoroutine(_musicManager.EndPhase());
 
@@ -232,7 +233,7 @@ public class GameManager : MonoBehaviour{
         } else if(_currentPhase == 2){
             if(_daysRemaining <= 0){
                 _commandGenerator.DestroyCommands();
-                _itemGenerator.DestroyItems();
+                _itemGenerator.ToggleVisibility(false);
                 _externalUI.SetActive(false);
                 _endingScreen.gameObject.SetActive(true);
                 _scoreText.text = "Score : " + _playerPoints.ToString() + "pts";
@@ -243,7 +244,7 @@ public class GameManager : MonoBehaviour{
                 _transitionImage.gameObject.SetActive(true);
 
                 _commandGenerator.DestroyCommands();
-                _itemGenerator.DestroyItems();
+                _itemGenerator.ToggleVisibility(false);
 
                 for(int i = 0; i < _publicContainersList.Count; i++){
                     for(int j = 0; j < _publicContainersList[i].childCount; j++){
@@ -313,7 +314,8 @@ public class GameManager : MonoBehaviour{
             _transitionImage.gameObject.SetActive(false);
 
             _commandGenerator.CreateCommands();
-            StartCoroutine(_itemGenerator.CreateItems());
+            // StartCoroutine(_itemGenerator.CreateItems());
+            _itemGenerator.ToggleVisibility(true);
             _musicManager.SetAudioClip();
         } else if(_activeHalls <= 0){
             SceneManager.LoadScene("StartScene");

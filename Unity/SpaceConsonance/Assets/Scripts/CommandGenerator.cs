@@ -1,3 +1,4 @@
+using System.Reflection;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -147,6 +148,12 @@ public class CommandGenerator : MonoBehaviour{
         _listArtistesInHalls.Clear();
         _commandGeneratedNbr = 0;
         _maxCommandNumberAtTime = _gameManager.GetActiveHalls();
+    }
+
+    public void ToggleVisibility(bool visibility){
+        for(int i = 0; i < this.transform.childCount; i++){
+            this.transform.GetChild(i).gameObject.SetActive(visibility);
+        }
     }
 
     public void AddToMaxCommandAtATime(int newValue){_maxCommandNumberAtTime += newValue;}
