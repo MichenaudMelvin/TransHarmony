@@ -9,7 +9,7 @@ public class Settings : MonoBehaviour{
 
     [Header("Master Volume")]
     [SerializeField]
-    [Tooltip("Slider qui gère le master volume")]
+    [Tooltip("Slider qui gère le master volume et dit blop")]
     private Slider _masterVolumeSlider;
 
     [Tooltip("Volume du jeu")]
@@ -19,7 +19,7 @@ public class Settings : MonoBehaviour{
     private bool _isSoundEnable = true;
 
     private void Start(){
-        // hard codé pour éviter une erreure
+        // hard codé pour éviter une erreur
         if(SceneManager.GetActiveScene().name != "StartScene"){
             _masterVolumeSlider.value = _masterVolume;
         }
@@ -43,4 +43,5 @@ public class Settings : MonoBehaviour{
 
     public bool GetIsSoundEnable(){return _isSoundEnable;}
 
+    public void SetQualitySetting(int qualityIndex){QualitySettings.SetQualityLevel(qualityIndex);}
 }
