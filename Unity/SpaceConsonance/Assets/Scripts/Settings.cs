@@ -18,11 +18,17 @@ public class Settings : MonoBehaviour{
     [Tooltip("Effets sonores activés ou désactivés")]
     private bool _isSoundEnable = true;
 
+    [SerializeField]
+    [Tooltip("Dropdown menu qui gère la qualité graphique du jeu")]
+    private Dropdown _graphicQualityMenu;
+
     private void Start(){
         // hard codé pour éviter une erreur
         if(SceneManager.GetActiveScene().name != "StartScene"){
             _masterVolumeSlider.value = _masterVolume;
         }
+
+        _graphicQualityMenu.SetValueWithoutNotify(QualitySettings.GetQualityLevel());
     }
 
     // public functions
@@ -44,4 +50,6 @@ public class Settings : MonoBehaviour{
     public bool GetIsSoundEnable(){return _isSoundEnable;}
 
     public void SetQualitySetting(int qualityIndex){QualitySettings.SetQualityLevel(qualityIndex);}
+
+    public void ToggleVisibility(GameObject gameObject){gameObject.SetActive(!gameObject.activeSelf);}
 }
